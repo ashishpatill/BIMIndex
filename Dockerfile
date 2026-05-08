@@ -15,3 +15,7 @@ CMD ["uvicorn", "retrieval_research.api:app", "--host", "0.0.0.0", "--port", "80
 FROM base as cli
 
 ENTRYPOINT ["python", "-m", "retrieval_research.cli"]
+
+FROM base as worker
+
+CMD ["python", "-m", "retrieval_research.cli", "worker"]
