@@ -91,6 +91,8 @@ Completed:
   - Docker worker target in `Dockerfile`.
   - Config: `RR_JOBS_ROOT` and `RR_JOB_POLL_INTERVAL` in config + `.env.example`.
   - 18 job tests covering models, store edge cases, handler dispatch.
+- Phase 7 follow-up — Dependabot config:
+  - `.github/dependabot.yml` with pip (weekly), npm (weekly), and Docker (weekly) ecosystems.
 
 Remaining / next:
 
@@ -102,11 +104,11 @@ Remaining / next:
   - Continue stress-testing graph extraction on noisier PDFs/OCR output and widen quality-tier corpora.
   - Revisit optional NLP/LLM extractors only if normalized rule-based extraction still misses key entities/references.
 - Phase 7 follow-up:
-  - Dependabot/renovate config for dependency updates.
+  - Dependabot config for dependency updates (pip, npm, Docker in `.github/dependabot.yml`).
 
 Next session start point:
 
-1. Dependabot/renovate config for dependency updates.
+1. Broaden visual retrieval quality benchmarks on larger real image/table-heavy corpora.
 2. Broaden visual retrieval quality benchmarks on larger real image/table-heavy corpora.
 3. Continue planner classifier calibration on mixed corpora while monitoring planner-vs-static deltas.
 
