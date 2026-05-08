@@ -1,46 +1,24 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Filter, Search } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-type GraphSection = {
-  name?: string;
-  chunk_ids?: string[];
-  document_ids?: string[];
-  pages?: number[];
-};
-
-type GraphEntity = {
-  name?: string;
-  chunk_ids?: string[];
-  document_ids?: string[];
-  pages?: number[];
-};
-
-type GraphReference = {
-  reference?: string;
-  source_chunk_ids?: string[];
-  target_chunk_ids?: string[];
-  document_ids?: string[];
-};
-
+type GraphSection = { name?: string; chunk_ids?: string[]; document_ids?: string[]; pages?: number[] };
+type GraphEntity = { name?: string; chunk_ids?: string[]; document_ids?: string[]; pages?: number[] };
+type GraphReference = { reference?: string; source_chunk_ids?: string[]; target_chunk_ids?: string[]; document_ids?: string[] };
 type KnowledgeGraph = {
   stats?: {
-    node_count?: number;
-    edge_count?: number;
-    section_count?: number;
-    entity_count?: number;
-    reference_count?: number;
-    relation_counts?: Record<string, number>;
+    node_count?: number; edge_count?: number; section_count?: number;
+    entity_count?: number; reference_count?: number; relation_counts?: Record<string, number>;
   };
-  sections?: GraphSection[];
-  entities?: GraphEntity[];
-  references?: GraphReference[];
+  sections?: GraphSection[]; entities?: GraphEntity[]; references?: GraphReference[];
 };
-
-type Props = {
-  graph: KnowledgeGraph | null;
-};
-
+type Props = { graph: KnowledgeGraph | null };
 type ArtifactKind = "sections" | "entities" | "references";
 
 export function KnowledgeGraphInspector({ graph }: Props) {
@@ -49,133 +27,119 @@ export function KnowledgeGraphInspector({ graph }: Props) {
   const [query, setQuery] = useState("");
 
   const relationRows = useMemo(
-    () => Object.entries(graph?.stats?.relation_counts ?? {}).sort((left, right) => right[1] - left[1]),
+    () => Object.entries(graph?.stats?.relation_counts ?? {}).sort((a, b) => b[1] - a[1]),
     [graph],
   );
   const artifactRows = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    const rows = graph?.[artifactKind] ?? [];
-    if (!normalizedQuery) {
-      return rows;
-    }
-    return rows.filter((row) => JSON.stringify(row).toLowerCase().includes(normalizedQuery));
+    const normalized = query.trim().toLowerCase();
+    const items = graph?.[artifactKind] ?? [];
+    if (!normalized) return items;
+    return items.filter((row) => JSON.stringify(row).toLowerCase().includes(normalized));
   }, [artifactKind, graph, query]);
 
-  if (!graph?.stats) {
-    return null;
-  }
+  if (!graph?.stats) return null;
 
   return (
-    <section className="space-y-4 rounded-lg border border-zinc-800 bg-zinc-900 p-4">
-      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-        <div>
-          <h2 className="text-sm font-semibold text-zinc-100">Knowledge graph</h2>
-          <p className="mt-1 text-xs text-zinc-500">Inspect extracted graph artifacts and relation mix.</p>
-        </div>
-        <div className="grid gap-2 sm:grid-cols-3">
-          <select
-            value={artifactKind}
-            onChange={(event) => setArtifactKind(event.target.value as ArtifactKind)}
-            className="rounded-md border border-zinc-700 bg-zinc-950 p-2 text-xs text-zinc-100"
-          >
-            <option value="entities">Entities</option>
-            <option value="sections">Sections</option>
-            <option value="references">References</option>
-          </select>
-          <select
-            value={relationFilter}
-            onChange={(event) => setRelationFilter(event.target.value)}
-            className="rounded-md border border-zinc-700 bg-zinc-950 p-2 text-xs text-zinc-100"
-          >
-            <option value="all">All relations</option>
-            {relationRows.map(([relation]) => (
-              <option key={relation} value={relation}>
-                {relation}
-              </option>
-            ))}
-          </select>
-          <input
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder={`Filter ${artifactKind}`}
-            className="rounded-md border border-zinc-700 bg-zinc-950 p-2 text-xs text-zinc-100"
-          />
-        </div>
-      </div>
-
-      <div className="grid gap-2 text-xs text-zinc-300 sm:grid-cols-5">
-        <StatCard label="Nodes" value={graph.stats.node_count ?? 0} />
-        <StatCard label="Edges" value={graph.stats.edge_count ?? 0} />
-        <StatCard label="Sections" value={graph.stats.section_count ?? 0} />
-        <StatCard label="Entities" value={graph.stats.entity_count ?? 0} />
-        <StatCard label="References" value={graph.stats.reference_count ?? 0} />
-      </div>
-
-      {relationRows.length ? (
-        <div className="flex flex-wrap gap-2">
-          {relationRows
-            .filter(([relation]) => relationFilter === "all" || relation === relationFilter)
-            .map(([relation, count]) => (
-              <span
-                key={relation}
-                className="rounded border border-zinc-700 bg-zinc-950 px-2 py-1 text-xs text-zinc-300"
-              >
-                {relation}: {count}
-              </span>
-            ))}
-        </div>
-      ) : null}
-
-      <div className="space-y-2 rounded-md border border-zinc-800 bg-zinc-950 p-3">
+    <Card>
+      <CardHeader>
         <div className="flex items-center justify-between">
-          <h3 className="text-xs font-semibold uppercase tracking-wide text-zinc-400">{artifactKind}</h3>
-          <span className="text-xs text-zinc-500">{artifactRows.length} shown</span>
+          <CardTitle>Knowledge graph</CardTitle>
+          <div className="flex items-center gap-2">
+            <Select value={relationFilter} onValueChange={setRelationFilter}>
+              <SelectTrigger className="h-8 w-36 text-xs">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All relations</SelectItem>
+                {relationRows.map(([rel]) => (
+                  <SelectItem key={rel} value={rel}>{rel}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            <div className="relative w-40">
+              <Search className="absolute left-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-muted-foreground" />
+              <Input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder={`Filter ${artifactKind}`}
+                className="h-8 pl-7 text-xs"
+              />
+            </div>
+          </div>
         </div>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div className="grid gap-3 sm:grid-cols-5">
+          <StatCard label="Nodes" value={graph.stats.node_count ?? 0} />
+          <StatCard label="Edges" value={graph.stats.edge_count ?? 0} />
+          <StatCard label="Sections" value={graph.stats.section_count ?? 0} />
+          <StatCard label="Entities" value={graph.stats.entity_count ?? 0} />
+          <StatCard label="References" value={graph.stats.reference_count ?? 0} />
+        </div>
+
+        {relationRows.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {relationRows
+              .filter(([rel]) => relationFilter === "all" || rel === relationFilter)
+              .map(([rel, count]) => (
+                <Badge key={rel} variant="secondary" className="text-[10px]">
+                  {rel}: {count}
+                </Badge>
+              ))}
+          </div>
+        )}
+
+        <Tabs value={artifactKind} onValueChange={(v) => setArtifactKind(v as ArtifactKind)}>
+          <TabsList>
+            <TabsTrigger value="entities">Entities</TabsTrigger>
+            <TabsTrigger value="sections">Sections</TabsTrigger>
+            <TabsTrigger value="references">References</TabsTrigger>
+          </TabsList>
+        </Tabs>
+
         <div className="grid gap-2 md:grid-cols-2">
-          {artifactRows.slice(0, 24).map((row, index) => (
-            <ArtifactCard key={`${artifactKind}-${index}`} kind={artifactKind} row={row} />
+          {artifactRows.slice(0, 24).map((row, idx) => (
+            <ArtifactCard key={`${artifactKind}-${idx}`} kind={artifactKind} row={row} />
           ))}
+          {!artifactRows.length && (
+            <p className="col-span-full py-8 text-center text-sm text-muted-foreground">No matching artifacts.</p>
+          )}
         </div>
-        {!artifactRows.length ? <p className="text-xs text-zinc-500">No matching graph artifacts.</p> : null}
-      </div>
-    </section>
+      </CardContent>
+    </Card>
   );
 }
 
 function StatCard({ label, value }: { label: string; value: number }) {
   return (
-    <div className="rounded-md border border-zinc-800 bg-zinc-950 p-2">
-      <p className="text-zinc-500">{label}</p>
-      <p className="text-zinc-100">{value}</p>
+    <div className="rounded-lg border bg-card p-3">
+      <p className="text-xs text-muted-foreground">{label}</p>
+      <p className="text-xl font-bold">{value}</p>
     </div>
   );
 }
 
-function ArtifactCard({
-  kind,
-  row,
-}: {
-  kind: ArtifactKind;
-  row: GraphSection | GraphEntity | GraphReference;
-}) {
+function ArtifactCard({ kind, row }: { kind: ArtifactKind; row: GraphSection | GraphEntity | GraphReference }) {
   const title =
     kind === "references" ? (row as GraphReference).reference : (row as GraphSection | GraphEntity).name;
   const chunkCount =
     kind === "references"
-      ? ((row as GraphReference).source_chunk_ids?.length ?? 0) + ((row as GraphReference).target_chunk_ids?.length ?? 0)
+      ? ((row as GraphReference).source_chunk_ids?.length ?? 0) +
+        ((row as GraphReference).target_chunk_ids?.length ?? 0)
       : ((row as GraphSection | GraphEntity).chunk_ids?.length ?? 0);
   const pages = "pages" in row ? row.pages ?? [] : [];
 
   return (
-    <div className="rounded-md border border-zinc-800 bg-zinc-900 p-2 text-xs text-zinc-300">
-      <p className="truncate font-medium text-zinc-100">{title ?? "(untitled)"}</p>
-      <p className="mt-1 text-zinc-500">
-        {chunkCount} chunks
-        {pages.length ? ` | pages ${pages.slice(0, 6).join(", ")}` : ""}
+    <div className="rounded-lg border bg-card p-3">
+      <p className="truncate text-sm font-medium">{title ?? "(untitled)"}</p>
+      <p className="mt-1 text-xs text-muted-foreground">
+        {chunkCount} chunks{pages.length ? ` | pages ${pages.slice(0, 6).join(", ")}` : ""}
       </p>
-      {(row.document_ids?.length ?? 0) > 0 ? (
-        <p className="mt-1 truncate font-mono text-[11px] text-zinc-500">{row.document_ids?.join(", ")}</p>
-      ) : null}
+      {(row.document_ids?.length ?? 0) > 0 && (
+        <p className="mt-1 truncate font-mono text-[11px] text-muted-foreground">
+          {row.document_ids?.join(", ")}
+        </p>
+      )}
     </div>
   );
 }
