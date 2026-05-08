@@ -70,6 +70,7 @@ GRAPH_TERMS = {
     "outline",
     "structure", "structures",
     "navigation",
+    "routing",
 }
 
 

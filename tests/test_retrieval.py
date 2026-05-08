@@ -14,6 +14,7 @@ from retrieval_research.retrieval import (
     search_document,
     search_corpus,
 )
+from retrieval_research.retrieval.graph import _number_values, _references, _section_aliases
 from retrieval_research.schema import Chunk, Document, Page
 from retrieval_research.storage import ArtifactStore
 
@@ -177,6 +178,53 @@ class GraphUnitTest(unittest.TestCase):
         index = GraphIndex(chunks_a + chunks_b)
         hits = index.search("SharedEntity", top_k=5)
         self.assertGreaterEqual(len(hits), 1)
+
+    def test_number_values_expands_ranges(self):
+        result = _number_values("1-3")
+        self.assertIn("1", result)
+        self.assertIn("2", result)
+        self.assertIn("3", result)
+
+        result = _number_values("A1-A3")
+        self.assertIn("a1", result)
+        self.assertIn("a2", result)
+        self.assertIn("a3", result)
+
+        result = _number_values("1, 2, 3")
+        self.assertIn("1", result)
+        self.assertIn("2", result)
+        self.assertIn("3", result)
+
+    def test_section_aliases_include_hierarchy(self):
+        aliases = _section_aliases("3.2.1 Algorithm")
+        self.assertIn("3.2.1 algorithm", aliases)
+        self.assertIn("3.2.1", aliases)
+        self.assertIn("3.2", aliases)
+        self.assertIn("3", aliases)
+        self.assertIn("algorithm", aliases)
+
+        aliases = _section_aliases("2.1")
+        self.assertIn("2.1", aliases)
+        self.assertIn("2", aliases)
+
+    def test_graph_references_expand_ranges(self):
+        refs = _references("See Figures 1-3 for details.")
+        for i in range(1, 4):
+            self.assertIn(f"figure:{i}", refs, f"figure:{i} should be in refs")
+
+        refs = _references("See Tables A1-A3 for data.")
+        for i in range(1, 4):
+            self.assertIn(f"table:a{i}", refs, f"table:a{i} should be in refs")
+
+    def test_ocr_noise_new_patterns(self):
+        refs = _references("Sect1on 3 details the method.")
+        self.assertIn("section:3", refs)
+
+        refs = _references("Equat10n 5 defines the loss.")
+        self.assertIn("equation:5", refs)
+
+        refs = _references("See ArXiv:2401.12345 for the preprint.")
+        self.assertIn("arxiv:2401.12345", refs)
 
 
 if __name__ == "__main__":
