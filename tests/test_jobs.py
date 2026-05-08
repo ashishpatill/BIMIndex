@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
@@ -56,14 +57,7 @@ class JobStoreTest(unittest.TestCase):
         self.store = JobStore(root=str(self.tmpdir))
 
     def tearDown(self):
-        if self.tmpdir.exists():
-            for path in self.tmpdir.rglob("*"):
-                if path.is_file():
-                    path.unlink()
-            for path in reversed(list(self.tmpdir.rglob("*"))):
-                if path.is_dir():
-                    path.rmdir()
-            self.tmpdir.rmdir()
+        shutil.rmtree(self.tmpdir, ignore_errors=True)
 
     def test_submit_creates_job_file(self):
         job = self.store.submit(JobType.INGEST, {"path": "/tmp/test.pdf"})
