@@ -5,53 +5,63 @@ import io
 from PIL import Image
 from google.genai import types
 
-from core_processor.gemini_client import get_gemini_client
+from core_processor.gemini_client import safe_generate_content
 from core_processor.image_geometry import _crop_document, _resize_for_ocr
 from core_processor.mlx_backend import glm_ocr_mlx
 from core_processor.settings import GEMINI_MODEL
+from retrieval_research.log import get_logger
+
+_logger = get_logger("core_processor.pipeline")
 
 
 def process_page(img: Image.Image, mode: str, system_prompt: str, user_query: str):
-    print(f"[1/5] Crop document — input size: {img.size}")
-    img = _crop_document(img)
-    print(f"[2/5] Resize for OCR — size after crop: {img.size}")
-    img = _resize_for_ocr(img)
-    print(f"[3/5] Image ready — final size: {img.size}")
+    try:
+        _logger.info("Processing page — input size: %s", img.size)
+        img = _crop_document(img)
+        img = _resize_for_ocr(img)
 
-    buffered = io.BytesIO()
-    img.save(buffered, format="PNG")
-    img_bytes = buffered.getvalue()
-    print(f"      PNG size: {len(img_bytes) / 1024:.1f} KB")
+        buffered = io.BytesIO()
+        img.save(buffered, format="PNG")
+        img_bytes = buffered.getvalue()
+        _logger.info("Image ready — size: %s, PNG: %.1f KB", img.size, len(img_bytes) / 1024)
 
-    glm_output = ""
-    final_output = ""
+        glm_output = ""
+        final_output = ""
 
-    if mode in ["Pure Local", "Hybrid"]:
-        print("[4/5] Running GLM-OCR via MLX...")
-        glm_output = glm_ocr_mlx(img, system_prompt, user_query)
-        print(f"      GLM-OCR done — {len(glm_output)} chars")
+        if mode in ["Pure Local", "Hybrid"]:
+            _logger.info("Running GLM-OCR via MLX...")
+            glm_output = glm_ocr_mlx(img, system_prompt, user_query)
+            _logger.info("GLM-OCR done — %d chars", len(glm_output))
 
-    gemini_client = get_gemini_client()
-    if mode in ["Pure Cloud", "Hybrid"] and gemini_client:
-        if mode == "Hybrid":
-            text = (
-                f"{system_prompt}\n\n{user_query}\n\n"
-                f"GLM-OCR raw output to refine:\n{glm_output}\n\n"
-                "Improve structure, fix errors, and reason step-by-step."
+        if mode in ["Pure Cloud", "Hybrid"]:
+            if mode == "Hybrid":
+                text = (
+                    f"{system_prompt}\n\n{user_query}\n\n"
+                    f"GLM-OCR raw output to refine:\n{glm_output}\n\n"
+                    "Improve structure, fix errors, and reason step-by-step."
+                )
+            else:
+                text = f"{system_prompt}\n\n{user_query}"
+
+            _logger.info("Running Gemini (%s)...", GEMINI_MODEL)
+            result = safe_generate_content(
+                GEMINI_MODEL,
+                [
+                    types.Part.from_text(text=text),
+                    types.Part.from_bytes(data=img_bytes, mime_type="image/png"),
+                ],
             )
+            if result is not None:
+                final_output = result
+                _logger.info("Gemini done — %d chars", len(final_output))
+            else:
+                _logger.warning("Gemini returned no output, falling back to GLM-OCR output")
+                final_output = glm_output
         else:
-            text = f"{system_prompt}\n\n{user_query}"
-        print(f"[5/5] Running Gemini ({GEMINI_MODEL})...")
-        response = gemini_client.models.generate_content(
-            model=GEMINI_MODEL,
-            contents=[
-                types.Part.from_text(text=text),
-                types.Part.from_bytes(data=img_bytes, mime_type="image/png"),
-            ],
-        )
-        final_output = response.text
-        print(f"      Gemini done — {len(final_output)} chars")
-    else:
-        final_output = glm_output
+            final_output = glm_output
 
-    return glm_output, final_output
+        return glm_output, final_output
+
+    except Exception as exc:
+        _logger.error("Page processing failed: %s", exc)
+        return "", ""
