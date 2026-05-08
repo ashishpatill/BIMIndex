@@ -6,7 +6,11 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List
 
 from retrieval_research.config import get_settings
+from retrieval_research.log import get_logger
 from retrieval_research.schema import Chunk, Document, DocumentProfile
+
+
+_logger = get_logger("storage.artifacts")
 
 
 class ArtifactStore:
@@ -73,8 +77,15 @@ class ArtifactStore:
             try:
                 documents.append(Document.from_dict(self.load_json(path)))
             except (KeyError, json.JSONDecodeError, TypeError, ValueError):
+                _logger.warning("Skipping corrupt document: %s", path)
                 continue
         return documents
+
+    def list_indexes(self, document_id: str) -> List[str]:
+        index_dir = self.indexes_dir / document_id
+        if not index_dir.exists():
+            return []
+        return sorted(p.stem for p in index_dir.glob("*.json"))
 
     def save_chunks(self, document_id: str, chunks: Iterable[Chunk]) -> Path:
         path = self.document_dir(document_id) / "chunks.json"
