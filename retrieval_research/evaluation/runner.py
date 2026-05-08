@@ -7,6 +7,7 @@ from typing import Any, Dict, List, Optional
 
 from retrieval_research.evidence import build_knowledge_card
 from retrieval_research.config import get_settings
+from retrieval_research.log import get_logger
 from retrieval_research.retrieval import (
     DEFAULT_PLANNER_RERANK,
     DEFAULT_RERANK_OVERLAP_WEIGHT,
@@ -56,7 +57,12 @@ def _has_supported_citations(card: Dict[str, Any]) -> bool:
 
 
 def _load_manifest(path: str) -> Dict[str, Any]:
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    try:
+        return json.loads(Path(path).read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, FileNotFoundError, UnicodeDecodeError) as exc:
+        msg = f"Failed to load eval manifest {path}: {exc}"
+        _logger.error(msg)
+        raise ValueError(msg) from exc
 
 
 def _planner_static_comparison(metrics_by_mode: Dict[str, Dict[str, float]]) -> Dict[str, Any]:
