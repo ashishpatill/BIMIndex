@@ -44,6 +44,17 @@ python3 -m pip install -r requirements.txt -q
 python3 -m pip install pytest pytest-cov -q
 log "Python dependencies installed"
 
+# ── Optional: MLX / GLM-OCR ──────────────────────────────────────────────────
+if python3 -c "import mlx_vlm" 2>/dev/null; then
+    log "mlx-vlm available — local GLM-OCR ready"
+else
+    warn "mlx-vlm not installed — local OCR unavailable"
+    echo -e "  ${CYAN}To enable local GLM-OCR (Apple Silicon only):${NC}"
+    echo -e "    ${CYAN}source .venv/bin/activate && pip install mlx-vlm${NC}"
+    echo -e "  ${CYAN}Without it, set RR_OCR_MODE=Pure Cloud in .env (needs GEMINI_API_KEY)${NC}"
+    echo ""
+fi
+
 # ── Environment file ─────────────────────────────────────────────────────────
 if [ ! -f .env ]; then
     cp .env.example .env
