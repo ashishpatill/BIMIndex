@@ -30,10 +30,10 @@ _settings = get_settings()
 
 
 def _store(args: argparse.Namespace) -> ArtifactStore:
-    return ArtifactStore(args.store)
+    return ArtifactStore(_store_root(args))
 
 
-def _job_store(args: argparse.Namespace) -> JobStore:
+def _job_store() -> JobStore:
     return JobStore()
 
 
