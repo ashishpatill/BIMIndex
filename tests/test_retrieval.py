@@ -14,7 +14,8 @@ from retrieval_research.retrieval import (
     search_document,
     search_corpus,
 )
-from retrieval_research.retrieval.graph import _number_values, _references, _section_aliases
+from retrieval_research.retrieval.graph import _number_values, _references, _section_aliases, _normalize_ocr_reference_text
+from retrieval_research.retrieval.planner import plan_query
 from retrieval_research.schema import Chunk, Document, Page
 from retrieval_research.storage import ArtifactStore
 
@@ -225,6 +226,229 @@ class GraphUnitTest(unittest.TestCase):
 
         refs = _references("See ArXiv:2401.12345 for the preprint.")
         self.assertIn("arxiv:2401.12345", refs)
+
+    def test_ocr_noise_expanded_patterns(self):
+        cases = [
+            ("Sectl0n 3 details", "section:3"),
+            ("Secti0n 4 details", "section:4"),
+            ("Chapt3r 5 covers", "section:5"),
+            ("Chapt er 6 covers", "section:6"),
+            ("Tab le 3 shows", "table:3"),
+            ("Tab les 4 show", "table:4"),
+            ("Tabke 5 shows", "table:5"),
+            ("F1gure 6 illustrates", "figure:6"),
+            ("F1gures 6-7 illustrate", "figure:6"),
+            ("Flgure 7 illustrates", "figure:7"),
+            ("ftgure 8 illustrates", "figure:8"),
+            ("Figu re 9 shows", "figure:9"),
+            ("Ligure 10 shows", "figure:10"),
+            ("Equati0n 7 defines", "equation:7"),
+            ("Eqnation 8 defines", "equation:8"),
+            ("Arxi v:2401.12345", "arxiv:2401.12345"),
+        ]
+        for text, expected in cases:
+            with self.subTest(text=text):
+                refs = _references(text)
+                self.assertIn(expected, refs, f"{text!r} should yield {expected}")
+
+    def test_ocr_normalize_reference_text_roundtrip(self):
+        noisy = "Sectlon 2.1, Tab1e 3, F1g 4, Chapte r 5, ArXiv:2401.12345"
+        normalized = _normalize_ocr_reference_text(noisy)
+        refs = _references(normalized)
+        self.assertIn("section:2.1", refs)
+        self.assertIn("table:3", refs)
+        self.assertIn("figure:4", refs)
+        self.assertIn("section:5", refs)
+        self.assertIn("arxiv:2401.12345", refs)
+
+    def test_graph_stress_multiple_combined_noise(self):
+        noisy = (
+            "Sect1on 2.1 describes the method. "
+            "Tab1e 1 and Tab1e 2 show results. "
+            "F1gure 3 and Flg 4 illustrate architecture. "
+            "Equat10n 5 defines loss. "
+            "ArXiv:2401.12345 cites one paper."
+        )
+        refs = _references(noisy)
+        for expected in (
+            "section:2.1",
+            "table:1", "table:2",
+            "figure:3", "figure:4",
+            "equation:5",
+            "arxiv:2401.12345",
+        ):
+            with self.subTest(expected=expected):
+                self.assertIn(expected, refs, f"Missing {expected} in combined noise")
+
+    def test_graph_stress_numeric_range_with_noise(self):
+        noisy = "See F1gures 1-3 and Tab1es A1-A3."
+        refs = _references(noisy)
+        for i in range(1, 4):
+            self.assertIn(f"figure:{i}", refs, f"figure:{i}")
+            self.assertIn(f"table:a{i}", refs, f"table:a{i}")
+
+    def test_graph_stress_section_hierarchy_with_noise(self):
+        noisy = "Sect1on 3.2.1 describes the algorithm. Sectlon 3.2 covers setup."
+        refs = _references(noisy)
+        self.assertIn("section:3.2.1", refs)
+        self.assertIn("section:3.2", refs)
+
+
+class PlannerCalibrationTest(unittest.TestCase):
+    def test_visual_queries_route_correctly(self):
+        visual_queries = [
+            ("show me the plot in this screenshot", "visual"),
+            ("what does the diagram show", "visual"),
+            ("describe the chart data", "visual"),
+            ("find the screenshot of the interface", "visual"),
+            ("interpret the flowchart", "visual"),
+            ("what is shown in the illustration", "visual"),
+            ("describe the ui layout", "visual"),
+            ("show the infographic data", "visual"),
+            ("is there a map of the region", "visual"),
+            ("find the mockup of the dashboard", "visual"),
+        ]
+        for query, expected_type in visual_queries:
+            with self.subTest(query=query):
+                plan = plan_query(query)
+                self.assertEqual(
+                    plan.query_type, expected_type,
+                    f"Query {query!r} expected {expected_type} got {plan.query_type}",
+                )
+                self.assertIn("visual", plan.routes)
+
+    def test_table_queries_route_correctly(self):
+        table_queries = [
+            ("what is the total revenue", "table_or_form"),
+            ("show the spreadsheet data", "table_or_form"),
+            ("find the row for Q3", "table_or_form"),
+            ("what are the column headers", "table_or_form"),
+            ("list the budget categories", "table_or_form"),
+            ("show the invoice line items", "table_or_form"),
+            ("find the transaction records", "table_or_form"),
+            ("what is the balance amount", "table_or_form"),
+            ("check the payroll entry", "table_or_form"),
+        ]
+        for query, expected_type in table_queries:
+            with self.subTest(query=query):
+                plan = plan_query(query)
+                self.assertEqual(
+                    plan.query_type, expected_type,
+                    f"Query {query!r} expected {expected_type} got {plan.query_type}",
+                )
+                self.assertIn("late", plan.routes)
+
+    def test_graph_queries_route_correctly(self):
+        graph_queries = [
+            ("what topics are covered in section 3", "graph_nav"),
+            ("list the references cited", "graph_nav"),
+            ("find entities related to retrieval", "graph_nav"),
+            ("show the document structure", "graph_nav"),
+            ("what is the section hierarchy", "graph_nav"),
+            ("find the bibliography entries", "graph_nav"),
+            ("show the appendix contents", "graph_nav"),
+            ("list the citations in chapter 2", "graph_nav"),
+            ("navigate to subsection 4.1", "graph_nav"),
+            ("what are the related terms in the glossary", "graph_nav"),
+            ("show the table of contents", "table_or_form"),
+        ]
+        for query, expected_type in graph_queries:
+            with self.subTest(query=query):
+                plan = plan_query(query)
+                self.assertEqual(
+                    plan.query_type, expected_type,
+                    f"Query {query!r} expected {expected_type} got {plan.query_type}",
+                )
+                if expected_type == "graph_nav":
+                    self.assertIn("graph", plan.routes)
+
+    def test_multihop_queries_route_correctly(self):
+        multihop_queries = [
+            ("compare the two approaches", "multi_hop"),
+            ("what are the differences between methods", "multi_hop"),
+            ("summarize the findings across documents", "multi_hop"),
+            ("show the relationship between concepts", "multi_hop"),
+            ("synthesize the results from all experiments", "multi_hop"),
+            ("find common patterns across sections", "multi_hop"),
+            ("compare results vs baseline", "multi_hop"),
+            ("what are the similarities and differences", "multi_hop"),
+            ("aggregate the metrics across documents", "multi_hop"),
+            ("analyze trends across quarters", "multi_hop"),
+        ]
+        for query, expected_type in multihop_queries:
+            with self.subTest(query=query):
+                plan = plan_query(query)
+                self.assertEqual(
+                    plan.query_type, expected_type,
+                    f"Query {query!r} expected {expected_type} got {plan.query_type}",
+                )
+                self.assertIn("hybrid", plan.routes)
+
+    def test_identifier_queries_route_correctly(self):
+        identifier_queries = [
+            ("look up invoice INV-2024-001", "exact_lookup"),
+            ("find document ID AB-12345", "exact_lookup"),
+            ("search for patent US-9876543", "exact_lookup"),
+            ("get the value for key ABC-123", "exact_lookup"),
+            ("look up version 1.2.3", "exact_lookup"),
+            ("find section DOI 10.1234/abc.def", "exact_lookup"),
+            ("look up transaction TXN-9001", "exact_lookup"),
+        ]
+        for query, expected_type in identifier_queries:
+            with self.subTest(query=query):
+                plan = plan_query(query)
+                self.assertEqual(
+                    plan.query_type, expected_type,
+                    f"Query {query!r} expected {expected_type} got {plan.query_type}",
+                )
+                self.assertEqual(plan.routes, ["bm25"])
+
+    def test_semantic_queries_route_correctly(self):
+        semantic_queries = [
+            ("what is the main contribution of this work", "semantic"),
+            ("explain how the method works", "semantic"),
+            ("what are the key findings", "semantic"),
+            ("describe the experimental setup", "semantic"),
+            ("who developed this approach", "semantic"),
+            ("why is this result important", "semantic"),
+            ("what happens when the temperature increases", "semantic"),
+            ("give me an overview of the approach", "semantic"),
+            ("tell me about the dataset used", "semantic"),
+        ]
+        for query, expected_type in semantic_queries:
+            with self.subTest(query=query):
+                plan = plan_query(query)
+                self.assertEqual(
+                    plan.query_type, expected_type,
+                    f"Query {query!r} expected {expected_type} got {plan.query_type}",
+                )
+                self.assertIn("dense", plan.routes)
+                self.assertIn("bm25", plan.routes)
+
+    def test_combined_intent_queries(self):
+        table_multihop = plan_query("compare the totals across spreadsheets")
+        self.assertEqual(table_multihop.query_type, "multi_hop")
+        self.assertIn("bm25", table_multihop.routes)
+        self.assertIn("hybrid", table_multihop.routes)
+        self.assertIn("late", table_multihop.routes)
+
+        graph_multihop = plan_query("compare sections across documents")
+        self.assertEqual(graph_multihop.query_type, "multi_hop")
+        self.assertIn("graph", graph_multihop.routes)
+        self.assertIn("hybrid", graph_multihop.routes)
+
+        visual_with_text = plan_query("describe the figure in section 3")
+        self.assertEqual(visual_with_text.query_type, "visual")
+        self.assertIn("visual", visual_with_text.routes)
+        self.assertIn("hybrid", visual_with_text.routes)
+
+        identifier_with_hint = plan_query("look up section ID 3.2.1")
+        self.assertIn(identifier_with_hint.query_type, ("graph_nav", "exact_lookup"))
+        self.assertTrue(identifier_with_hint.routes)
+
+    def test_merge_strategy_validation(self):
+        with self.assertRaises(ValueError):
+            plan_query("test query", merge_strategy="invalid")
 
 
 if __name__ == "__main__":
