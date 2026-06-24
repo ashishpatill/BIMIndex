@@ -1,6 +1,6 @@
 # BIMIndex: Tri-Modal Retrieval Architecture
 
-![Tri-Modal Retrieval Concept](../assets/tri_modal_retrieval.png)
+![Tri-Modal Retrieval Concept](assets/tri_modal_retrieval.png)
 
 ## The Problem with Traditional RAG
 Standard Retrieval-Augmented Generation relies overwhelmingly on dense vector search. After months of intensive research, we proved that vector search alone is fundamentally flawed for enterprise structural data. It suffers from "needle in a haystack" failures when dealing with exact identifiers, and it completely loses the multi-hop relationships inherent in complex documents.
@@ -8,7 +8,7 @@ Standard Retrieval-Augmented Generation relies overwhelmingly on dense vector se
 ## The Breakthrough: Tri-Modal Retrieval
 **BIMIndex** solves this by breaking the reliance on single-mode embeddings. We developed a highly-tuned, concurrent **Tri-Modal Retrieval** mechanism that guarantees maximum recall and contextual depth.
 
-![Tri-Modal Retrieval Architecture](../assets/bimindex_premium.png)
+![Tri-Modal Retrieval Architecture](assets/bimindex_premium.png)
 
 1. **Dense Vector Pathway**: Optimized for deep semantic similarity and abstract conceptual mapping (e.g., LanceDB integration with Multi-Vector Routing).
 2. **Lexical Keyword Pathway**: A deterministic inverted index mechanism (BM25/SPLADE) that ensures exact matches (e.g., product codes, strict terms) are never lost (e.g., Tantivy integration).
