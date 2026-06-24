@@ -1,6 +1,27 @@
-# Implementation Plan
+# Implementation Plan: BIMIndex
 
-This plan turns `retrieval_roadmap.md` into an implementation sequence for the project. It intentionally ignores the research paper roadmap for now and focuses on shipping a usable retrieval/document-intelligence system from the current codebase.
+This document tracks the implementation progress, technical debt, and future roadmap for the `BIMIndex` repository.
+
+## Current Focus: Tri-Modal Agentic Retrieval (v1.0 Integration)
+
+The current priority is establishing the robust Tri-Modal retrieval agent leveraging the Google Antigravity SDK.
+
+### Completed Agentic Integrations
+- `[x]` Antigravity Subagent Orchestration (`retrieval_agent.py`).
+- `[x]` Mock tool definitions for Lexical (Tantivy), Dense (LanceDB), and Graph (KuzuDB) searches (`retrieval_tools.py`).
+- `[x]` Reciprocal Rank Fusion (RRF) implementation for combining tri-modal results.
+- `[x]` Graceful tool error handling and fallback hooks.
+
+### Pending Tri-Modal Work
+- `[ ]` Replace mock `retrieval_tools.py` data with live connections to Tantivy, LanceDB, and KuzuDB instances.
+- `[ ]` Integrate `ColQwen2.5` multi-vector routing.
+- `[ ]` Hook up Graph extraction data from the Phase 6 pipeline into the KuzuDB ingestion path.
+
+---
+
+## Legacy Roadmap & Eval Harness
+
+This plan turns `retrieval_roadmap.md` into an implementation sequence for the underlying evaluation and ingestion systems.
 
 ## Progress status (session checkpoint)
 

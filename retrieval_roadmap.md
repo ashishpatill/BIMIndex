@@ -19,7 +19,7 @@ The research paper should target a broader claim: current retrieval pipelines fa
 ### Project name candidates
 
 - Knowledge Fabric
-- OmniRetrieve
+- BIMRetrieve
 - DeepDocument Retrieval Stack
 - StructRAG
 - PageGraph
