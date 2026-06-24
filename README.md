@@ -10,6 +10,9 @@ Standard Retrieval-Augmented Generation relies overwhelmingly on dense vector se
 
 ![Tri-Modal Retrieval Architecture](assets/bimindex_premium.png)
 
+### Tech Stack & Retrieval Flow
+![BIMIndex Tech Stack Flow](assets/bimindex_excalidraw.png)
+
 1. **Dense Vector Pathway**: Optimized for deep semantic similarity and abstract conceptual mapping (e.g., LanceDB integration with Multi-Vector Routing).
 2. **Lexical Keyword Pathway**: A deterministic inverted index mechanism (BM25/SPLADE) that ensures exact matches (e.g., product codes, strict terms) are never lost (e.g., Tantivy integration).
 3. **Graph Relational Pathway**: Captures and preserves the hierarchical structure and multi-hop entity relationships from the original documents (e.g., KùzuDB with Personalized PageRank).
