@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:36:12.637Z",
+  "payload": {
+    "runId": "aae4156c-4ebb-45c7-8da4-c34978c205c7",
+    "sessionId": "2bb96104-a564-4565-ac88-12852d199e67",
+    "status": "completed",
+    "userRequest": "Summarize what this project does and list its top-level Python packages. Read-only: do not modify any files.",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/aae4156c-4ebb-45c7-8da4-c34978c205c7/policy_candidates.json"
+    }
+  }
+}

@@ -1,0 +1,1682 @@
+{
+  "runId": "2fee7f47-7a13-47b5-ab8d-878a4632cef8",
+  "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+  "createdAt": "2026-05-27T17:38:33.599Z",
+  "events": [
+    {
+      "type": "workspace_surface",
+      "turn": 0,
+      "kind": "local",
+      "surfaceId": "local",
+      "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+      "metadata": {
+        "mode": "direct"
+      }
+    },
+    {
+      "type": "run_contract",
+      "turn": 0,
+      "runContract": {
+        "objectiveSummary": "Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.",
+        "capabilityProfile": "governed_delivery",
+        "governanceMode": "governed",
+        "continuity": {
+          "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+          "parentSessionId": null,
+          "checkpointId": "7252e8eb-cb3c-4ab5-9e98-dbc7d994f171",
+          "workstreamId": null,
+          "resumeMode": "new_session"
+        },
+        "memorySnapshot": {
+          "capturedAt": "2026-05-27T17:37:54.391Z",
+          "memoryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/MEMORY.md",
+          "userPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/USER.md",
+          "memoryMarkdown": "",
+          "userMarkdown": "",
+          "truncated": {
+            "memory": false,
+            "user": false
+          }
+        },
+        "workspaceSurface": {
+          "kind": "local",
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "surfaceId": "local"
+        },
+        "resourcePolicy": {
+          "promptTokenLimit": 24000,
+          "maxTurns": 20,
+          "maxRecoverySignals": 3
+        },
+        "evidenceRequirements": [
+          "verifier",
+          "trace"
+        ],
+        "deliveryRequirements": [
+          "trace",
+          "changed_files",
+          "patch_bundle"
+        ],
+        "cacheStability": {
+          "version": "cache-stability/v1",
+          "createdAt": "2026-05-27T17:37:54.695Z",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+          "protectedMessageBoundary": 2,
+          "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 1,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0\nResource summary: tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: none\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files\nEpisodic recall: none\nArchival recall: none\nRecent messages: [user] Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0",
+          "resource_summary": "tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1039,
+          "selectedTotalTokens": 1039,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 1,
+      "contextTier": "standard",
+      "promptTokenEstimate": 2304,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 1,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 1,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "created",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 1,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:0c05e8e83c07d345",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "0c05e8e83c07d345c089ad51290f8280ac7059d803ce4b1c0ae476ae3364f385"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 1,
+      "phase": "planning",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 1,
+      "assistantMessage": "",
+      "toolCallNames": [
+        "read_file"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": false,
+        "cacheTtftMs": 456
+      },
+      "usage": {
+        "inputTokens": 3103,
+        "outputTokens": 133,
+        "reasoningTokens": 72,
+        "cacheTtftMs": 456,
+        "totalTokens": 3236,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 1,
+      "state": "tool",
+      "detail": "1 tool call(s): read_file"
+    },
+    {
+      "type": "tool_result",
+      "turn": 1,
+      "observation": {
+        "toolCallId": "call_00_P4dt8OUftj77YsmABx4s1141",
+        "toolName": "read_file",
+        "success": false,
+        "summary": "Tool call rejected — invalid arguments.",
+        "outputPreview": "read_file.path is required",
+        "mutatedFiles": []
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 2,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2\nResource summary: tokens=3236 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: none\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: none\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Context tier standard; compaction not triggered; selected tokens 1039 | Tool call rejected — invalid arguments.\nArchival recall: none\nRecent messages: [user] Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | [system] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] read_file.path is required",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2",
+          "resource_summary": "tokens=3236 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1175,
+          "selectedTotalTokens": 1175,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 2,
+      "contextTier": "standard",
+      "promptTokenEstimate": 2496,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 2,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 2,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 2,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:bd65d021d2a0f76f",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "bd65d021d2a0f76f768600f491ae1251d4cb302c5bed5874f52ee31ee4861cf1"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 2,
+      "phase": "implementation",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 2,
+      "assistantMessage": "",
+      "toolCallNames": [
+        "read_file"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 223
+      },
+      "usage": {
+        "inputTokens": 3220,
+        "outputTokens": 114,
+        "cachedTokens": 1152,
+        "reasoningTokens": 54,
+        "cacheTtftMs": 223,
+        "totalTokens": 3334,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 2,
+      "state": "tool",
+      "detail": "1 tool call(s): read_file"
+    },
+    {
+      "type": "tool_result",
+      "turn": 2,
+      "observation": {
+        "toolCallId": "call_00_cePFlpE3vwYTDxvke9Kx2972",
+        "toolName": "read_file",
+        "success": true,
+        "summary": "Read /Volumes/Developer/Workspace/Retrieval-Research/README.md.",
+        "outputPreview": "<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\">\n  <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\">\n  <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\">\n  <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\">\n</p>\n\n# Retrieval Research\n\n**A retrieval engine that actually understands your documents.** Not just vector search over flattened text — this system ingests complex PDFs and images, builds seven parallel retrieval indexes (lexical, dense, late-interaction, visual, graph, hybrid, and planner-routed), and returns grounded answers with full provenance traces.\n\nStandard RAG fails on real-world documents because it discards page structure, layout, tables, figures, and cross-references before retrieval even starts. This project keeps those signals alive and uses them.\n\n---\n\n## Why this exists\n\n| Problem with standard RAG | What we do differently |\n|---|---|\n| Flattens everything to text chunks | Preserves pages, sections, entities, figures, tables, citations, and references as first-class objects |\n| One retrieval method for all queries | Planner inspects the question and routes to the best index — BM25, dense, visual, graph, or any combination |\n| No traceability | Every answer comes with `retrieval_trace.json`, `evidence_bundle.json`, and a `knowledge_card` with confidence and ambiguity notes |\n| Multi-document reasoning is bolted on | Cross-document graph traversal connects shared entities and references across your entire corpus |\n| PDFs with tables and diagrams break | Multimodal ingestion with OCR ensemble, layout preservation, and visual page indexing (ColPali-compatible) |\n\n---\n\n## Quick start\n\nOne command sets up everything:\n\n```bash\n./run-app.sh\n```\n\nThen in two terminals:\n\n```bash\n# Terminal 1 — backend API\nsource .venv/bin/activate\npython3 -m uvicorn retrieval_research.api:app --host 127.0.0.1 --port 8000 --reload\n\n# Terminal 2 — web UI\ncd apps/web\nNEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000 npm run dev\n```\n\nOpen **http://localhost:3000** and ingest a document.\n\n> Optional: add `GEMINI_API_KEY` to `.env` for OCR refinement. The pipeline works without it — hybrid OCR mode uses local GLM-OCR via MLX and falls back gracefully.\n\n---\n\n## Architecture\n\n```\n  PDF / Image / Markdown\n         │\n         ▼\n  ┌──────────────────────────────┐\n  │   Ingestion & OCR Ensemble    │\n  │   hybrid / pure-local / cloud │\n  └──────────┬───────────────────┘\n             │\n             ▼\n  ┌──────────────────────────────┐\n  │   Canonical Document Schema   │\n  │   pages · sections · blocks   │\n  │   tables · figures · refs     │\n  └──────────┬───────────────────┘\n             │\n     ┌───────┼───────┬───────┬───────┐\n     ▼       ▼       ▼       ▼       ▼\n   bm25   dense   late    visual   graph\n     │       │       │       │       │\n     └───────┴───────┴───────┴───────┘\n             │\n             ▼\n  ┌──────────────────────────────┐\n  │       Query Planner           │\n  │   inspects query → routes to  │\n  │   best index combination      │\n  └──────────┬───────────────────┘\n             │\n             ▼\n  ┌──────────────────────────────┐\n  │   Evidence + Knowledge Card   │\n  │   trace · citations · conf.   │\n  └──────────────────────────────┘\n```\n\n---\n\n## Retrieval modes\n\n| Mode | When to use it | Backed by |\n|---|---|---|\n| `planner` | Default — adaptive routing based on query type | All indexes |\n| `bm25` | Exact terms, IDs, codes, entity names | Lexical index |\n| `dense` | Semantic similarity, broad topics | Embedding index |\n| `late` | Fine-grained passage scoring, table/form queries | ColBERT-style MaxSim |\n| `visual` | Diagrams, charts, layouts, scanned pages | Page-image index (baseline / ColPali) |\n| `graph` | Cross-section navigation, entity linking, citation chase | Entity/reference/section graph |\n| `hybrid` | Balanced recall across text modalities | BM25 + dense fusion |\n\n### Planner intelligence\n\nThe planner classifies queries into **visual**, **table/form**, **graph/navigation**, **multi-hop**, **exact lookup**, or **semantic** categories using an expanded vocabulary with plural-stem normalization. A strong-identifier pre-check (DOI, version numbers, invoice codes, alphanumeric IDs) routes mixed-intent queries to exact lookup before content-based routing, fixing queries like \"look up invoice INV-2024-001\". It selects the optimal retrieval paths and records its reasoning in every trace. A 45+ query calibration test suite validates routing accuracy across all categories.\n\n---\n\n## CLI at a glance\n\n```bash\n# Ingest any document\nrr ingest report.pdf --ocr --mode Hybrid\n\n# Build chunks and indexes\nrr chunk <doc-id>\nrr index <doc-id> --mode all\n\n# Query\nrr query \"what are the Q4 revenue figures?\" --mode planner\n\n# Evaluate a benchmark\nrr eval datasets/manifests/readme_eval.example.json --modes bm25,dense,graph,planner\n\n# Background jobs (async processing)\nrr worker              # start the job worker\nrr ingest large.pdf --async  # submit as a job\nrr jobs                # list all jobs\n```\n\n---\n\n## Web UI\n\n<p align=\"center\">\n  <strong>Professional dark theme · shadcn-style components · lucide icons</strong>\n</p>\n\n- **Dashboard** — document count, eval runs, recent activity, one-click ingest\n- **Documents** — browse, inspect page previews, view knowledge graphs, run chunk/index\n- **Query** — full workbench with planner controls, mode selector, evidence panels, graph/visual diagnostics, raw trace inspection\n- **Evals** — JSON manifest editor, multi-mode benchmark runner, planner sweep across merge/rerank variants, graph extraction quality reports\n\n---\n\n## What's under the hood\n\n| Capability | Implementation |\n|---|---|\n| OCR | GLM-OCR (local MLX) + Gemini 3.1 Pro Preview (cloud) — ensemble with confidence routing |\n| Chunking | Page-aware, section-preserving, configurable word/overlap windows |\n| BM25 | In-house implementation with configurable k1/b parameters |\n| Dense embedding | On-the-fly embedding with configurable dimensions |\n| Late interaction | ColBERT-style MaxSim scoring — zero external dependencies |\n| Visual retrieval | Baseline (layout/color profiles) + optional ColPali with int8 compression |\n| Graph extraction | Regex-based entity, acronym, section, citation, DOI/arXiv/URL extraction with 60+ OCR noise patterns, numeric range expansion, and section hierarchy alias linking |\n| Knowledge cards | Answerability, confidence, unresolved ambiguity, follow-up suggestions |\n| Background jobs | File-based queue with `JobStore`, worker process, async API + CLI |\n| Evaluation | Manifest-driven benchmarks with term hit, page hit, MRR, citation support, planner sweep, graph extraction recall, quality-tier drift reporting |\n\n---\n\n## Development\n\n```bash\n./run-app.sh          # one-time setup\nsource .venv/bin/activate\nPYTHONPATH=. pytest tests/ -v   # 90 tests · < 2 seconds\n```\n\nThe web frontend (`apps/web/`) is a standalone Next.js 16 project with Tailwind CSS v4 and shadcn-style UI primitives. Build it separately:\n\n```bash\ncd apps/web && npm run build\n```\n\n---\n\nMIT License · built with Python, Next.js, and careful attention to document structure\n",
+        "mutatedFiles": [],
+        "permission": {
+          "outcome": "allow",
+          "reason": "Read-only action allowed by default.",
+          "source": "mode_default",
+          "mode": "auto"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 3,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=0 | tool_proofs=2 | operator_interventions=0 | memory_safety=0 | memory_confidence=4\nResource summary: tokens=6570 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: none\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md.\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Tool call rejected — invalid arguments. | Context tier standard; compaction not triggered; selected tokens 1175 | Read /Volumes/Developer/Workspace/Retrieval-Research/README.md.\nArchival recall: none\nRecent messages: [system] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] read_file.path is required | [system] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] <p align=\"center\">\n  <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\">\n  <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\">\n  <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\">\n  <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\">\n</p>\n\n# Retrieval Research\n\n**A retrieval engine that actually understands your documents.** Not just vector search over flattened text — this system ingests complex PDFs and images, builds seven parallel retrieval indexes (lexical, dense, late-interaction, visual, graph, hybrid, and planner-routed), and returns grounded answers with full provenance traces.\n…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=2 | operator_interventions=0 | memory_safety=0 | memory_confidence=4",
+          "resource_summary": "tokens=6570 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1429,
+          "selectedTotalTokens": 1429,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 3,
+      "contextTier": "standard",
+      "promptTokenEstimate": 4597,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 3,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 3,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 3,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:b8669f8d6b5aa4be",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "b8669f8d6b5aa4be4a8341bca808e6c59a9fe30ca4417261fba4bb5587cbbe4a"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 3,
+      "phase": "implementation",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 3,
+      "assistantMessage": "",
+      "toolCallNames": [
+        "write_file"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 310
+      },
+      "usage": {
+        "inputTokens": 5295,
+        "outputTokens": 508,
+        "cachedTokens": 1664,
+        "reasoningTokens": 329,
+        "cacheTtftMs": 310,
+        "totalTokens": 5803,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 3,
+      "state": "tool",
+      "detail": "1 tool call(s): write_file"
+    },
+    {
+      "type": "tool_result",
+      "turn": 3,
+      "observation": {
+        "toolCallId": "call_00_4dovnKqv4VfN0iQzOwlY4364",
+        "toolName": "write_file",
+        "success": false,
+        "summary": "Tool call rejected — invalid arguments.",
+        "outputPreview": "write_file.path is required",
+        "mutatedFiles": []
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 4,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=0 | tool_proofs=3 | operator_interventions=0 | memory_safety=0 | memory_confidence=6\nResource summary: tokens=12373 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: none\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md.\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md. | Context tier standard; compaction not triggered; selected tokens 1429 | Tool call rejected — invalid arguments.\nArchival recall: none\nRecent messages: [system] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] <p align=\"center\">\n  <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\">\n  <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\">\n  <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\">\n  <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\">\n</p>\n\n# Retrieval Research\n\n**A retrieval engine that actually understands your documents.** Not just vector search over flattened text — this system ingests complex PDFs and images, builds seven parallel retrieval indexes (lexical, dense, late-interaction, visual, graph, hybrid, and planner-routed), and returns grounded answers with full provenance traces.\n…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=3 | operator_interventions=0 | memory_safety=0 | memory_confidence=6",
+          "resource_summary": "tokens=12373 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1416,
+          "selectedTotalTokens": 1416,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 4,
+      "contextTier": "standard",
+      "promptTokenEstimate": 4640,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 4,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 4,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 4,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5aa4bf36d5ae0e68",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "5aa4bf36d5ae0e688e0b3d41ff530de343bae3f9c6bf7e6d6473b752cb8ad5d5"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 4,
+      "phase": "implementation",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 4,
+      "assistantMessage": "",
+      "toolCallNames": [
+        "write_file"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 316
+      },
+      "usage": {
+        "inputTokens": 5335,
+        "outputTokens": 502,
+        "cachedTokens": 1664,
+        "reasoningTokens": 341,
+        "cacheTtftMs": 316,
+        "totalTokens": 5837,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 4,
+      "state": "tool",
+      "detail": "1 tool call(s): write_file"
+    },
+    {
+      "type": "checkpoint",
+      "turn": 4,
+      "checkpointId": "7252e8eb-cb3c-4ab5-9e98-dbc7d994f171",
+      "reason": "Mutating tool batch"
+    },
+    {
+      "type": "tool_result",
+      "turn": 4,
+      "observation": {
+        "toolCallId": "call_00_6o6INiO8ick664TJ1a4V3927",
+        "toolName": "write_file",
+        "success": true,
+        "summary": "Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.",
+        "outputPreview": "# Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.\n- **Python tests:** `PYTHONPATH=. pytest tests/ -v` (90 tests, under 2 seconds).\n- **Frontend build:** `cd apps/web && npm run build` (Next.js 16, Tailwind CSS v4).\n",
+        "mutatedFiles": [
+          "/Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md"
+        ],
+        "permission": {
+          "outcome": "allow",
+          "reason": "Workspace file edit is allowed in auto mode.",
+          "source": "classifier",
+          "mode": "auto"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 5,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=1 | tool_proofs=4 | operator_interventions=0 | memory_safety=0 | memory_confidence=8\nResource summary: tokens=18210 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md. | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Checkpoint 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171 created before mutating tool execution\nEpisodic recall: Tool call rejected — invalid arguments. | Context tier standard; compaction not triggered; selected tokens 1416 | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nArchival recall: none\nRecent messages: [system] Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] write_file.path is required | [system] Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] # Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.\n- **Python tests:** `PYTHONPATH=. pytest tests/ -v` (90 tests, under 2 seconds).…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=1 | tool_proofs=4 | operator_interventions=0 | memory_safety=0 | memory_confidence=8",
+          "resource_summary": "tokens=18210 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1461,
+          "selectedTotalTokens": 1461,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 5,
+      "contextTier": "standard",
+      "promptTokenEstimate": 4800,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 5,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 5. Selected tokens: 4800. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 5,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 5,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:03bec86c0d149729",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "03bec86c0d149729fe263bade58c20ef9caeb3212d2365f3707227a994cd1bd5"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 5,
+      "phase": "implementation",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 5,
+      "assistantMessage": "",
+      "toolCallNames": [
+        "read_file"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 355
+      },
+      "usage": {
+        "inputTokens": 5560,
+        "outputTokens": 82,
+        "cachedTokens": 1152,
+        "reasoningTokens": 17,
+        "cacheTtftMs": 355,
+        "totalTokens": 5642,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 5,
+      "state": "tool",
+      "detail": "1 tool call(s): read_file"
+    },
+    {
+      "type": "tool_result",
+      "turn": 5,
+      "observation": {
+        "toolCallId": "call_00_lDuJ7VV013KKvdIhjre16894",
+        "toolName": "read_file",
+        "success": true,
+        "summary": "Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.",
+        "outputPreview": "# Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.\n- **Python tests:** `PYTHONPATH=. pytest tests/ -v` (90 tests, under 2 seconds).\n- **Frontend build:** `cd apps/web && npm run build` (Next.js 16, Tailwind CSS v4).\n",
+        "mutatedFiles": [],
+        "permission": {
+          "outcome": "allow",
+          "reason": "Read-only action allowed by default.",
+          "source": "mode_default",
+          "mode": "auto"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 6,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=1 | tool_proofs=5 | operator_interventions=0 | memory_safety=0 | memory_confidence=10\nResource summary: tokens=23852 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md. | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md. | Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Checkpoint 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171 created before mutating tool execution | [info] Ralph refresh triggered at turn 5. Selected tokens: 4800. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md. | Context tier standard; compaction not triggered; selected tokens 1461 | Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nArchival recall: none\nRecent messages: [system] Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] # Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=1 | tool_proofs=5 | operator_interventions=0 | memory_safety=0 | memory_confidence=10",
+          "resource_summary": "tokens=23852 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1456,
+          "selectedTotalTokens": 1456,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 6,
+      "contextTier": "standard",
+      "promptTokenEstimate": 4910,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 6,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 6. Selected tokens: 4910. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 6,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 6,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5ea47e0684d4c0f3",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "5ea47e0684d4c0f3a9376e05c7adf01b8a9f1569e4966cabb6654896798d9772"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 6,
+      "phase": "implementation",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 6,
+      "assistantMessage": "The file `CONTRIBUTING_NOTES.md` has been created at the repo root with a 3-bullet summary of how to run the test suite, derived from the README's Development section. It's 6 lines total — well under the 15-line limit.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 365
+      },
+      "usage": {
+        "inputTokens": 5691,
+        "outputTokens": 99,
+        "cachedTokens": 1152,
+        "reasoningTokens": 40,
+        "cacheTtftMs": 365,
+        "totalTokens": 5790,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 6,
+      "state": "llm",
+      "detail": "text-only generation"
+    },
+    {
+      "type": "context_built",
+      "turn": 7,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=1 | tool_proofs=5 | operator_interventions=0 | memory_safety=0 | memory_confidence=10\nResource summary: tokens=29642 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md. | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md. | Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Checkpoint 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171 created before mutating tool execution | [info] Ralph refresh triggered at turn 5. Selected tokens: 4800. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 6. Selected tokens: 4910. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Context tier standard; compaction not triggered; selected tokens 1461 | Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md. | Context tier standard; compaction not triggered; selected tokens 1456 | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nArchival recall: none\nRecent messages: [tool] # Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=1 | tool_proofs=5 | operator_interventions=0 | memory_safety=0 | memory_confidence=10",
+          "resource_summary": "tokens=29642 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1470,
+          "selectedTotalTokens": 1470,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 7,
+      "contextTier": "standard",
+      "promptTokenEstimate": 5025,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 7,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 7. Selected tokens: 5025. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 7,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 7,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:f79de9a2c99cca3a",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "f79de9a2c99cca3ad0aeb8f9c0ce8fb01db1dda7dd09410e7f6e30a20c259e98"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 7,
+      "phase": "planning",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 7,
+      "assistantMessage": "The file **CONTRIBUTING_NOTES.md** has been created at the repository root. It contains a 3‑bullet summary (one‑time setup, Python tests, frontend build) derived from the README and is well under 15 lines.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 411
+      },
+      "usage": {
+        "inputTokens": 5799,
+        "outputTokens": 152,
+        "cachedTokens": 1664,
+        "reasoningTokens": 98,
+        "cacheTtftMs": 411,
+        "totalTokens": 5951,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 7,
+      "state": "llm",
+      "detail": "text-only generation"
+    },
+    {
+      "type": "context_built",
+      "turn": 8,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: eba4bcbf-1ac8-40c8-8e42-6cabe5c40680\nParent session: none\nCheckpoint anchor: 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171\nWorkstream: none\nUser request: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.7.0\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspect…\nRun contract summary: governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=l…\nEvidence summary: files=1 | tool_proofs=5 | operator_interventions=0 | memory_safety=0 | memory_confidence=10\nResource summary: tokens=35593 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 31)\nWhy selected: Matched task terms: file, repo, run, test, suite\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.\nFiles touched: /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md\nHypotheses: none\nFailed attempts: Tool call rejected — invalid arguments.\nOpen questions: none\nLearnings: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md. | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md. | Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nNotes: [info] Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Checkpoint 7252e8eb-cb3c-4ab5-9e98-dbc7d994f171 created before mutating tool execution | [info] Ralph refresh triggered at turn 5. Selected tokens: 4800. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 6. Selected tokens: 4910. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 7. Selected tokens: 5025. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md. | Context tier standard; compaction not triggered; selected tokens 1456 | Context tier standard; compaction not triggered; selected tokens 1470 | Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.\nArchival recall: none\nRecent messages: [assistant]  | [tool] # Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.\n- **Python tests:** `PYTHONPATH=. pytest tests/ -v` (90 tests, under 2 seconds).\n- **Frontend build:** `cd apps/web && npm run build` (Next.js 16, Tailwind CSS v4).…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 21 | Statuses: completed=16, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=1 | tool_proofs=5 | operator_interventions=0 | memory_safety=0 | memory_confidence=10",
+          "resource_summary": "tokens=35593 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.7.0",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: file, repo, run, test, suite",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 31
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1319,
+          "selectedTotalTokens": 1319,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 8,
+      "contextTier": "standard",
+      "promptTokenEstimate": 4973,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 8,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 8. Selected tokens: 4973. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 8,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-27T17:37:54.695Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "878f5fb799fba8e8bb86e1e768e237b69eed74e3b41515079f35ea9e5c0e29da"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 8,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a7b801193fb0c9dc",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "a7b801193fb0c9dcce8b2282e6c5bc2e867ae89a72fa757f89ec9823d70edfab"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 8,
+      "phase": "planning",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 8,
+      "assistantMessage": "The task is complete. `CONTRIBUTING_NOTES.md` is now at the repo root with the 3-bullet summary and is well under 15 lines.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 324
+      },
+      "usage": {
+        "inputTokens": 5766,
+        "outputTokens": 105,
+        "cachedTokens": 1664,
+        "reasoningTokens": 68,
+        "cacheTtftMs": 324,
+        "totalTokens": 5871,
+        "estimated": false
+      },
+      "completionSummary": "The task is complete. `CONTRIBUTING_NOTES.md` is now at the repo root with the 3-bullet summary and is well under 15 lines."
+    },
+    {
+      "type": "turn_state",
+      "turn": 8,
+      "state": "llm",
+      "detail": "text-only generation with completion claim"
+    },
+    {
+      "type": "verifier_verdict",
+      "turn": 8,
+      "verdict": {
+        "status": "partial",
+        "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+        "evidence": [
+          "Completion claim: The task is complete. `CONTRIBUTING_NOTES.md` is now at the repo root with the 3-bullet summary and is well under 15 lines.",
+          "Touched files: 1"
+        ]
+      }
+    },
+    {
+      "type": "delivery_gate",
+      "turn": 8,
+      "verdict": {
+        "status": "fail",
+        "summary": "Runtime is missing required handoff evidence: verifier.",
+        "missingRequirements": [
+          "verifier"
+        ],
+        "satisfiedRequirements": [
+          "changed_files",
+          "patch_bundle",
+          "tool_proofs",
+          "trace"
+        ]
+      }
+    },
+    {
+      "type": "resource_usage",
+      "turn": 8,
+      "usage": {
+        "inputTokens": 39769,
+        "outputTokens": 1695,
+        "totalTokens": 41464,
+        "totalCostUsd": 0,
+        "estimated": false,
+        "withinBudget": true,
+        "notes": [
+          "Token usage is estimated unless the active model adapter returns explicit usage metadata."
+        ]
+      }
+    }
+  ],
+  "messages": [
+    {
+      "id": "b5a367ba-4f5a-4d12-912a-24b95f3fb0b6",
+      "role": "user",
+      "content": "Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.",
+      "timestamp": "2026-05-27T17:37:54.397Z"
+    },
+    {
+      "id": "5164f56a-6287-4575-824d-8201930bbce9",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 1. Selected tokens: 2304. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:37:54.685Z"
+    },
+    {
+      "id": "b5366adb-0a91-4d62-ac91-1305fa8a88de",
+      "role": "assistant",
+      "content": "",
+      "timestamp": "2026-05-27T17:37:58.210Z"
+    },
+    {
+      "id": "8add5319-e913-4bf5-a292-b24bb53cbf7e",
+      "role": "tool",
+      "content": "read_file.path is required",
+      "timestamp": "2026-05-27T17:37:58.257Z",
+      "metadata": {
+        "toolName": "read_file",
+        "toolCallId": "call_00_P4dt8OUftj77YsmABx4s1141",
+        "success": false
+      }
+    },
+    {
+      "id": "e289e8ae-893f-44c9-89b0-82d4be3b367b",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 2. Selected tokens: 2496. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:37:58.323Z"
+    },
+    {
+      "id": "67467adb-3d5a-4306-a6fe-4051259b0e23",
+      "role": "assistant",
+      "content": "",
+      "timestamp": "2026-05-27T17:38:01.423Z"
+    },
+    {
+      "id": "85311ff0-cbf9-4e78-905b-3b887340c5e3",
+      "role": "tool",
+      "content": "<p align=\"center\">\n  <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\">\n  <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\">\n  <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\">\n  <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\">\n</p>\n\n# Retrieval Research\n\n**A retrieval engine that actually understands your documents.** Not just vector search over flattened text — this system ingests complex PDFs and images, builds seven parallel retrieval indexes (lexical, dense, late-interaction, visual, graph, hybrid, and planner-routed), and returns grounded answers with full provenance traces.\n\nStandard RAG fails on real-world documents because it discards page structure, layout, tables, figures, and cross-references before retrieval even starts. This project keeps those signals alive and uses them.\n\n---\n\n## Why this exists\n\n| Problem with standard RAG | What we do differently |\n|---|---|\n| Flattens everything to text chunks | Preserves pages, sections, entities, figures, tables, citations, and references as first-class objects |\n| One retrieval method for all queries | Planner inspects the question and routes to the best index — BM25, dense, visual, graph, or any combination |\n| No traceability | Every answer comes with `retrieval_trace.json`, `evidence_bundle.json`, and a `knowledge_card` with confidence and ambiguity notes |\n| Multi-document reasoning is bolted on | Cross-document graph traversal connects shared entities and references across your entire corpus |\n| PDFs with tables and diagrams break | Multimodal ingestion with OCR ensemble, layout preservation, and visual page indexing (ColPali-compatible) |\n\n---\n\n## Quick start\n\nOne command sets up everything:\n\n```bash\n./run-app.sh\n```\n\nThen in two terminals:\n\n```bash\n# Terminal 1 — backend API\nsource .venv/bin/activate\npython3 -m uvicorn retrieval_research.api:app --host 127.0.0.1 --port 8000 --reload\n\n# Terminal 2 — web UI\ncd apps/web\nNEXT_PUBLIC_API_BASE_URL=http://127.0.0.1:8000 npm run dev\n```\n\nOpen **http://localhost:3000** and ingest a document.\n\n> Optional: add `GEMINI_API_KEY` to `.env` for OCR refinement. The pipeline works without it — hybrid OCR mode uses local GLM-OCR via MLX and falls back gracefully.\n\n---\n\n## Architecture\n\n```\n  PDF / Image / Markdown\n         │\n         ▼\n  ┌──────────────────────────────┐\n  │   Ingestion & OCR Ensemble    │\n  │   hybrid / pure-local / cloud │\n  └──────────┬───────────────────┘\n             │\n             ▼\n  ┌──────────────────────────────┐\n  │   Canonical Document Schema   │\n  │   pages · sections · blocks   │\n  │   tables · figures · refs     │\n  └──────────┬───────────────────┘\n             │\n     ┌───────┼───────┬───────┬───────┐\n     ▼       ▼       ▼       ▼       ▼\n   bm25   dense   late    visual   graph\n     │       │       │       │       │\n     └───────┴───────┴───────┴───────┘\n             │\n             ▼\n  ┌──────────────────────────────┐\n  │       Query Planner           │\n  │   inspects query → routes to  │\n  │   best index combination      │\n  └──────────┬───────────────────┘\n             │\n             ▼\n  ┌──────────────────────────────┐\n  │   Evidence + Knowledge Card   │\n  │   trace · citations · conf.   │\n  └──────────────────────────────┘\n```\n\n---\n\n## Retrieval modes\n\n| Mode | When to use it | Backed by |\n|---|---|---|\n| `planner` | Default — adaptive routing based on query type | All indexes |\n| `bm25` | Exact terms, IDs, codes, entity names | Lexical index |\n| `dense` | Semantic similarity, broad topics | Embedding index |\n| `late` | Fine-grained passage scoring, table/form queries | ColBERT-style MaxSim |\n| `visual` | Diagrams, charts, layouts, scanned pages | Page-image index (baseline / ColPali) |\n| `graph` | Cross-section navigation, entity linking, citation chase | Entity/reference/section graph |\n| `hybrid` | Balanced recall across text modalities | BM25 + dense fusion |\n\n### Planner intelligence\n\nThe planner classifies queries into **visual**, **table/form**, **graph/navigation**, **multi-hop**, **exact lookup**, or **semantic** categories using an expanded vocabulary with plural-stem normalization. A strong-identifier pre-check (DOI, version numbers, invoice codes, alphanumeric IDs) routes mixed-intent queries to exact lookup before content-based routing, fixing queries like \"look up invoice INV-2024-001\". It selects the optimal retrieval paths and records its reasoning in every trace. A 45+ query calibration test suite validates routing accuracy across all categories.\n\n---\n\n## CLI at a glance\n\n```bash\n# Ingest any document\nrr ingest report.pdf --ocr --mode Hybrid\n\n# Build chunks and indexes\nrr chunk <doc-id>\nrr index <doc-id> --mode all\n\n# Query\nrr query \"what are the Q4 revenue figures?\" --mode planner\n\n# Evaluate a benchmark\nrr eval datasets/manifests/readme_eval.example.json --modes bm25,dense,graph,planner\n\n# Background jobs (async processing)\nrr worker              # start the job worker\nrr ingest large.pdf --async  # submit as a job\nrr jobs                # list all jobs\n```\n\n---\n\n## Web UI\n\n<p align=\"center\">\n  <strong>Professional dark theme · shadcn-style components · lucide icons</strong>\n</p>\n\n- **Dashboard** — document count, eval runs, recent activity, one-click ingest\n- **Documents** — browse, inspect page previews, view knowledge graphs, run chunk/index\n- **Query** — full workbench with planner controls, mode selector, evidence panels, graph/visual diagnostics, raw trace inspection\n- **Evals** — JSON manifest editor, multi-mode benchmark runner, planner sweep across merge/rerank variants, graph extraction quality reports\n\n---\n\n## What's under the hood\n\n| Capability | Implementation |\n|---|---|\n| OCR | GLM-OCR (local MLX) + Gemini 3.1 Pro Preview (cloud) — ensemble with confidence routing |\n| Chunking | Page-aware, section-preserving, configurable word/overlap windows |\n| BM25 | In-house implementation with configurable k1/b parameters |\n| Dense embedding | On-the-fly embedding with configurable dimensions |\n| Late interaction | ColBERT-style MaxSim scoring — zero external dependencies |\n| Visual retrieval | Baseline (layout/color profiles) + optional ColPali with int8 compression |\n| Graph extraction | Regex-based entity, acronym, section, citation, DOI/arXiv/URL extraction with 60+ OCR noise patterns, numeric range expansion, and section hierarchy alias linking |\n| Knowledge cards | Answerability, confidence, unresolved ambiguity, follow-up suggestions |\n| Background jobs | File-based queue with `JobStore`, worker process, async API + CLI |\n| Evaluation | Manifest-driven benchmarks with term hit, page hit, MRR, citation support, planner sweep, graph extraction recall, quality-tier drift reporting |\n\n---\n\n## Development\n\n```bash\n./run-app.sh          # one-time setup\nsource .venv/bin/activate\nPYTHONPATH=. pytest tests/ -v   # 90 tests · < 2 seconds\n```\n\nThe web frontend (`apps/web/`) is a standalone Next.js 16 project with Tailwind CSS v4 and shadcn-style UI primitives. Build it separately:\n\n```bash\ncd apps/web && npm run build\n```\n\n---\n\nMIT License · built with Python, Next.js, and careful attention to document structure\n",
+      "timestamp": "2026-05-27T17:38:01.457Z",
+      "metadata": {
+        "toolName": "read_file",
+        "toolCallId": "call_00_cePFlpE3vwYTDxvke9Kx2972",
+        "success": true
+      }
+    },
+    {
+      "id": "60e92157-80f4-4cb0-9a20-f935537f8c96",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 3. Selected tokens: 4597. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:38:01.525Z"
+    },
+    {
+      "id": "bd55c745-b432-4ac8-b915-8aad2593c068",
+      "role": "assistant",
+      "content": "",
+      "timestamp": "2026-05-27T17:38:10.033Z"
+    },
+    {
+      "id": "a772a8e1-f2ff-43fc-ae80-c059ba2546c5",
+      "role": "tool",
+      "content": "write_file.path is required",
+      "timestamp": "2026-05-27T17:38:10.062Z",
+      "metadata": {
+        "toolName": "write_file",
+        "toolCallId": "call_00_4dovnKqv4VfN0iQzOwlY4364",
+        "success": false
+      }
+    },
+    {
+      "id": "5ff595a9-3d04-4e6e-b8b4-7a8598b0d9f6",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 4. Selected tokens: 4640. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:38:10.130Z"
+    },
+    {
+      "id": "c0fd0946-2e07-4d36-93a4-37638ecf2b0f",
+      "role": "assistant",
+      "content": "",
+      "timestamp": "2026-05-27T17:38:19.423Z"
+    },
+    {
+      "id": "6bf33b01-ed96-408f-9a9d-de9ce377f1a5",
+      "role": "tool",
+      "content": "# Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.\n- **Python tests:** `PYTHONPATH=. pytest tests/ -v` (90 tests, under 2 seconds).\n- **Frontend build:** `cd apps/web && npm run build` (Next.js 16, Tailwind CSS v4).\n",
+      "timestamp": "2026-05-27T17:38:19.453Z",
+      "metadata": {
+        "toolName": "write_file",
+        "toolCallId": "call_00_6o6INiO8ick664TJ1a4V3927",
+        "success": true
+      }
+    },
+    {
+      "id": "81a6ce07-4a89-429f-bf66-a565017c1c6c",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 5. Selected tokens: 4800. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:38:19.526Z"
+    },
+    {
+      "id": "208ffecc-8da2-4114-9636-b4ab99540c19",
+      "role": "assistant",
+      "content": "",
+      "timestamp": "2026-05-27T17:38:21.816Z"
+    },
+    {
+      "id": "d0d162f1-c86a-468b-a0a9-b73225d406af",
+      "role": "tool",
+      "content": "# Contributing Notes\n\n- **One-time setup:** Run `./run-app.sh`, then `source .venv/bin/activate`.\n- **Python tests:** `PYTHONPATH=. pytest tests/ -v` (90 tests, under 2 seconds).\n- **Frontend build:** `cd apps/web && npm run build` (Next.js 16, Tailwind CSS v4).\n",
+      "timestamp": "2026-05-27T17:38:21.840Z",
+      "metadata": {
+        "toolName": "read_file",
+        "toolCallId": "call_00_lDuJ7VV013KKvdIhjre16894",
+        "success": true
+      }
+    },
+    {
+      "id": "1a7b6666-ade8-4d84-90b0-7347f86f38bd",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 6. Selected tokens: 4910. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:38:21.917Z"
+    },
+    {
+      "id": "03a73170-4680-4217-a1eb-b0abe1be6929",
+      "role": "assistant",
+      "content": "The file `CONTRIBUTING_NOTES.md` has been created at the repo root with a 3-bullet summary of how to run the test suite, derived from the README's Development section. It's 6 lines total — well under the 15-line limit.",
+      "timestamp": "2026-05-27T17:38:25.679Z"
+    },
+    {
+      "id": "187d5785-aba3-437f-9d20-a71f51a46a16",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 7. Selected tokens: 5025. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:38:25.759Z"
+    },
+    {
+      "id": "078617a1-6364-48d9-94d5-be15a79434d9",
+      "role": "assistant",
+      "content": "The file **CONTRIBUTING_NOTES.md** has been created at the repository root. It contains a 3‑bullet summary (one‑time setup, Python tests, frontend build) derived from the README and is well under 15 lines.",
+      "timestamp": "2026-05-27T17:38:30.398Z"
+    },
+    {
+      "id": "3e945365-cb8a-42b7-9aac-f7f38df2dfee",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 8. Selected tokens: 4973. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-27T17:38:30.484Z"
+    },
+    {
+      "id": "7a6f82c8-0a18-4b06-b14a-cc98a96dad9d",
+      "role": "assistant",
+      "content": "The task is complete. `CONTRIBUTING_NOTES.md` is now at the repo root with the 3-bullet summary and is well under 15 lines.",
+      "timestamp": "2026-05-27T17:38:33.526Z"
+    }
+  ]
+}

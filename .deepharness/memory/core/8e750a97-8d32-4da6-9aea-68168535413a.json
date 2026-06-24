@@ -1,0 +1,16 @@
+{
+  "sessionId": "8e750a97-8d32-4da6-9aea-68168535413a",
+  "currentGoal": "Run pytest on this project (read-only audit; do NOT fix anything yet — just report what fails).",
+  "filesTouched": [],
+  "hypotheses": [],
+  "failedAttempts": [
+    "Ran shell command with exit code 127."
+  ],
+  "openQuestions": [],
+  "learnings": [
+    "Listed 29 entries under ..",
+    "Listed 8 entries under .venv.",
+    "Listed 9 entries under tests.",
+    "Listed 35 entries under .venv/bin."
+  ]
+}

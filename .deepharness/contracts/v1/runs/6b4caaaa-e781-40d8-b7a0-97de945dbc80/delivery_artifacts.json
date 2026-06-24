@@ -1,0 +1,35 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "delivery_artifacts",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:10:58.829Z",
+  "payload": {
+    "runId": "6b4caaaa-e781-40d8-b7a0-97de945dbc80",
+    "sessionId": "ba0108cc-ece6-4cf4-9285-c05781349364",
+    "verdict": {
+      "status": "pass",
+      "summary": "Runtime completed with the required evidence and delivery artifacts.",
+      "missingRequirements": [],
+      "satisfiedRequirements": [
+        "tool_proofs",
+        "trace",
+        "verifier"
+      ]
+    },
+    "evidence": {
+      "touchedFiles": [],
+      "toolProofs": [
+        "shell: Ran shell command with exit code 0.",
+        "shell: Ran shell command with exit code 2."
+      ],
+      "operatorInterventions": []
+    },
+    "artifacts": [
+      {
+        "artifactType": "trace",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80.json",
+        "summary": "Primary runtime trace."
+      }
+    ]
+  }
+}

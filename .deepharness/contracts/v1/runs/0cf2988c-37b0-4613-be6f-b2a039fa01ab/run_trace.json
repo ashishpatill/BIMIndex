@@ -1,0 +1,604 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "run_trace",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:49:28.112Z",
+  "payload": {
+    "runId": "0cf2988c-37b0-4613-be6f-b2a039fa01ab",
+    "sessionId": "f62bc3f0-4c33-4360-8331-0e1704c186c7",
+    "status": "completed",
+    "runContract": {
+      "objectiveSummary": "Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that im...",
+      "capabilityProfile": "governed_delivery",
+      "governanceMode": "governed",
+      "continuity": {
+        "sessionId": "f62bc3f0-4c33-4360-8331-0e1704c186c7",
+        "parentSessionId": null,
+        "checkpointId": null,
+        "workstreamId": null,
+        "resumeMode": "new_session"
+      },
+      "memorySnapshot": {
+        "capturedAt": "2026-05-16T09:49:06.723Z",
+        "memoryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/MEMORY.md",
+        "userPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/USER.md",
+        "memoryMarkdown": "",
+        "userMarkdown": "",
+        "truncated": {
+          "memory": false,
+          "user": false
+        }
+      },
+      "workspaceSurface": {
+        "kind": "local",
+        "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+        "surfaceId": "local"
+      },
+      "resourcePolicy": {
+        "promptTokenLimit": 24000,
+        "maxTurns": 6,
+        "maxRecoverySignals": 3
+      },
+      "evidenceRequirements": [
+        "verifier",
+        "trace"
+      ],
+      "deliveryRequirements": [
+        "trace",
+        "changed_files",
+        "patch_bundle"
+      ],
+      "cacheStability": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-16T09:49:06.813Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "e8ebe6e5eb776c6baaeb657ad815b81fd3f97199591cdf0d17a4a8956b90ab52",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "117892aeca05fc4e8a7f72d6a494930f8ee05752b559941b8500106141c63ec6"
+      }
+    },
+    "resourceUsage": {
+      "inputTokens": 6553,
+      "outputTokens": 589,
+      "totalTokens": 7142,
+      "totalCostUsd": 0,
+      "estimated": false,
+      "withinBudget": true,
+      "notes": [
+        "Token usage is estimated unless the active model adapter returns explicit usage metadata."
+      ]
+    },
+    "events": [
+      {
+        "type": "workspace_surface",
+        "turn": 0,
+        "kind": "local",
+        "surfaceId": "local",
+        "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+        "metadata": {
+          "mode": "direct"
+        }
+      },
+      {
+        "type": "run_contract",
+        "turn": 0,
+        "runContract": {
+          "objectiveSummary": "Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that im...",
+          "capabilityProfile": "governed_delivery",
+          "governanceMode": "governed",
+          "continuity": {
+            "sessionId": "f62bc3f0-4c33-4360-8331-0e1704c186c7",
+            "parentSessionId": null,
+            "checkpointId": null,
+            "workstreamId": null,
+            "resumeMode": "new_session"
+          },
+          "memorySnapshot": {
+            "capturedAt": "2026-05-16T09:49:06.723Z",
+            "memoryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/MEMORY.md",
+            "userPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/USER.md",
+            "memoryMarkdown": "",
+            "userMarkdown": "",
+            "truncated": {
+              "memory": false,
+              "user": false
+            }
+          },
+          "workspaceSurface": {
+            "kind": "local",
+            "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+            "surfaceId": "local"
+          },
+          "resourcePolicy": {
+            "promptTokenLimit": 24000,
+            "maxTurns": 6,
+            "maxRecoverySignals": 3
+          },
+          "evidenceRequirements": [
+            "verifier",
+            "trace"
+          ],
+          "deliveryRequirements": [
+            "trace",
+            "changed_files",
+            "patch_bundle"
+          ],
+          "cacheStability": {
+            "version": "cache-stability/v1",
+            "createdAt": "2026-05-16T09:49:06.813Z",
+            "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+            "toolHash": "e8ebe6e5eb776c6baaeb657ad815b81fd3f97199591cdf0d17a4a8956b90ab52",
+            "protectedMessageBoundary": 2,
+            "protectedMessageHash": "117892aeca05fc4e8a7f72d6a494930f8ee05752b559941b8500106141c63ec6"
+          }
+        }
+      },
+      {
+        "type": "context_built",
+        "turn": 1,
+        "compiledContext": {
+          "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+          "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: f62bc3f0-4c33-4360-8331-0e1704c186c7\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 3 | Statuses: completed=3 | Hot extensions: none | Recommendations: testing_signal\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that impor. Prefer narr…\nRun contract summary: governed_delivery / governed | objective=Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that im... | resume=new_sess…\nEvidence summary: files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0\nResource summary: tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 25)\nWhy selected: Matched task terms: file, check, version, then, pytest\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: none\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that impor. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files\nEpisodic recall: none\nArchival recall: none\nRecent messages: [user] Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain",
+          "contextTier": "standard",
+          "instructionSources": [],
+          "contextInjection": {
+            "branch": "main",
+            "git_diff_summary": "No working tree diff.",
+            "last_test_summary": "No recorded test summary.",
+            "active_error_summaries": [],
+            "local_learning_summary": "Runs tracked: 3 | Statuses: completed=3 | Hot extensions: none | Recommendations: testing_signal",
+            "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that impor. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+            "run_contract_summary": "governed_delivery / governed | objective=Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that im... | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+            "evidence_summary": "files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0",
+            "resource_summary": "tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage",
+            "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+          },
+          "environmentSnapshot": {
+            "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+            "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+            "branch": "main",
+            "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml",
+            "languageHints": [],
+            "packageManagers": [],
+            "repoMap": [
+              ".claude/",
+              ".cursor/",
+              ".deepharness/",
+              ".env.example",
+              ".git/",
+              ".github/",
+              ".gitignore",
+              ".pytest_cache/",
+              ".venv/",
+              "Dockerfile",
+              "GLM-OCR + Gemini 3.1 Pro Preview.md",
+              "IMPLEMENTATION_PLAN.md",
+              "LICENSE",
+              "README.md",
+              "__pycache__/",
+              "apps/",
+              "core_processor/",
+              "data/",
+              "datasets/",
+              "gradio_app.py"
+            ],
+            "runtimeVersions": {
+              "node": "v22.22.2",
+              "python": "Python 3.13.7",
+              "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+              "bun": "1.3.11"
+            },
+            "memoryGb": 16
+          },
+          "relevantSnippets": [
+            {
+              "path": "README.md",
+              "summary": "Matched task terms: file, check, version, then, pytest",
+              "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+              "score": 25
+            }
+          ],
+          "budgetReport": {
+            "contextTier": "standard",
+            "tokenBudget": 2500,
+            "estimatedTotalTokens": 1089,
+            "selectedTotalTokens": 1089,
+            "compactionTriggered": false,
+            "compressionPressure": "none",
+            "compressionTargetTokens": 1875,
+            "degradedSections": []
+          }
+        }
+      },
+      {
+        "type": "gateway_budget",
+        "turn": 1,
+        "contextTier": "standard",
+        "promptTokenEstimate": 2382,
+        "budgetDecision": {
+          "withinBudget": true,
+          "requiresCompaction": false,
+          "reason": "Selected context fits within the effective standard budget.",
+          "effectivePromptTokenLimit": 24000
+        }
+      },
+      {
+        "type": "note",
+        "turn": 1,
+        "level": "info",
+        "message": "Ralph refresh triggered at turn 1. Selected tokens: 2382. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+      },
+      {
+        "type": "cache_stability_contract",
+        "turn": 1,
+        "contract": {
+          "version": "cache-stability/v1",
+          "createdAt": "2026-05-16T09:49:06.813Z",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "e8ebe6e5eb776c6baaeb657ad815b81fd3f97199591cdf0d17a4a8956b90ab52",
+          "protectedMessageBoundary": 2,
+          "protectedMessageHash": "117892aeca05fc4e8a7f72d6a494930f8ee05752b559941b8500106141c63ec6"
+        },
+        "status": "created",
+        "violationCount": 0
+      },
+      {
+        "type": "cache_metrics",
+        "turn": 1,
+        "metric": {
+          "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5384891e20b5053c",
+          "cacheHit": false,
+          "hitCount": 0,
+          "model": "deepseek:deepseek-v4-pro",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "e8ebe6e5eb776c6baaeb657ad815b81fd3f97199591cdf0d17a4a8956b90ab52",
+          "recentMessageHash": "5384891e20b5053cede717afdf5f50b58ca1f1bda193b9b799f310e7d079448c"
+        }
+      },
+      {
+        "type": "progressive_tool_disclosure",
+        "turn": 1,
+        "phase": "planning",
+        "capabilityProfile": "governed_delivery",
+        "activeToolNames": [
+          "self.capabilities",
+          "self.knowledge",
+          "self.history",
+          "list_files",
+          "read_file",
+          "write_file",
+          "shell"
+        ]
+      },
+      {
+        "type": "model_output",
+        "turn": 1,
+        "assistantMessage": "I'll create the two files. Let me first check if `core_processor/` and `tests/` directories exist and whether `core_processor/` has an `__init__.py` needed for the import.",
+        "toolCallNames": [
+          "list_files",
+          "list_files"
+        ],
+        "modelMetadata": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "cacheHit": true,
+          "cacheTtftMs": 532
+        },
+        "usage": {
+          "inputTokens": 2963,
+          "outputTokens": 511,
+          "cachedTokens": 1152,
+          "reasoningTokens": 367,
+          "cacheTtftMs": 532,
+          "totalTokens": 3474,
+          "estimated": false
+        }
+      },
+      {
+        "type": "turn_state",
+        "turn": 1,
+        "state": "tool",
+        "detail": "2 tool call(s): list_files, list_files"
+      },
+      {
+        "type": "tool_result",
+        "turn": 1,
+        "observation": {
+          "toolCallId": "c1",
+          "toolName": "list_files",
+          "success": true,
+          "summary": "Listed 29 entries under ..",
+          "outputPreview": "dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests",
+          "mutatedFiles": [],
+          "permission": {
+            "outcome": "allow",
+            "reason": "Read-only action allowed by default.",
+            "source": "mode_default",
+            "mode": "auto"
+          }
+        }
+      },
+      {
+        "type": "tool_result",
+        "turn": 1,
+        "observation": {
+          "toolCallId": "c2",
+          "toolName": "list_files",
+          "success": true,
+          "summary": "Listed 8 entries under tests.",
+          "outputPreview": "dir  __pycache__\nfile test_api.py\nfile test_chunking.py\nfile test_config.py\nfile test_jobs.py\nfile test_log.py\nfile test_retrieval.py\nfile test_v01_pipeline.py",
+          "mutatedFiles": [],
+          "permission": {
+            "outcome": "allow",
+            "reason": "Read-only action allowed by default.",
+            "source": "mode_default",
+            "mode": "auto"
+          }
+        }
+      },
+      {
+        "type": "context_built",
+        "turn": 2,
+        "compiledContext": {
+          "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+          "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: f62bc3f0-4c33-4360-8331-0e1704c186c7\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 3 | Statuses: completed=3 | Hot extensions: none | Recommendations: testing_signal\nPlan summary: Plan summary: Use a read-then-write plan for: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that impor. Prefer narr…\nRun contract summary: governed_delivery / governed | objective=Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that im... | resume=new_sess…\nEvidence summary: files=0 | tool_proofs=2 | operator_interventions=0 | memory_safety=0 | memory_confidence=4\nResource summary: tokens=3474 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 25)\nWhy selected: Matched task terms: file, check, version, then, pytest\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: Listed 29 entries under .. | Listed 8 entries under tests.\nNotes: [info] Plan summary: Use a read-then-write plan for: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that impor. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2382. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Listed 29 entries under .. | Listed 8 entries under tests.\nArchival recall: none\nRecent messages: [user] Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain | [system] Ralph refresh triggered at turn 1. Selected tokens: 2382. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant] I'll create the two files. Let me first check if `core_processor/` and `tests/` directories exist and whether `core_processor/` has an `__init__.py` needed for the import. | [tool] dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests | [tool] dir  __pycache__\nfile test_api.py\nfile test_chunking.py\nfile test_config.py\nfile test_jobs.py\nfile test_log.py\nfile test_retrieval.py\nfile test_v01_pipeline.py",
+          "contextTier": "standard",
+          "instructionSources": [],
+          "contextInjection": {
+            "branch": "main",
+            "git_diff_summary": "No working tree diff.",
+            "last_test_summary": "No recorded test summary.",
+            "active_error_summaries": [],
+            "local_learning_summary": "Runs tracked: 3 | Statuses: completed=3 | Hot extensions: none | Recommendations: testing_signal",
+            "plan_summary": "Plan summary: Use a read-then-write plan for: Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that impor. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+            "run_contract_summary": "governed_delivery / governed | objective=Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that im... | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+            "evidence_summary": "files=0 | tool_proofs=2 | operator_interventions=0 | memory_safety=0 | memory_confidence=4",
+            "resource_summary": "tokens=3474 | cost_usd=0.0000 | within_budget | provider_usage",
+            "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+          },
+          "environmentSnapshot": {
+            "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+            "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+            "branch": "main",
+            "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml",
+            "languageHints": [],
+            "packageManagers": [],
+            "repoMap": [
+              ".claude/",
+              ".cursor/",
+              ".deepharness/",
+              ".env.example",
+              ".git/",
+              ".github/",
+              ".gitignore",
+              ".pytest_cache/",
+              ".venv/",
+              "Dockerfile",
+              "GLM-OCR + Gemini 3.1 Pro Preview.md",
+              "IMPLEMENTATION_PLAN.md",
+              "LICENSE",
+              "README.md",
+              "__pycache__/",
+              "apps/",
+              "core_processor/",
+              "data/",
+              "datasets/",
+              "gradio_app.py"
+            ],
+            "runtimeVersions": {
+              "node": "v22.22.2",
+              "python": "Python 3.13.7",
+              "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+              "bun": "1.3.11"
+            },
+            "memoryGb": 16
+          },
+          "relevantSnippets": [
+            {
+              "path": "README.md",
+              "summary": "Matched task terms: file, check, version, then, pytest",
+              "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+              "score": 25
+            }
+          ],
+          "budgetReport": {
+            "contextTier": "standard",
+            "tokenBudget": 2500,
+            "estimatedTotalTokens": 1420,
+            "selectedTotalTokens": 1420,
+            "compactionTriggered": false,
+            "compressionPressure": "none",
+            "compressionTargetTokens": 1875,
+            "degradedSections": []
+          }
+        }
+      },
+      {
+        "type": "gateway_budget",
+        "turn": 2,
+        "contextTier": "standard",
+        "promptTokenEstimate": 2969,
+        "budgetDecision": {
+          "withinBudget": true,
+          "requiresCompaction": false,
+          "reason": "Selected context fits within the effective standard budget.",
+          "effectivePromptTokenLimit": 24000
+        }
+      },
+      {
+        "type": "note",
+        "turn": 2,
+        "level": "info",
+        "message": "Ralph refresh triggered at turn 2. Selected tokens: 2969. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+      },
+      {
+        "type": "cache_stability_contract",
+        "turn": 2,
+        "contract": {
+          "version": "cache-stability/v1",
+          "createdAt": "2026-05-16T09:49:06.813Z",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "e8ebe6e5eb776c6baaeb657ad815b81fd3f97199591cdf0d17a4a8956b90ab52",
+          "protectedMessageBoundary": 2,
+          "protectedMessageHash": "117892aeca05fc4e8a7f72d6a494930f8ee05752b559941b8500106141c63ec6"
+        },
+        "status": "validated",
+        "violationCount": 0
+      },
+      {
+        "type": "cache_metrics",
+        "turn": 2,
+        "metric": {
+          "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:aeae0cc30f1e7603",
+          "cacheHit": false,
+          "hitCount": 0,
+          "model": "deepseek:deepseek-v4-pro",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "e8ebe6e5eb776c6baaeb657ad815b81fd3f97199591cdf0d17a4a8956b90ab52",
+          "recentMessageHash": "aeae0cc30f1e7603a83dd4bb8b28b7d41254f85100ba71e50260141e92c4269c"
+        }
+      },
+      {
+        "type": "progressive_tool_disclosure",
+        "turn": 2,
+        "phase": "implementation",
+        "capabilityProfile": "governed_delivery",
+        "activeToolNames": [
+          "self.capabilities",
+          "self.knowledge",
+          "self.history",
+          "list_files",
+          "read_file",
+          "write_file",
+          "shell"
+        ]
+      },
+      {
+        "type": "model_output",
+        "turn": 2,
+        "assistantMessage": "I'll check the `core_processor` directory contents to ensure proper package structure.",
+        "toolCallNames": [],
+        "modelMetadata": {
+          "provider": "deepseek",
+          "model": "deepseek-v4-pro",
+          "cacheHit": true,
+          "cacheTtftMs": 353
+        },
+        "usage": {
+          "inputTokens": 3590,
+          "outputTokens": 78,
+          "cachedTokens": 1152,
+          "reasoningTokens": 60,
+          "cacheTtftMs": 353,
+          "totalTokens": 3668,
+          "estimated": false
+        },
+        "completionSummary": "I'll check the `core_processor` directory contents to ensure proper package structure."
+      },
+      {
+        "type": "turn_state",
+        "turn": 2,
+        "state": "llm",
+        "detail": "text-only generation with completion claim"
+      },
+      {
+        "type": "verifier_verdict",
+        "turn": 2,
+        "verdict": {
+          "status": "pass",
+          "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+          "evidence": [
+            "Completion claim: I'll check the `core_processor` directory contents to ensure proper package structure.",
+            "Touched files: 0"
+          ]
+        }
+      },
+      {
+        "type": "delivery_gate",
+        "turn": 2,
+        "verdict": {
+          "status": "fail",
+          "summary": "Runtime is missing required handoff evidence: changed_files, patch_bundle.",
+          "missingRequirements": [
+            "changed_files",
+            "patch_bundle"
+          ],
+          "satisfiedRequirements": [
+            "tool_proofs",
+            "trace",
+            "verifier"
+          ]
+        }
+      },
+      {
+        "type": "resource_usage",
+        "turn": 2,
+        "usage": {
+          "inputTokens": 6553,
+          "outputTokens": 589,
+          "totalTokens": 7142,
+          "totalCostUsd": 0,
+          "estimated": false,
+          "withinBudget": true,
+          "notes": [
+            "Token usage is estimated unless the active model adapter returns explicit usage metadata."
+          ]
+        }
+      }
+    ],
+    "messages": [
+      {
+        "id": "bd4ba2e7-d7e2-495d-becf-98adcc39e8f8",
+        "role": "user",
+        "content": "Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain",
+        "timestamp": "2026-05-16T09:49:06.725Z"
+      },
+      {
+        "id": "7aa6337b-5f64-4ee4-8b98-9e1145830b1d",
+        "role": "system",
+        "content": "Ralph refresh triggered at turn 1. Selected tokens: 2382. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+        "timestamp": "2026-05-16T09:49:06.809Z"
+      },
+      {
+        "id": "2765e57d-097f-4682-99e2-9a3da4da9a0a",
+        "role": "assistant",
+        "content": "I'll create the two files. Let me first check if `core_processor/` and `tests/` directories exist and whether `core_processor/` has an `__init__.py` needed for the import.",
+        "timestamp": "2026-05-16T09:49:23.412Z"
+      },
+      {
+        "id": "46f955a4-757a-4913-be72-c3c4be578c04",
+        "role": "tool",
+        "content": "dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests",
+        "timestamp": "2026-05-16T09:49:23.438Z",
+        "metadata": {
+          "toolName": "list_files",
+          "toolCallId": "c1",
+          "success": true
+        }
+      },
+      {
+        "id": "177d211b-2f9a-4898-a53a-fc01a55a2254",
+        "role": "tool",
+        "content": "dir  __pycache__\nfile test_api.py\nfile test_chunking.py\nfile test_config.py\nfile test_jobs.py\nfile test_log.py\nfile test_retrieval.py\nfile test_v01_pipeline.py",
+        "timestamp": "2026-05-16T09:49:23.446Z",
+        "metadata": {
+          "toolName": "list_files",
+          "toolCallId": "c2",
+          "success": true
+        }
+      },
+      {
+        "id": "5158eb83-e82e-4a25-90f8-e9c9daac9fd9",
+        "role": "system",
+        "content": "Ralph refresh triggered at turn 2. Selected tokens: 2969. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+        "timestamp": "2026-05-16T09:49:23.476Z"
+      },
+      {
+        "id": "6423e2bd-0af6-472e-8ee2-f97298f5b069",
+        "role": "assistant",
+        "content": "I'll check the `core_processor` directory contents to ensure proper package structure.",
+        "timestamp": "2026-05-16T09:49:28.042Z"
+      }
+    ]
+  }
+}

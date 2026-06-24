@@ -1,0 +1,25 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T18:58:49.731Z",
+  "payload": {
+    "runId": "9d6bd4bc-679f-48b2-8f74-bcdc524fae03",
+    "sessionId": "cdd0522c-7c13-432b-9385-20af4a8a5633",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "cdd0522c-7c13-432b-9385-20af4a8a5633",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "/graph",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "9d6bd4bc-679f-48b2-8f74-bcdc524fae03:1",
+        "9d6bd4bc-679f-48b2-8f74-bcdc524fae03:2"
+      ]
+    }
+  }
+}

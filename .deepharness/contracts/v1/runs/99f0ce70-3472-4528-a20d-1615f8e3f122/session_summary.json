@@ -1,0 +1,27 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:17:24.813Z",
+  "payload": {
+    "runId": "99f0ce70-3472-4528-a20d-1615f8e3f122",
+    "sessionId": "ccaccfc3-af95-4dc6-b42f-7c0f1e525a68",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "ccaccfc3-af95-4dc6-b42f-7c0f1e525a68",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Run ./.venv/bin/pytest in this project. If tests fail to collect, investigate by listing files in the project root and reading any config (setup.cfg, pytest.ini, conftest.py). Report final pass/fail counts and the first few failure messages if any. Do not modify code.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "99f0ce70-3472-4528-a20d-1615f8e3f122:1",
+        "99f0ce70-3472-4528-a20d-1615f8e3f122:2",
+        "99f0ce70-3472-4528-a20d-1615f8e3f122:3",
+        "99f0ce70-3472-4528-a20d-1615f8e3f122:4"
+      ]
+    }
+  }
+}

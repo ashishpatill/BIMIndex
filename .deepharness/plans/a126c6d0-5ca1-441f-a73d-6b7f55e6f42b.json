@@ -1,0 +1,67 @@
+{
+  "taskId": "a126c6d0-5ca1-441f-a73d-6b7f55e6f42b",
+  "prompt": "Read retrieval_roadmap.md and IMPLEMENTATION_PLAN.md, then audit the project against the roadmap. Report: (1) which roadmap items are implemented, (2) which are missing, (3) any obvious gaps between docs and code. Use list_files/read_file. Do not modify code.",
+  "summary": "Refreshed plan after a recovery signal. Stabilize the current phase, avoid repeating failed actions, and finish with explicit verification.",
+  "strategyNotes": [
+    "Prompt tokens are at 15137/16000 with low-signal assistant output",
+    "Prompt tokens are at 15776/16000 with low-signal assistant output",
+    "Prompt tokens are at 16491/16000 with low-signal assistant output",
+    "Prompt tokens are at 16830/16000 with low-signal assistant output"
+  ],
+  "recoveryBranches": [
+    "B1 Narrow evidence: Re-read the smallest set of files and compare the current state against the task objective before taking another action.",
+    "B2 Switch to explicit verification: Stop making new edits and run the narrowest verification path or state inspection needed to prove what is actually true.",
+    "B3 Report blocked state: Stop mutating and produce a concrete blocked-state report with the failed strategy, observed evidence, and next question."
+  ],
+  "activeRecoveryBranch": "B1",
+  "steps": [
+    {
+      "stepId": "S1",
+      "title": "Survey the workspace",
+      "objective": "Identify the repo areas and files most relevant to the task.",
+      "phase": "planning",
+      "suggestedTools": [
+        "list_files",
+        "read_file",
+        "shell"
+      ],
+      "status": "in_progress"
+    },
+    {
+      "stepId": "S2",
+      "title": "Inspect the critical implementation details",
+      "objective": "Read the narrowest set of files needed to confirm the current behavior.",
+      "phase": "planning",
+      "suggestedTools": [
+        "read_file",
+        "shell"
+      ],
+      "status": "in_progress"
+    },
+    {
+      "stepId": "S3",
+      "title": "Apply the smallest coherent code change",
+      "objective": "Implement the feature or fix with minimal unrelated churn.",
+      "phase": "implementation",
+      "suggestedTools": [
+        "read_file",
+        "write_file",
+        "shell"
+      ],
+      "status": "completed"
+    },
+    {
+      "stepId": "S4",
+      "title": "Verify the result",
+      "objective": "Check the final state, run the relevant validation, and confirm completion honestly.",
+      "phase": "verification",
+      "suggestedTools": [
+        "read_file",
+        "shell",
+        "list_files"
+      ],
+      "status": "pending"
+    }
+  ],
+  "updatedAt": "2026-05-20T20:24:00.446Z"
+}

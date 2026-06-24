@@ -1,0 +1,35 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T20:24:00.595Z",
+  "payload": {
+    "runId": "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea",
+    "sessionId": "a126c6d0-5ca1-441f-a73d-6b7f55e6f42b",
+    "status": "blocked",
+    "summary": "Recovery halt triggered after 3 signals (loop_detected). Stop the current trajectory and hand off with evidence about the failure mode: Prompt tokens are at 16830/16000 with low-signal assistant output",
+    "sessionRecord": {
+      "session_id": "a126c6d0-5ca1-441f-a73d-6b7f55e6f42b",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Read retrieval_roadmap.md and IMPLEMENTATION_PLAN.md, then audit the project against the roadmap. Report: (1) which roadmap items are implemented, (2) which are missing, (3) any obvious gaps between docs and code. Use list_files/read_file. Do not modify code.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:1",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:2",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:3",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:4",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:5",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:6",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:7",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:8",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:9",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:10",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:11",
+        "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea:12"
+      ]
+    }
+  }
+}

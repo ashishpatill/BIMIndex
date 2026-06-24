@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T17:49:09.763Z",
+  "payload": {
+    "runId": "539e464e-3c7a-44af-82c7-8f592675a9e5",
+    "sessionId": "250cbc4c-8952-423f-9c4c-1c92f33f76b3",
+    "verdict": {
+      "status": "partial",
+      "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+      "evidence": [
+        "Completion claim: All steps are complete and verified:\n\n- **Created** `/Volumes/Developer/Workspace/Retrieval-Research/HELLO_DEEPHARNESS.txt` containing the single line `probe ok`.\n- **Read** the file back and confirme",
+        "Touched files: 1"
+      ]
+    }
+  }
+}

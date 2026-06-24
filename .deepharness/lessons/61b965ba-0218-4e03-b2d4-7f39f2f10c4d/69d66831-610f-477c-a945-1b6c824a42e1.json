@@ -1,0 +1,390 @@
+{
+  "createdAt": "2026-05-16T09:43:29.930Z",
+  "runId": "69d66831-610f-477c-a945-1b6c824a42e1",
+  "sessionId": "61b965ba-0218-4e03-b2d4-7f39f2f10c4d",
+  "userRequest": "Survey the codebase: list the main Python source files (not .venv), their purpose, and top-level imports. Give a brief architecture summary. --plain",
+  "status": "completed",
+  "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+  "filesTouched": [],
+  "learnings": [],
+  "errors": [],
+  "turnHistoryRefs": [
+    "69d66831-610f-477c-a945-1b6c824a42e1:1",
+    "69d66831-610f-477c-a945-1b6c824a42e1:2"
+  ],
+  "tracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/69d66831-610f-477c-a945-1b6c824a42e1.json",
+  "graphPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/graphs/69d66831-610f-477c-a945-1b6c824a42e1.json",
+  "verifierVerdict": {
+    "status": "pass",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "evidence": [
+      "Completion claim: Let me read a set of key source files to understand their purpose and top-level imports. I'll inspect a batch of representative modules.",
+      "Touched files: 0"
+    ]
+  },
+  "graphHighlights": {
+    "files": [
+      {
+        "path": "apps/web/next-env.d.ts",
+        "language": "typescript",
+        "summary": "<reference types=\"next\" />",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/next.config.ts",
+        "language": "typescript",
+        "summary": "Source file apps/web/next.config.ts.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/documents/[id]/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/documents/[id]/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/documents/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/documents/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/evals/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/evals/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/layout.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/layout.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/query/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/query/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/components/document-actions.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/document-actions.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/document-actions.tsx#DocumentActions",
+          "apps/web/src/components/document-actions.tsx#runAction"
+        ]
+      },
+      {
+        "path": "apps/web/src/components/document-profile-panel.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/document-profile-panel.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/document-profile-panel.tsx#readStringList",
+          "apps/web/src/components/document-profile-panel.tsx#DocumentProfilePanel"
+        ]
+      },
+      {
+        "path": "apps/web/src/components/eval-runner.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/eval-runner.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/eval-runner.tsx#EvalRunner",
+          "apps/web/src/components/eval-runner.tsx#onSubmit"
+        ]
+      },
+      {
+        "path": "apps/web/src/components/ingest-form.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/ingest-form.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/ingest-form.tsx#IngestForm",
+          "apps/web/src/components/ingest-form.tsx#onSubmit"
+        ]
+      }
+    ],
+    "functions": [
+      {
+        "id": "apps/web/src/components/document-actions.tsx#DocumentActions",
+        "filePath": "apps/web/src/components/document-actions.tsx",
+        "language": "typescript",
+        "name": "DocumentActions",
+        "kind": "function",
+        "container": null,
+        "signature": "export function DocumentActions({ documentId }: Props) {",
+        "lineStart": 13,
+        "lineEnd": 80,
+        "summary": "Function DocumentActions.",
+        "calls": [
+          "apps/web/src/components/document-actions.tsx#runAction"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "fetch",
+          "JSON.stringify",
+          "response.json",
+          "setBusyAction",
+          "setStatus"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/document-actions.tsx#runAction",
+        "filePath": "apps/web/src/components/document-actions.tsx",
+        "language": "typescript",
+        "name": "runAction",
+        "kind": "function",
+        "container": null,
+        "signature": "async function runAction(action: \"chunk\" | \"index\") {",
+        "lineStart": 17,
+        "lineEnd": 47,
+        "summary": "Function runAction.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/document-actions.tsx#DocumentActions"
+        ],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "fetch",
+          "JSON.stringify",
+          "response.json",
+          "setBusyAction",
+          "setStatus"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/document-profile-panel.tsx#DocumentProfilePanel",
+        "filePath": "apps/web/src/components/document-profile-panel.tsx",
+        "language": "typescript",
+        "name": "DocumentProfilePanel",
+        "kind": "function",
+        "container": null,
+        "signature": "export function DocumentProfilePanel({ profile }: Props) {",
+        "lineStart": 18,
+        "lineEnd": 106,
+        "summary": "Function DocumentProfilePanel.",
+        "calls": [
+          "apps/web/src/components/document-profile-panel.tsx#readStringList"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "Array.isArray",
+          "base.filter",
+          "includes",
+          "kind.toLowerCase",
+          "map",
+          "Object.keys",
+          "query.trim",
+          "ref.toLowerCase",
+          "refs.join",
+          "refs.some",
+          "rows.map",
+          "setQuery",
+          "sort",
+          "toLowerCase",
+          "useMemo",
+          "useState"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/document-profile-panel.tsx#readStringList",
+        "filePath": "apps/web/src/components/document-profile-panel.tsx",
+        "language": "typescript",
+        "name": "readStringList",
+        "kind": "function",
+        "container": null,
+        "signature": "function readStringList(value: unknown): string[] {",
+        "lineStart": 14,
+        "lineEnd": 16,
+        "summary": "Function readStringList.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/document-profile-panel.tsx#DocumentProfilePanel"
+        ],
+        "unresolvedCalls": [
+          "Array.isArray",
+          "value.filter"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/eval-runner.tsx#EvalRunner",
+        "filePath": "apps/web/src/components/eval-runner.tsx",
+        "language": "typescript",
+        "name": "EvalRunner",
+        "kind": "function",
+        "container": null,
+        "signature": "export function EvalRunner() {",
+        "lineStart": 108,
+        "lineEnd": 423,
+        "summary": "Function EvalRunner.",
+        "calls": [
+          "apps/web/src/components/eval-runner.tsx#onSubmit"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "event.preventDefault",
+          "fetch",
+          "filter",
+          "flatMap",
+          "graphRows.map",
+          "JSON.parse",
+          "JSON.stringify",
+          "m.trim",
+          "Manifest",
+          "map",
+          "Modes",
+          "Number",
+          "Object.entries",
+          "response.json",
+          "setError",
+          "setIsSubmitting",
+          "setManifestText",
+          "setModesText",
+          "setPlannerRerank",
+          "setPlannerRerankOverlapWeight",
+          "setPlannerRouteVoteBonus",
+          "setPlannerSweep",
+          "setResult",
+          "setShowPlannerOptions",
+          "setTopK",
+          "slice",
+          "split",
+          "String",
+          "toFixed",
+          "useState"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/eval-runner.tsx#onSubmit",
+        "filePath": "apps/web/src/components/eval-runner.tsx",
+        "language": "typescript",
+        "name": "onSubmit",
+        "kind": "function",
+        "container": null,
+        "signature": "async function onSubmit(event: React.FormEvent<HTMLFormElement>) {",
+        "lineStart": 122,
+        "lineEnd": 159,
+        "summary": "Function onSubmit.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/eval-runner.tsx#EvalRunner"
+        ],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "event.preventDefault",
+          "fetch",
+          "filter",
+          "JSON.parse",
+          "JSON.stringify",
+          "m.trim",
+          "map",
+          "response.json",
+          "setError",
+          "setIsSubmitting",
+          "setResult",
+          "split"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/ingest-form.tsx#IngestForm",
+        "filePath": "apps/web/src/components/ingest-form.tsx",
+        "language": "typescript",
+        "name": "IngestForm",
+        "kind": "function",
+        "container": null,
+        "signature": "export function IngestForm() {",
+        "lineStart": 13,
+        "lineEnd": 92,
+        "summary": "Function IngestForm.",
+        "calls": [
+          "apps/web/src/components/ingest-form.tsx#onSubmit"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "data.get",
+          "event.preventDefault",
+          "fetch",
+          "form.reset",
+          "FormData",
+          "response.json",
+          "setIsSubmitting",
+          "setMessage",
+          "useState"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/ingest-form.tsx#onSubmit",
+        "filePath": "apps/web/src/components/ingest-form.tsx",
+        "language": "typescript",
+        "name": "onSubmit",
+        "kind": "function",
+        "container": null,
+        "signature": "async function onSubmit(event: React.FormEvent<HTMLFormElement>) {",
+        "lineStart": 17,
+        "lineEnd": 45,
+        "summary": "Function onSubmit.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/ingest-form.tsx#IngestForm"
+        ],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "data.get",
+          "event.preventDefault",
+          "fetch",
+          "form.reset",
+          "FormData",
+          "response.json",
+          "setIsSubmitting",
+          "setMessage"
+        ]
+      }
+    ]
+  },
+  "toolObservations": [
+    {
+      "toolName": "shell",
+      "success": true,
+      "summary": "Ran shell command with exit code 0.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "sessionId": "5de4be7f-9772-4ddb-83eb-802df3985038",
+  "currentGoal": "Survey the codebase: list the main Python files, their purpose, and top-level imports. Give me a brief architecture summary. --plain",
+  "filesTouched": [],
+  "hypotheses": [],
+  "failedAttempts": [],
+  "openQuestions": [],
+  "learnings": []
+}

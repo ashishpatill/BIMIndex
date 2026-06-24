@@ -1,0 +1,853 @@
+{
+  "runId": "23a4b30d-0d10-48fd-9b40-c469cff2880a",
+  "sessionId": "3c874709-86a5-4fd4-b1d1-92db4dce66d1",
+  "createdAt": "2026-05-20T20:48:02.291Z",
+  "events": [
+    {
+      "type": "workspace_surface",
+      "turn": 0,
+      "kind": "local",
+      "surfaceId": "local",
+      "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+      "metadata": {
+        "mode": "direct"
+      }
+    },
+    {
+      "type": "run_contract",
+      "turn": 0,
+      "runContract": {
+        "objectiveSummary": "Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.",
+        "capabilityProfile": "local_core",
+        "governanceMode": "local_compat",
+        "continuity": {
+          "sessionId": "3c874709-86a5-4fd4-b1d1-92db4dce66d1",
+          "parentSessionId": null,
+          "checkpointId": null,
+          "workstreamId": null,
+          "resumeMode": "new_session"
+        },
+        "memorySnapshot": {
+          "capturedAt": "2026-05-20T20:47:18.024Z",
+          "memoryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/MEMORY.md",
+          "userPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/USER.md",
+          "memoryMarkdown": "",
+          "userMarkdown": "",
+          "truncated": {
+            "memory": false,
+            "user": false
+          }
+        },
+        "workspaceSurface": {
+          "kind": "local",
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "surfaceId": "local"
+        },
+        "resourcePolicy": {
+          "promptTokenLimit": 16000,
+          "maxTurns": 20,
+          "maxRecoverySignals": 3
+        },
+        "evidenceRequirements": [
+          "trace"
+        ],
+        "deliveryRequirements": [
+          "trace"
+        ],
+        "cacheStability": {
+          "version": "cache-stability/v1",
+          "createdAt": "2026-05-20T20:47:18.147Z",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+          "protectedMessageBoundary": 2,
+          "protectedMessageHash": "decc67c6067f8f77c2577f9813307f722a139482166043715074dd4ce4b91670"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 1,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 3c874709-86a5-4fd4-b1d1-92db4dce66d1\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit …\nRun contract summary: local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace\nEvidence summary: files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0\nResource summary: tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 25)\nWhy selected: Matched task terms: run, pythonpath, via, report, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: none\nNotes: [info] Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files\nEpisodic recall: none\nArchival recall: none\nRecent messages: [user] Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace",
+          "evidence_summary": "files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0",
+          "resource_summary": "tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pythonpath, via, report, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 25
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1006,
+          "selectedTotalTokens": 1006,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 1,
+      "contextTier": "standard",
+      "promptTokenEstimate": 2263,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 16000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 1,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 1,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T20:47:18.147Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "decc67c6067f8f77c2577f9813307f722a139482166043715074dd4ce4b91670"
+      },
+      "status": "created",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 1,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:ef3fadd73fa815cc",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "ef3fadd73fa815cc35b56079633fba725daff3270a920c310c11ef2b1e25597d"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 1,
+      "phase": "planning",
+      "capabilityProfile": "local_core",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 1,
+      "assistantMessage": "",
+      "toolCallNames": [
+        "shell"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": false,
+        "cacheTtftMs": 414
+      },
+      "usage": {
+        "inputTokens": 3013,
+        "outputTokens": 126,
+        "reasoningTokens": 29,
+        "cacheTtftMs": 414,
+        "totalTokens": 3139,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 1,
+      "state": "tool",
+      "detail": "1 tool call(s): shell"
+    },
+    {
+      "type": "tool_result",
+      "turn": 1,
+      "observation": {
+        "toolCallId": "call_00_NZcnecadt563mEzjzs4z4300",
+        "toolName": "shell",
+        "success": true,
+        "summary": "Ran shell command with exit code 0.",
+        "outputPreview": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.11, pytest-9.0.3, pluggy-1.6.0 -- /Volumes/Developer/Workspace/Retrieval-Research/.venv/bin/python3\ncachedir: .pytest_cache\nrootdir: /Volumes/Developer/Workspace/Retrieval-Research\nplugins: anyio-4.13.0\ncollecting ... collected 91 items\n\ntests/test_api.py::ApiTest::test_document_and_query_endpoints PASSED     [  1%]\ntests/test_api.py::ApiTest::test_documents_are_listed_newest_first PASSED [  2%]\ntests/test_api.py::ApiTest::test_health_endpoint_payload PASSED          [  3%]\ntests/test_api.py::ApiTest::test_index_endpoint_rejects_invalid_mode PASSED [  4%]\ntests/test_api.py::ApiTest::test_ingest_upload_endpoint PASSED           [  5%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_empty_corpus PASSED [  6%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_invalid_mode PASSED [  7%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_unknown_document PASSED [  8%]\ntests/test_api.py::ApiTest::test_query_endpoint_validates_top_k PASSED   [  9%]\ntests/test_chunking.py::ChunkingTest::test_chunk_metadata_contains_source_page_id PASSED [ 10%]\ntests/test_chunking.py::ChunkingTest::test_chunks_created_for_simple_text PASSED [ 12%]\ntests/test_chunking.py::ChunkingTest::test_chunks_empty_page_skipped PASSED [ 13%]\ntests/test_chunking.py::ChunkingTest::test_chunks_preserve_section_from_headings PASSED [ 14%]\ntests/test_chunking.py::ChunkingTest::test_chunks_respect_max_words PASSED [ 15%]\ntests/test_chunking.py::ChunkingTest::test_chunks_use_config_defaults_when_no_args PASSED [ 16%]\ntests/test_config.py::ConfigTest::test_cache_is_lru_and_clears PASSED    [ 17%]\ntests/test_config.py::ConfigTest::test_defaults_apply_when_no_env_vars PASSED [ 18%]\ntests/test_config.py::ConfigTest::test_env_vars_override_defaults PASSED [ 19%]\ntests/test_config.py::ConfigTest::test_gemini_api_key_comes_from_env PASSED [ 20%]\ntests/test_health.py::test_check_returns_expected_dict PASSED            [ 21%]\ntests/test_jobs.py::JobModelTest::test_job_defaults PASSED               [ 23%]\ntests/test_jobs.py::JobModelTest::test_job_roundtrip_dict PASSED         [ 24%]\ntests/test_jobs.py::JobModelTest::test_job_status_enum_values PASSED     [ 25%]\ntests/test_jobs.py::JobModelTest::test_job_type_enum_values PASSED       [ 26%]\ntests/test_jobs.py::JobStoreTest::test_claim_next_only_pending PASSED    [ 27%]\ntests/test_jobs.py::JobStoreTest::test_claim_next_returns_none_when_empty PASSED [ 28%]\ntests/test_jobs.py::JobStoreTest::test_claim_next_returns_pending_job PASSED [ 29%]\ntests/test_jobs.py::JobStoreTest::test_claim_respects_fifo_order PASSED  [ 30%]\ntests/test_jobs.py::JobStoreTest::test_complete_unknown_job_does_not_raise PASSED [ 31%]\ntests/test_jobs.py::JobStoreTest::test_complete_updates_job PASSED       [ 32%]\ntests/test_jobs.py::JobStoreTest::test_fail_updates_job PASSED           [ 34%]\ntests/test_jobs.py::JobStoreTest::test_list_jobs_filters_by_status PASSED [ 35%]\ntests/test_jobs.py::JobStoreTest::test_list_jobs_respects_limit PASSED   [ 36%]\ntests/test_jobs.py::JobStoreTest::test_list_jobs_returns_all PASSED      [ 37%]\ntests/test_jobs.py::JobStoreTest::test_load_returns_job PASSED           [ 38%]\ntests/test_jobs.py::JobStoreTest::test_load_returns_none_for_missing PASSED [ 39%]\ntests/test_jobs.py::JobStoreTest::test_submit_creates_job_file PASSED    [ 40%]\ntests/test_jobs.py::JobTypeTest::test_all_types_have_handlers PASSED     [ 41%]\ntests/test_log.py::LogTest::test_get_logger_returns_named_logger PASSED  [ 42%]\ntests/test_log.py::LogTest::test_get_logger_root PASSED                  [ 43%]\ntests/test_log.py::LogTest::test_setup_logging_adds_handler PASSED       [ 45%]\ntests/test_log.py::LogTest::test_silence_noisy_third_party PASSED        [ 46%]\ntests/test_retrieval.py::RetrievalTest::test_bm25_search_returns_results PASSED [ 47%]\ntests/test_retrieval.py::RetrievalTest::test_corpus_search_cross_document_graph PASSED [ 48%]\ntests/test_retrieval.py::RetrievalTest::test_dense_search_returns_results PASSED [ 49%]\ntests/test_retrieval.py::RetrievalTest::test_graph_search_returns_results PASSED [ 50%]\ntests/test_retrieval.py::RetrievalTest::test_late_search_returns_results PASSED [ 51%]\ntests/test_retrieval.py::RetrievalTest::test_search_corpus_multi_document PASSED [ 52%]\ntests/test_retrieval.py::RetrievalTest::test_search_document_planner_mode PASSED [ 53%]\ntests/test_retrieval.py::RetrievalTest::test_search_document_returns_hits_for_all_modes PASSED [ 54%]\ntests/test_retrieval.py::RetrievalTest::test_visual_search_returns_results PASSED [ 56%]\ntests/test_retrieval.py::BM25UnitTest::test_empty_corpus_returns_empty PASSED [ 57%]\ntests/test_retrieval.py::BM25UnitTest::test_empty_query_returns_empty PASSED [ 58%]\ntests/test_retrieval.py::BM25UnitTest::test_no_matching_terms_returns_empty PASSED [ 59%]\ntests/test_retrieval.py::BM25UnitTest::test_respects_top_k PASSED        [ 60%]\ntests/test_retrieval.py::DenseUnitTest::test_empty_corpus PASSED         [ 61%]\ntests/test_retrieval.py::DenseUnitTest::test_identical_text_has_high_score PASSED [ 62%]\ntests/test_retrieval.py::GraphUnitTest::test_builds_knowledge_graph PASSED [ 63%]\ntests/test_retrieval.py::GraphUnitTest::test_corpus_graph_links_shared_entities PASSED [ 64%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_references_expand_ranges PASSED [ 65%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_multiple_combined_noise \ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_multiple_combined_noise PASSED [ 67%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_numeric_range_with_noise PASSED [ 68%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_section_hierarchy_with_noise PASSED [ 69%]\ntests/test_retrieval.py::GraphUnitTest::test_number_values_expands_ranges PASSED [ 70%]\ntests/test_retrieval.py::GraphUnitTest::test_ocr_noise_expanded_patterns \ntests/test_retrieval.py::GraphUnitTest::test_ocr_noise_expanded_patterns PASSED [ 71%]\ntests/test_retrieval.py::GraphUnitTest::test_ocr_noise_new_patterns PASSED [ 72%]\ntests/test_retrieval.py::GraphUnitTest::test_ocr_normalize_reference_text_roundtrip PASSED [ 73%]\ntests/test_retrieval.py::GraphUnitTest::test_section_aliases_include_hierarchy PASSED [ 74%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_combined_intent_queries PASSED [ 75%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_graph_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_graph_queries_route_correctly PASSED [ 76%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_identifier_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_identifier_queries_route_correctly PASSED [ 78%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_merge_strategy_validation PASSED [ 79%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_multihop_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_multihop_queries_route_correctly PASSED [ 80%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_semantic_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_semantic_queries_route_correctly PASSED [ 81%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_table_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_table_queries_route_correctly PASSED [ 82%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_visual_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_visual_queries_route_correctly PASSED [ 83%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_cli_query_mode_defaults_to_planner PASSED [ 84%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_colpali_optional_dependency_message PASSED [ 85%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_corpus_graph_search_links_shared_entities_across_documents PASSED [ 86%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_document_profile_from_dict_tolerates_legacy_and_extra_keys PASSED [ 87%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_document_profile_structured_reference_inventory PASSED [ 89%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_empty_claim_citations_are_not_supported PASSED [ 90%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_extraction_handles_acronyms_aliases_and_external_refs PASSED [ 91%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_index_builds_section_entity_and_reference_edges PASSED [ 92%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_reference_extraction_handles_ocr_like_noise PASSED [ 93%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_section_navigation_edges PASSED [ 94%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_int8_embedding_compression_roundtrip PASSED [ 95%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_planner_merge_strategy_and_rerank_controls PASSED [ 96%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_planner_routes_plot_and_spreadsheet_queries PASSED [ 97%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_text_ingest_chunk_retrieve PASSED [ 98%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_visual_mode_handles_weak_ocr_fixture_and_reports_visual_metrics PASSED [100%]\n\n=================== 91 passed, 79 subtests passed in 12.26s ====================",
+        "mutatedFiles": [],
+        "metadata": {
+          "intent": "verify",
+          "exitCode": 0,
+          "commandPreview": "cd /Volumes/Developer/Workspace/Retrieval-Research && PYTHONPATH=. ./.venv/bin/pytest --tb=short -v 2>&1",
+          "verificationSignal": true
+        },
+        "permission": {
+          "outcome": "allow",
+          "reason": "Read-only action allowed by default.",
+          "source": "mode_default",
+          "mode": "auto"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 2,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 3c874709-86a5-4fd4-b1d1-92db4dce66d1\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit …\nRun contract summary: local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace\nEvidence summary: files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2\nResource summary: tokens=3139 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 25)\nWhy selected: Matched task terms: run, pythonpath, via, report, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: Ran shell command with exit code 0.\nNotes: [info] Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Context tier standard; compaction not triggered; selected tokens 1006 | Ran shell command with exit code 0.\nArchival recall: none\nRecent messages: [user] Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | [system] Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] ============================= test session starts ==============================\nplatform darwin -- Python 3.13.11, pytest-9.0.3, pluggy-1.6.0 -- /Volumes/Developer/Workspace/Retrieval-Research/.venv/bin/python3\ncachedir: .pytest_cache\nrootdir: /Volumes/Developer/Workspace/Retrieval-Research\nplugins: anyio-4.13.0\ncollecting ... collected 91 items\n\ntests/test_api.py::ApiTest::test_document_and_query_endpoints PASSED     [  1%]\ntests/test_api.py::ApiTest::test_documents_are_listed_newest_first PASSED [  2%]\ntests/test_api.py::ApiTest::test_health_endpoint_payload PASSED          [  3%]\ntests/test_api.py::ApiTest::test_index_endpoint_rejects_invalid_mode PASSED [  4%]\ntests/test_api.py::ApiTest::test_ingest_upload_endpoint PASSED           [  5%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_empty_corpus PASSED [  6%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_invalid_mode PASSED [  7%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_unknown_document PASSED [  8%]\ntests/test_api.py::ApiTest::test_query_endpoint_validates_top_k PASSED   [  9%]\ntests/test_chunking.py::ChunkingTest::test_chunk_metadata_contains_source_page_id PASSED [ 10%]\ntests/test_chunking.py::ChunkingTest::test_chunks_created_for_simple_text PASSED [ 12%]…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace",
+          "evidence_summary": "files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2",
+          "resource_summary": "tokens=3139 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pythonpath, via, report, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 25
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1452,
+          "selectedTotalTokens": 1452,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 2,
+      "contextTier": "standard",
+      "promptTokenEstimate": 5093,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 16000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 2,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 2. Selected tokens: 5093. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 2,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T20:47:18.147Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "decc67c6067f8f77c2577f9813307f722a139482166043715074dd4ce4b91670"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 2,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a5ec97f285a46978",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "a5ec97f285a46978ca3e447c43f45588481538d911debe55ae227702901781cb"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 2,
+      "phase": "implementation",
+      "capabilityProfile": "local_core",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 2,
+      "assistantMessage": "## Test Results\n\n- **Passed:** 91\n- **Failed:** 0\n- **Subtest passes:** 79\n- **Total collected:** 91 items\n- **Duration:** 12.26 seconds\n\n**Failing test names:** None — all 91 tests passed cleanly.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": false,
+        "cacheTtftMs": 506
+      },
+      "usage": {
+        "inputTokens": 6387,
+        "outputTokens": 235,
+        "reasoningTokens": 171,
+        "cacheTtftMs": 506,
+        "totalTokens": 6622,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 2,
+      "state": "llm",
+      "detail": "text-only generation"
+    },
+    {
+      "type": "context_built",
+      "turn": 3,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 3c874709-86a5-4fd4-b1d1-92db4dce66d1\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit …\nRun contract summary: local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace\nEvidence summary: files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2\nResource summary: tokens=9761 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 25)\nWhy selected: Matched task terms: run, pythonpath, via, report, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: Ran shell command with exit code 0.\nNotes: [info] Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 5093. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Context tier standard; compaction not triggered; selected tokens 1006 | Ran shell command with exit code 0. | Context tier standard; compaction not triggered; selected tokens 1452\nArchival recall: none\nRecent messages: [user] Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | [system] Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant]  | [tool] ============================= test session starts ==============================\nplatform darwin -- Python 3.13.11, pytest-9.0.3, pluggy-1.6.0 -- /Volumes/Developer/Workspace/Retrieval-Research/.venv/bin/python3\ncachedir: .pytest_cache\nrootdir: /Volumes/Developer/Workspace/Retrieval-Research\nplugins: anyio-4.13.0\ncollecting ... collected 91 items\n\ntests/test_api.py::ApiTest::test_document_and_query_endpoints PASSED     [  1%]\ntests/test_api.py::ApiTest::test_documents_are_listed_newest_first PASSED [  2%]\ntests/test_api.py::ApiTest::test_health_endpoint_payload PASSED          [  3%]\ntests/test_api.py::ApiTest::test_index_endpoint_rejects_invalid_mode PASSED [  4%]\ntests/test_api.py::ApiTest::test_ingest_upload_endpoint PASSED           [  5%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_empty_corpus PASSED [  6%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_invalid_mode PASSED [  7%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_unknown_document PASSED [  8%]…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace",
+          "evidence_summary": "files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2",
+          "resource_summary": "tokens=9761 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pythonpath, via, report, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 25
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1448,
+          "selectedTotalTokens": 1448,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 3,
+      "contextTier": "standard",
+      "promptTokenEstimate": 5185,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 16000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 3,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 3. Selected tokens: 5185. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 3,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T20:47:18.147Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "decc67c6067f8f77c2577f9813307f722a139482166043715074dd4ce4b91670"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 3,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:f37027268dc2d845",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "f37027268dc2d8458cfdcb9f753a49792b6d2d64c6af2ca303311e97c12821a2"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 3,
+      "phase": "planning",
+      "capabilityProfile": "local_core",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 3,
+      "assistantMessage": "## Pytest Results Summary\n\n| Metric              | Count |\n|---------------------|-------|\n| **Collected**       | 91    |\n| **Passed**          | 91 ✅  |\n| **Failed**          | 0     |\n| **Subtests Passed** | 79    |\n| **Duration**        | ~12.3s |\n\n**Failing tests:** None. All 91 tests passed successfully, covering test modules `test_api.py`, `test_chunking.py`, `test_config.py`, `test_health.py`, `test_jobs.py`, `test_log.py`, `test_retrieval.py`, and `test_v01_pipeline.py`.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 392
+      },
+      "usage": {
+        "inputTokens": 6462,
+        "outputTokens": 172,
+        "cachedTokens": 1664,
+        "reasoningTokens": 28,
+        "cacheTtftMs": 392,
+        "totalTokens": 6634,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 3,
+      "state": "llm",
+      "detail": "text-only generation"
+    },
+    {
+      "type": "context_built",
+      "turn": 4,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 3c874709-86a5-4fd4-b1d1-92db4dce66d1\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification\nPlan summary: Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit …\nRun contract summary: local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace\nEvidence summary: files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2\nResource summary: tokens=16395 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 25)\nWhy selected: Matched task terms: run, pythonpath, via, report, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: Ran shell command with exit code 0.\nNotes: [info] Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 5093. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 3. Selected tokens: 5185. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Ran shell command with exit code 0. | Context tier standard; compaction not triggered; selected tokens 1452 | Context tier standard; compaction not triggered; selected tokens 1448\nArchival recall: none\nRecent messages: [assistant]  | [tool] ============================= test session starts ==============================\nplatform darwin -- Python 3.13.11, pytest-9.0.3, pluggy-1.6.0 -- /Volumes/Developer/Workspace/Retrieval-Research/.venv/bin/python3\ncachedir: .pytest_cache\nrootdir: /Volumes/Developer/Workspace/Retrieval-Research\nplugins: anyio-4.13.0\ncollecting ... collected 91 items\n\ntests/test_api.py::ApiTest::test_document_and_query_endpoints PASSED     [  1%]\ntests/test_api.py::ApiTest::test_documents_are_listed_newest_first PASSED [  2%]\ntests/test_api.py::ApiTest::test_health_endpoint_payload PASSED          [  3%]\ntests/test_api.py::ApiTest::test_index_endpoint_rejects_invalid_mode PASSED [  4%]\ntests/test_api.py::ApiTest::test_ingest_upload_endpoint PASSED           [  5%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_empty_corpus PASSED [  6%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_invalid_mode PASSED [  7%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_unknown_document PASSED [  8%]\ntests/test_api.py::ApiTest::test_query_endpoint_validates_top_k PASSED   [  9%]\ntests/test_chunking.py::ChunkingTest::test_chunk_metadata_contains_source_page_id PASSED [ 10%]…",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 19 | Statuses: completed=14, blocked=5 | Hot extensions: .py:2, .txt:1 | Recommendations: failure_signal, loop_warning, review_failure_patterns, strengthen_verification",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "local_core / local_compat | objective=Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code. | resume=new_session | surface=local | requirements=trace, trace",
+          "evidence_summary": "files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2",
+          "resource_summary": "tokens=16395 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pythonpath, via, report, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 25
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1456,
+          "selectedTotalTokens": 1456,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 4,
+      "contextTier": "standard",
+      "promptTokenEstimate": 5361,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 16000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 4,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 4. Selected tokens: 5361. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 4,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T20:47:18.147Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "decc67c6067f8f77c2577f9813307f722a139482166043715074dd4ce4b91670"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 4,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:03fb853c584f7075",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "03fb853c584f707565f60fe3e500187b6614387d90357e54db49d76ca3b53466"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 4,
+      "phase": "planning",
+      "capabilityProfile": "local_core",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 4,
+      "assistantMessage": "## ✅ Test Results Complete\n\n**Command:** `PYTHONPATH=. ./.venv/bin/pytest`\n\n| Metric | Count |\n|---|---|\n| **Collected** | 91 |\n| **Passed** | **91** ✅ |\n| **Failed** | **0** |\n| **Subtests passed** | 79 |\n| **Duration** | 12.26s |\n\n**Failing tests:** None. All tests pass cleanly.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 373
+      },
+      "usage": {
+        "inputTokens": 6658,
+        "outputTokens": 225,
+        "cachedTokens": 1664,
+        "reasoningTokens": 131,
+        "cacheTtftMs": 373,
+        "totalTokens": 6883,
+        "estimated": false
+      },
+      "completionSummary": "## ✅ Test Results Complete\n\n**Command:** `PYTHONPATH=. ./.venv/bin/pytest`\n\n| Metric | Count |\n|---|---|\n| **Collected** | 91 |\n| **Passed** | **91** ✅ |\n| **Failed** | **0** |\n| **Subtests passed** |"
+    },
+    {
+      "type": "turn_state",
+      "turn": 4,
+      "state": "llm",
+      "detail": "text-only generation with completion claim"
+    },
+    {
+      "type": "verifier_verdict",
+      "turn": 4,
+      "verdict": {
+        "status": "pass",
+        "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+        "evidence": [
+          "Completion claim: ## ✅ Test Results Complete\n\n**Command:** `PYTHONPATH=. ./.venv/bin/pytest`\n\n| Metric | Count |\n|---|---|\n| **Collected** | 91 |\n| **Passed** | **91** ✅ |\n| **Failed** | **0** |\n| **Subtests passed** |",
+          "Touched files: 0"
+        ]
+      }
+    },
+    {
+      "type": "delivery_gate",
+      "turn": 4,
+      "verdict": {
+        "status": "pass",
+        "summary": "Runtime completed with the required evidence and delivery artifacts.",
+        "missingRequirements": [],
+        "satisfiedRequirements": [
+          "tool_proofs",
+          "trace",
+          "verifier"
+        ]
+      }
+    },
+    {
+      "type": "resource_usage",
+      "turn": 4,
+      "usage": {
+        "inputTokens": 22520,
+        "outputTokens": 758,
+        "totalTokens": 23278,
+        "totalCostUsd": 0,
+        "estimated": false,
+        "withinBudget": true,
+        "notes": [
+          "Token usage is estimated unless the active model adapter returns explicit usage metadata."
+        ]
+      }
+    }
+  ],
+  "messages": [
+    {
+      "id": "b7626b74-f2d5-4b0b-883b-95ae6fceb8a5",
+      "role": "user",
+      "content": "Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.",
+      "timestamp": "2026-05-20T20:47:18.027Z"
+    },
+    {
+      "id": "9ce261c4-0c7e-48b1-a711-09091c6640b3",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 1. Selected tokens: 2263. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T20:47:18.144Z"
+    },
+    {
+      "id": "ca0fe450-797a-4cfc-9f9c-e74fed2900d9",
+      "role": "assistant",
+      "content": "",
+      "timestamp": "2026-05-20T20:47:22.901Z"
+    },
+    {
+      "id": "d42ad9cd-75a7-4a6e-8017-d9cf0596e618",
+      "role": "tool",
+      "content": "============================= test session starts ==============================\nplatform darwin -- Python 3.13.11, pytest-9.0.3, pluggy-1.6.0 -- /Volumes/Developer/Workspace/Retrieval-Research/.venv/bin/python3\ncachedir: .pytest_cache\nrootdir: /Volumes/Developer/Workspace/Retrieval-Research\nplugins: anyio-4.13.0\ncollecting ... collected 91 items\n\ntests/test_api.py::ApiTest::test_document_and_query_endpoints PASSED     [  1%]\ntests/test_api.py::ApiTest::test_documents_are_listed_newest_first PASSED [  2%]\ntests/test_api.py::ApiTest::test_health_endpoint_payload PASSED          [  3%]\ntests/test_api.py::ApiTest::test_index_endpoint_rejects_invalid_mode PASSED [  4%]\ntests/test_api.py::ApiTest::test_ingest_upload_endpoint PASSED           [  5%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_empty_corpus PASSED [  6%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_invalid_mode PASSED [  7%]\ntests/test_api.py::ApiTest::test_query_endpoint_rejects_unknown_document PASSED [  8%]\ntests/test_api.py::ApiTest::test_query_endpoint_validates_top_k PASSED   [  9%]\ntests/test_chunking.py::ChunkingTest::test_chunk_metadata_contains_source_page_id PASSED [ 10%]\ntests/test_chunking.py::ChunkingTest::test_chunks_created_for_simple_text PASSED [ 12%]\ntests/test_chunking.py::ChunkingTest::test_chunks_empty_page_skipped PASSED [ 13%]\ntests/test_chunking.py::ChunkingTest::test_chunks_preserve_section_from_headings PASSED [ 14%]\ntests/test_chunking.py::ChunkingTest::test_chunks_respect_max_words PASSED [ 15%]\ntests/test_chunking.py::ChunkingTest::test_chunks_use_config_defaults_when_no_args PASSED [ 16%]\ntests/test_config.py::ConfigTest::test_cache_is_lru_and_clears PASSED    [ 17%]\ntests/test_config.py::ConfigTest::test_defaults_apply_when_no_env_vars PASSED [ 18%]\ntests/test_config.py::ConfigTest::test_env_vars_override_defaults PASSED [ 19%]\ntests/test_config.py::ConfigTest::test_gemini_api_key_comes_from_env PASSED [ 20%]\ntests/test_health.py::test_check_returns_expected_dict PASSED            [ 21%]\ntests/test_jobs.py::JobModelTest::test_job_defaults PASSED               [ 23%]\ntests/test_jobs.py::JobModelTest::test_job_roundtrip_dict PASSED         [ 24%]\ntests/test_jobs.py::JobModelTest::test_job_status_enum_values PASSED     [ 25%]\ntests/test_jobs.py::JobModelTest::test_job_type_enum_values PASSED       [ 26%]\ntests/test_jobs.py::JobStoreTest::test_claim_next_only_pending PASSED    [ 27%]\ntests/test_jobs.py::JobStoreTest::test_claim_next_returns_none_when_empty PASSED [ 28%]\ntests/test_jobs.py::JobStoreTest::test_claim_next_returns_pending_job PASSED [ 29%]\ntests/test_jobs.py::JobStoreTest::test_claim_respects_fifo_order PASSED  [ 30%]\ntests/test_jobs.py::JobStoreTest::test_complete_unknown_job_does_not_raise PASSED [ 31%]\ntests/test_jobs.py::JobStoreTest::test_complete_updates_job PASSED       [ 32%]\ntests/test_jobs.py::JobStoreTest::test_fail_updates_job PASSED           [ 34%]\ntests/test_jobs.py::JobStoreTest::test_list_jobs_filters_by_status PASSED [ 35%]\ntests/test_jobs.py::JobStoreTest::test_list_jobs_respects_limit PASSED   [ 36%]\ntests/test_jobs.py::JobStoreTest::test_list_jobs_returns_all PASSED      [ 37%]\ntests/test_jobs.py::JobStoreTest::test_load_returns_job PASSED           [ 38%]\ntests/test_jobs.py::JobStoreTest::test_load_returns_none_for_missing PASSED [ 39%]\ntests/test_jobs.py::JobStoreTest::test_submit_creates_job_file PASSED    [ 40%]\ntests/test_jobs.py::JobTypeTest::test_all_types_have_handlers PASSED     [ 41%]\ntests/test_log.py::LogTest::test_get_logger_returns_named_logger PASSED  [ 42%]\ntests/test_log.py::LogTest::test_get_logger_root PASSED                  [ 43%]\ntests/test_log.py::LogTest::test_setup_logging_adds_handler PASSED       [ 45%]\ntests/test_log.py::LogTest::test_silence_noisy_third_party PASSED        [ 46%]\ntests/test_retrieval.py::RetrievalTest::test_bm25_search_returns_results PASSED [ 47%]\ntests/test_retrieval.py::RetrievalTest::test_corpus_search_cross_document_graph PASSED [ 48%]\ntests/test_retrieval.py::RetrievalTest::test_dense_search_returns_results PASSED [ 49%]\ntests/test_retrieval.py::RetrievalTest::test_graph_search_returns_results PASSED [ 50%]\ntests/test_retrieval.py::RetrievalTest::test_late_search_returns_results PASSED [ 51%]\ntests/test_retrieval.py::RetrievalTest::test_search_corpus_multi_document PASSED [ 52%]\ntests/test_retrieval.py::RetrievalTest::test_search_document_planner_mode PASSED [ 53%]\ntests/test_retrieval.py::RetrievalTest::test_search_document_returns_hits_for_all_modes PASSED [ 54%]\ntests/test_retrieval.py::RetrievalTest::test_visual_search_returns_results PASSED [ 56%]\ntests/test_retrieval.py::BM25UnitTest::test_empty_corpus_returns_empty PASSED [ 57%]\ntests/test_retrieval.py::BM25UnitTest::test_empty_query_returns_empty PASSED [ 58%]\ntests/test_retrieval.py::BM25UnitTest::test_no_matching_terms_returns_empty PASSED [ 59%]\ntests/test_retrieval.py::BM25UnitTest::test_respects_top_k PASSED        [ 60%]\ntests/test_retrieval.py::DenseUnitTest::test_empty_corpus PASSED         [ 61%]\ntests/test_retrieval.py::DenseUnitTest::test_identical_text_has_high_score PASSED [ 62%]\ntests/test_retrieval.py::GraphUnitTest::test_builds_knowledge_graph PASSED [ 63%]\ntests/test_retrieval.py::GraphUnitTest::test_corpus_graph_links_shared_entities PASSED [ 64%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_references_expand_ranges PASSED [ 65%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_multiple_combined_noise \ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_multiple_combined_noise PASSED [ 67%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_numeric_range_with_noise PASSED [ 68%]\ntests/test_retrieval.py::GraphUnitTest::test_graph_stress_section_hierarchy_with_noise PASSED [ 69%]\ntests/test_retrieval.py::GraphUnitTest::test_number_values_expands_ranges PASSED [ 70%]\ntests/test_retrieval.py::GraphUnitTest::test_ocr_noise_expanded_patterns \ntests/test_retrieval.py::GraphUnitTest::test_ocr_noise_expanded_patterns PASSED [ 71%]\ntests/test_retrieval.py::GraphUnitTest::test_ocr_noise_new_patterns PASSED [ 72%]\ntests/test_retrieval.py::GraphUnitTest::test_ocr_normalize_reference_text_roundtrip PASSED [ 73%]\ntests/test_retrieval.py::GraphUnitTest::test_section_aliases_include_hierarchy PASSED [ 74%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_combined_intent_queries PASSED [ 75%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_graph_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_graph_queries_route_correctly PASSED [ 76%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_identifier_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_identifier_queries_route_correctly PASSED [ 78%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_merge_strategy_validation PASSED [ 79%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_multihop_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_multihop_queries_route_correctly PASSED [ 80%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_semantic_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_semantic_queries_route_correctly PASSED [ 81%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_table_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_table_queries_route_correctly PASSED [ 82%]\ntests/test_retrieval.py::PlannerCalibrationTest::test_visual_queries_route_correctly \ntests/test_retrieval.py::PlannerCalibrationTest::test_visual_queries_route_correctly PASSED [ 83%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_cli_query_mode_defaults_to_planner PASSED [ 84%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_colpali_optional_dependency_message PASSED [ 85%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_corpus_graph_search_links_shared_entities_across_documents PASSED [ 86%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_document_profile_from_dict_tolerates_legacy_and_extra_keys PASSED [ 87%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_document_profile_structured_reference_inventory PASSED [ 89%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_empty_claim_citations_are_not_supported PASSED [ 90%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_extraction_handles_acronyms_aliases_and_external_refs PASSED [ 91%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_index_builds_section_entity_and_reference_edges PASSED [ 92%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_reference_extraction_handles_ocr_like_noise PASSED [ 93%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_graph_section_navigation_edges PASSED [ 94%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_int8_embedding_compression_roundtrip PASSED [ 95%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_planner_merge_strategy_and_rerank_controls PASSED [ 96%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_planner_routes_plot_and_spreadsheet_queries PASSED [ 97%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_text_ingest_chunk_retrieve PASSED [ 98%]\ntests/test_v01_pipeline.py::V01PipelineTest::test_visual_mode_handles_weak_ocr_fixture_and_reports_visual_metrics PASSED [100%]\n\n=================== 91 passed, 79 subtests passed in 12.26s ====================",
+      "timestamp": "2026-05-20T20:47:37.806Z",
+      "metadata": {
+        "toolName": "shell",
+        "toolCallId": "call_00_NZcnecadt563mEzjzs4z4300",
+        "success": true
+      }
+    },
+    {
+      "id": "36a2ef76-3b14-4c37-b126-8fec8c0e5bf9",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 2. Selected tokens: 5093. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T20:47:37.864Z"
+    },
+    {
+      "id": "d60da856-0ddb-4cbb-8d9d-4c24dc7324e8",
+      "role": "assistant",
+      "content": "## Test Results\n\n- **Passed:** 91\n- **Failed:** 0\n- **Subtest passes:** 79\n- **Total collected:** 91 items\n- **Duration:** 12.26 seconds\n\n**Failing test names:** None — all 91 tests passed cleanly.",
+      "timestamp": "2026-05-20T20:47:46.287Z"
+    },
+    {
+      "id": "8cb987e3-3e86-4249-920c-4c393b0cc41f",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 3. Selected tokens: 5185. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T20:47:46.381Z"
+    },
+    {
+      "id": "745e8b15-2187-473d-b86c-5195bccfd133",
+      "role": "assistant",
+      "content": "## Pytest Results Summary\n\n| Metric              | Count |\n|---------------------|-------|\n| **Collected**       | 91    |\n| **Passed**          | 91 ✅  |\n| **Failed**          | 0     |\n| **Subtests Passed** | 79    |\n| **Duration**        | ~12.3s |\n\n**Failing tests:** None. All 91 tests passed successfully, covering test modules `test_api.py`, `test_chunking.py`, `test_config.py`, `test_health.py`, `test_jobs.py`, `test_log.py`, `test_retrieval.py`, and `test_v01_pipeline.py`.",
+      "timestamp": "2026-05-20T20:47:53.875Z"
+    },
+    {
+      "id": "6de98370-f948-4d2f-aaa9-e3736864eea9",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 4. Selected tokens: 5361. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T20:47:53.962Z"
+    },
+    {
+      "id": "1340d0b3-96d7-474a-80f4-644920988f4f",
+      "role": "assistant",
+      "content": "## ✅ Test Results Complete\n\n**Command:** `PYTHONPATH=. ./.venv/bin/pytest`\n\n| Metric | Count |\n|---|---|\n| **Collected** | 91 |\n| **Passed** | **91** ✅ |\n| **Failed** | **0** |\n| **Subtests passed** | 79 |\n| **Duration** | 12.26s |\n\n**Failing tests:** None. All tests pass cleanly.",
+      "timestamp": "2026-05-20T20:48:02.280Z"
+    }
+  ]
+}

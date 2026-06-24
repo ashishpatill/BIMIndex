@@ -1,0 +1,28 @@
+{
+  "version": "checkpoint/v2",
+  "checkpointId": "eef0369e-b376-4ad2-9a6d-c82c865625ea",
+  "sessionId": "4b38d198-f955-46d0-9597-f5cc5bfe6740",
+  "createdAt": "2026-05-16T09:53:01.534Z",
+  "toolCallId": null,
+  "workspaceDiff": {
+    "summary": "No touched files recorded.",
+    "touchedFiles": [],
+    "diffHash": "sha256:12924a1fbe095e7337ac4866f708ec13c109347e8c9c35349465d8fcfe8272d2"
+  },
+  "workspaceState": null,
+  "ledgerCursor": null,
+  "runContractState": {},
+  "semanticStateHash": "sha256:66fcb4dbe9920b61a46eee3b4939fff47c909fd3a211330fe9362f7cfcdb8b45",
+  "snapshot": {
+    "turn": 1,
+    "messages": [
+      {
+        "id": "33d6d428-f406-4ad6-8d2a-b0f64e6e677e",
+        "role": "user",
+        "content": "Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain",
+        "timestamp": "2026-05-16T09:52:47.579Z"
+      }
+    ],
+    "touchedFiles": []
+  }
+}

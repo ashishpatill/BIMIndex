@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T17:58:48.936Z",
+  "payload": {
+    "runId": "b43d3d1b-52ad-4714-97ec-2284db5b4cc3",
+    "sessionId": "e2e7d9eb-adf2-458c-baeb-aede8de56db7",
+    "status": "completed",
+    "userRequest": "check all remaining features in the project. check all code and docs throughly and respond",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/b43d3d1b-52ad-4714-97ec-2284db5b4cc3/policy_candidates.json"
+    }
+  }
+}

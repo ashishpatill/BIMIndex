@@ -1,0 +1,26 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:44:12.766Z",
+  "payload": {
+    "runId": "eefedafe-0519-46d6-87d7-61a9f938b82d",
+    "sessionId": "13cfb79b-4f4f-47df-91d3-161dc32d523a",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "13cfb79b-4f4f-47df-91d3-161dc32d523a",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Add a health-check endpoint to the FastAPI app if one exists in core_processor/ or create a simple health.py module in core_processor/ that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Write a pytest test for it. --plain",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "eefedafe-0519-46d6-87d7-61a9f938b82d:1",
+        "eefedafe-0519-46d6-87d7-61a9f938b82d:2",
+        "eefedafe-0519-46d6-87d7-61a9f938b82d:3"
+      ]
+    }
+  }
+}

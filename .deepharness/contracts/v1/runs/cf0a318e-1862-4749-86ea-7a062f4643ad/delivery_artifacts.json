@@ -1,0 +1,49 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "delivery_artifacts",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:53:07.136Z",
+  "payload": {
+    "runId": "cf0a318e-1862-4749-86ea-7a062f4643ad",
+    "sessionId": "9b9862bb-7e03-4dd2-8f08-caffcb92d193",
+    "verdict": {
+      "status": "pass",
+      "summary": "Runtime completed with the required evidence and delivery artifacts.",
+      "missingRequirements": [],
+      "satisfiedRequirements": [
+        "tool_proofs",
+        "trace"
+      ]
+    },
+    "evidence": {
+      "touchedFiles": [],
+      "toolProofs": [
+        "list_files: Listed 29 entries under /Volumes/Developer/Workspace/Retrieval-Research.",
+        "read_file: Read /Volumes/Developer/Workspace/Retrieval-Research/retrieval_roadmap.md.",
+        "read_file: Read /Volumes/Developer/Workspace/Retrieval-Research/IMPLEMENTATION_PLAN.md.",
+        "shell: Ran shell command with exit code 0.",
+        "shell: Ran shell command with exit code 0.",
+        "read_file: Read retrieval_research/schema/models.py.",
+        "read_file: Read retrieval_research/storage/artifacts.py.",
+        "read_file: Read retrieval_research/ingest/service.py.",
+        "read_file: Read retrieval_research/chunking/page_aware.py.",
+        "read_file: Read retrieval_research/retrieval/planner.py.",
+        "read_file: Read retrieval_research/retrieval/graph.py.",
+        "read_file: Read retrieval_research/retrieval/visual.py.",
+        "read_file: Read retrieval_research/retrieval/hybrid.py.",
+        "read_file: Read retrieval_research/cli.py.",
+        "read_file: Read retrieval_research/api.py.",
+        "read_file: Read retrieval_research/evaluation/runner.py.",
+        "read_file: Read retrieval_research/config.py."
+      ],
+      "operatorInterventions": []
+    },
+    "artifacts": [
+      {
+        "artifactType": "trace",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/cf0a318e-1862-4749-86ea-7a062f4643ad.json",
+        "summary": "Primary runtime trace."
+      }
+    ]
+  }
+}

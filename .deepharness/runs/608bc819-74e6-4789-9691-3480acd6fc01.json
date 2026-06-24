@@ -1,0 +1,683 @@
+{
+  "runId": "608bc819-74e6-4789-9691-3480acd6fc01",
+  "sessionId": "5ba3c537-8493-43d4-bed4-928c90bead48",
+  "createdAt": "2026-05-20T19:03:28.707Z",
+  "events": [
+    {
+      "type": "workspace_surface",
+      "turn": 0,
+      "kind": "local",
+      "surfaceId": "local",
+      "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+      "metadata": {
+        "mode": "direct"
+      }
+    },
+    {
+      "type": "run_contract",
+      "turn": 0,
+      "runContract": {
+        "objectiveSummary": "Run pytest on this project and fix any failures you find. Report results.",
+        "capabilityProfile": "governed_delivery",
+        "governanceMode": "governed",
+        "continuity": {
+          "sessionId": "5ba3c537-8493-43d4-bed4-928c90bead48",
+          "parentSessionId": null,
+          "checkpointId": null,
+          "workstreamId": null,
+          "resumeMode": "new_session"
+        },
+        "memorySnapshot": {
+          "capturedAt": "2026-05-20T19:03:04.754Z",
+          "memoryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/MEMORY.md",
+          "userPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/memory/l1/USER.md",
+          "memoryMarkdown": "",
+          "userMarkdown": "",
+          "truncated": {
+            "memory": false,
+            "user": false
+          }
+        },
+        "workspaceSurface": {
+          "kind": "local",
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "surfaceId": "local"
+        },
+        "resourcePolicy": {
+          "promptTokenLimit": 24000,
+          "maxTurns": 6,
+          "maxRecoverySignals": 3
+        },
+        "evidenceRequirements": [
+          "verifier",
+          "trace"
+        ],
+        "deliveryRequirements": [
+          "trace",
+          "changed_files",
+          "patch_bundle"
+        ],
+        "cacheStability": {
+          "version": "cache-stability/v1",
+          "createdAt": "2026-05-20T19:03:04.836Z",
+          "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+          "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+          "protectedMessageBoundary": 2,
+          "protectedMessageHash": "f7de16e1ff8d15785e7ba1864ea9fb7111f3277a01c9de5e2b6239206c7d53b7"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 1,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 5ba3c537-8493-43d4-bed4-928c90bead48\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run pytest on this project and fix any failures you find. Report results.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 10 | Statuses: completed=8, blocked=2 | Hot extensions: .py:2, .txt:1 | Recommendations: review_failure_patterns, testing_signal\nPlan summary: Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification. S1 [in_progress] Survey the workspace (planni…\nRun contract summary: governed_delivery / governed | objective=Run pytest on this project and fix any failures you find. Report results. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle\nEvidence summary: files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0\nResource summary: tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 22)\nWhy selected: Matched task terms: run, pytest, project, fix, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run pytest on this project and fix any failures you find. Report results.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: none\nNotes: [info] Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files\nEpisodic recall: none\nArchival recall: none\nRecent messages: [user] Run pytest on this project and fix any failures you find. Report results.",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 10 | Statuses: completed=8, blocked=2 | Hot extensions: .py:2, .txt:1 | Recommendations: review_failure_patterns, testing_signal",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Run pytest on this project and fix any failures you find. Report results. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=0 | operator_interventions=0 | memory_safety=0 | memory_confidence=0",
+          "resource_summary": "tokens=0 | cost_usd=0.0000 | within_budget | estimated_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pytest, project, fix, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 22
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 932,
+          "selectedTotalTokens": 932,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 1,
+      "contextTier": "standard",
+      "promptTokenEstimate": 2174,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 1,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 1. Selected tokens: 2174. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 1,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T19:03:04.836Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "f7de16e1ff8d15785e7ba1864ea9fb7111f3277a01c9de5e2b6239206c7d53b7"
+      },
+      "status": "created",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 1,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:0912553ce79560dd",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "0912553ce79560dd15015debc157a8532a3a5a324e87fde494057c72382d1c2b"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 1,
+      "phase": "planning",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 1,
+      "assistantMessage": "Starting with a survey of the project structure and test files before running pytest.",
+      "toolCallNames": [
+        "list_files"
+      ],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 350
+      },
+      "usage": {
+        "inputTokens": 2770,
+        "outputTokens": 157,
+        "cachedTokens": 1152,
+        "reasoningTokens": 80,
+        "cacheTtftMs": 350,
+        "totalTokens": 2927,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 1,
+      "state": "tool",
+      "detail": "1 tool call(s): list_files"
+    },
+    {
+      "type": "tool_result",
+      "turn": 1,
+      "observation": {
+        "toolCallId": "call-1",
+        "toolName": "list_files",
+        "success": true,
+        "summary": "Listed 29 entries under ..",
+        "outputPreview": "dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests",
+        "mutatedFiles": [],
+        "permission": {
+          "outcome": "allow",
+          "reason": "Read-only action allowed by default.",
+          "source": "mode_default",
+          "mode": "auto"
+        }
+      }
+    },
+    {
+      "type": "context_built",
+      "turn": 2,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 5ba3c537-8493-43d4-bed4-928c90bead48\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run pytest on this project and fix any failures you find. Report results.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 10 | Statuses: completed=8, blocked=2 | Hot extensions: .py:2, .txt:1 | Recommendations: review_failure_patterns, testing_signal\nPlan summary: Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification. S1 [in_progress] Survey the workspace (planni…\nRun contract summary: governed_delivery / governed | objective=Run pytest on this project and fix any failures you find. Report results. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle\nEvidence summary: files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2\nResource summary: tokens=2927 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 22)\nWhy selected: Matched task terms: run, pytest, project, fix, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run pytest on this project and fix any failures you find. Report results.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: Listed 29 entries under ..\nNotes: [info] Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2174. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Context tier standard; compaction not triggered; selected tokens 932 | Listed 29 entries under ..\nArchival recall: none\nRecent messages: [user] Run pytest on this project and fix any failures you find. Report results. | [system] Ralph refresh triggered at turn 1. Selected tokens: 2174. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant] Starting with a survey of the project structure and test files before running pytest. | [tool] dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 10 | Statuses: completed=8, blocked=2 | Hot extensions: .py:2, .txt:1 | Recommendations: review_failure_patterns, testing_signal",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Run pytest on this project and fix any failures you find. Report results. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2",
+          "resource_summary": "tokens=2927 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pytest, project, fix, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 22
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1200,
+          "selectedTotalTokens": 1200,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 2,
+      "contextTier": "standard",
+      "promptTokenEstimate": 2636,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 2,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 2. Selected tokens: 2636. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 2,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T19:03:04.836Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "f7de16e1ff8d15785e7ba1864ea9fb7111f3277a01c9de5e2b6239206c7d53b7"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 2,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1df23151c06eeb69",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "1df23151c06eeb6998386fdb3c0eaa7e241696726d95ae5d19143129fc5ca3a0"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 2,
+      "phase": "implementation",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 2,
+      "assistantMessage": "Let me look at the test files and key source directories to understand the codebase before running pytest.",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 212
+      },
+      "usage": {
+        "inputTokens": 3223,
+        "outputTokens": 176,
+        "cachedTokens": 1152,
+        "reasoningTokens": 32,
+        "cacheTtftMs": 212,
+        "totalTokens": 3399,
+        "estimated": false
+      }
+    },
+    {
+      "type": "turn_state",
+      "turn": 2,
+      "state": "llm",
+      "detail": "text-only generation"
+    },
+    {
+      "type": "context_built",
+      "turn": 3,
+      "compiledContext": {
+        "stablePrefix": "You are DeepHarness, a coding-agent runtime optimized for long-task reliability.\nUse tools deliberately, avoid repeated no-op exploration, and do not declare success without evidence.\nPrefer minimal context, concrete plans, and verification after mutations.\nFrozen L1 Memory\nProject memory:\nNo frozen project memory recorded.\nUser memory:\nNo frozen user memory recorded.\nInstruction layers (reloaded every turn): none discovered.\nSkill index: version=skill-index/v1 body_injection=deferred a2a.task.debug@1.0.0 title=\"A2A Task Debug\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Debug A2A task lifecycle, launch queues, worker claims, and message dispatch.\" architecture.graph.map@1.0.0 title=\"Architecture Graph Map\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Map source files, functions, classes, and feature clusters into architecture graph artifacts.\" cache.stability.audit@1.0.0 title=\"Cache Stability Audit\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Audit prompt, tool, and protected-message changes for cache-stability regressions.\" changelog.update@1.0.0 title=\"Changelog Update\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Update relevant release notes and roadmap documentation for meaningful code changes.\" compression.replay@1.0.0 title=\"Compression Replay\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Verify long-task compression behavior across repeated synthetic turns.\" context.budget.plan@1.0.0 title=\"Context Budget Plan\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Plan context sections against prompt budget pressure and compression thresholds.\" delivery.gate.check@1.0.0 title=\"Delivery Gate Check\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Check whether governed delivery has required verifier and artifact evidence.\" evidence.ledger.review@1.0.0 title=\"Evidence Ledger Review\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Review run evidence for governed delivery and completion claims.\" frontend.typecheck.triage@1.0.0 title=\"Frontend Typecheck Triage\" trust=workspace tools=filesystem,frontend,typescript tests=passing success=1.000 description=\"Triage strict frontend TypeScript failures while respecting existing UI patterns.\" ingress.github.triage@1.0.0 title=\"GitHub Ingress Triage\" trust=workspace tools=filesystem,github tests=passing success=1.000 description=\"Normalize GitHub webhook or comment context into a runtime workstream.\" mcp.server.verify@1.0.0 title=\"MCP Server Verify\" trust=workspace tools=filesystem,mcp,typescript tests=passing success=1.000 description=\"Verify MCP server tool exposure, schemas, and operator control responses.\" memory.distillation@1.0.0 title=\"Memory Distillation\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Extract durable memory candidates from compressed or collapsed runtime turns.\" model.routing.diagnostics@1.0.0 title=\"Model Routing Diagnostics\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Diagnose provider routing, context tier, and model fallback decisions.\" python.eval.handoff@1.0.0 title=\"Python Eval Handoff\" trust=workspace tools=filesystem,python tests=passing success=1.000 description=\"Prepare TypeScript runtime artifacts for Python companion-lab eval and replay work.\" recall.benchmark.review@1.0.0 title=\"Recall Benchmark Review\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Review Recall@5 benchmark inputs, outputs, and regressions for episodic memory search.\" sandbox.policy.review@1.0.0 title=\"Sandbox Policy Review\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Review sandbox, permission, and taint decisions around tool execution.\" skill.authoring@1.0.0 title=\"Skill Authoring\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Create or revise typed procedural skills with manifests, tests, metrics, and lazy activation bodies.\" tool.permission.triage@1.0.0 title=\"Tool Permission Triage\" trust=workspace tools=filesystem,security tests=passing success=1.000 description=\"Triage denied, asked, or held tool calls with concise remediation guidance.\" trace.summarize@1.0.0 title=\"Trace Summarize\" trust=workspace tools=filesystem tests=passing success=1.000 description=\"Summarize runtime traces into high-signal progress, costs, evidence, and verifier outcomes.\" typescript.refactor@1.0.0 title=\"TypeScript Refactor\" trust=workspace tools=filesystem,typescript tests=passing success=1.000 description=\"Refactor TypeScript modules while preserving public behavior and strict type safety.\"",
+        "dynamicContext": "Runtime metadata\nContext tier: standard\nSession ID: 5ba3c537-8493-43d4-bed4-928c90bead48\nParent session: none\nCheckpoint anchor: none\nWorkstream: none\nUser request: Run pytest on this project and fix any failures you find. Report results.\n\nEnvironment bootstrap\n<env>\n  cwd: /Volumes/Developer/Workspace/Retrieval-Research\n  branch: main\n  git_status:\n    ?? .deepharness/\n    ?? apps/web/pnpm-lock.yaml\n    ?? core_processor/health.py\n    ?? tests/test_health.py\n  runtimes:\n    node: v22.22.2\n    python: Python 3.13.7\n    rust: rustc 1.81.0 (eeb90cda1 2024-09-04)\n    bun: 1.3.11\n  memory: 16 GB\n  workspace: .claude/  .cursor/  .deepharness/  .env.example  .git/  .github/  .gitignore  .pytest_cache/  .venv/  Dockerfile  GLM-OCR + Gemini 3.1 Pro Preview.md  IMPLEMENTATION_PLAN.md  LICENSE  README.md  __pycache__/\n</env>\n\nDynamic context injection\nBranch: main\nGit diff summary: No working tree diff.\nLast test summary: No recorded test summary.\nLocal learning summary: Runs tracked: 10 | Statuses: completed=8, blocked=2 | Hot extensions: .py:2, .txt:1 | Recommendations: review_failure_patterns, testing_signal\nPlan summary: Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification. S1 [in_progress] Survey the workspace (planni…\nRun contract summary: governed_delivery / governed | objective=Run pytest on this project and fix any failures you find. Report results. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle\nEvidence summary: files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2\nResource summary: tokens=6326 | cost_usd=0.0000 | within_budget | provider_usage\nRecovery summary: signals=0 | escalation=stable | latest=none | notes=Recovery state is stable.\nActive error summaries: none\n\nCurrent plan\nNo explicit plan recorded yet.\n\nRelevant project snippets\nREADME.md (score 22)\nWhy selected: Matched task terms: run, pytest, project, fix, any\n<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…\n\nSession memory\nSession summary:\nCurrent goal: Run pytest on this project and fix any failures you find. Report results.\nFiles touched: none\nHypotheses: none\nFailed attempts: none\nOpen questions: none\nLearnings: Listed 29 entries under ..\nNotes: [info] Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files | [info] Ralph refresh triggered at turn 1. Selected tokens: 2174. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [info] Ralph refresh triggered at turn 2. Selected tokens: 2636. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.\nEpisodic recall: Context tier standard; compaction not triggered; selected tokens 932 | Listed 29 entries under .. | Context tier standard; compaction not triggered; selected tokens 1200\nArchival recall: none\nRecent messages: [user] Run pytest on this project and fix any failures you find. Report results. | [system] Ralph refresh triggered at turn 1. Selected tokens: 2174. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant] Starting with a survey of the project structure and test files before running pytest. | [tool] dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests | [system] Ralph refresh triggered at turn 2. Selected tokens: 2636. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state. | [assistant] Let me look at the test files and key source directories to understand the codebase before running pytest.",
+        "contextTier": "standard",
+        "instructionSources": [],
+        "contextInjection": {
+          "branch": "main",
+          "git_diff_summary": "No working tree diff.",
+          "last_test_summary": "No recorded test summary.",
+          "active_error_summaries": [],
+          "local_learning_summary": "Runs tracked: 10 | Statuses: completed=8, blocked=2 | Hot extensions: .py:2, .txt:1 | Recommendations: review_failure_patterns, testing_signal",
+          "plan_summary": "Plan summary: Use a read-then-write plan for: Run pytest on this project and fix any failures you find. Report results.. Prefer narrow file inspection, minimal churn, and explicit verification.\nS1 [in_progress] Survey the workspace (planning) -> Identify the repo areas and files most relevant to the task. | tools: list_files, read_file, shell\nS2 [pending] Inspect the critical implementation details (planning) -> Read the narrowest set of files needed to confirm the current behavior. | tools: read_file, shell\nS3 [pending] Apply the smallest coherent code change (implementation) -> Implement the feature or fix with minimal unrelated churn. | tools: read_file, write_file, shell\nS4 [pending] Verify the result (verification) -> Check the final state, run the relevant validation, and confirm completion honestly. | tools: read_file, shell, list_files",
+          "run_contract_summary": "governed_delivery / governed | objective=Run pytest on this project and fix any failures you find. Report results. | resume=new_session | surface=local | requirements=verifier, trace, trace, changed_files, patch_bundle",
+          "evidence_summary": "files=0 | tool_proofs=1 | operator_interventions=0 | memory_safety=0 | memory_confidence=2",
+          "resource_summary": "tokens=6326 | cost_usd=0.0000 | within_budget | provider_usage",
+          "recovery_summary": "signals=0 | escalation=stable | latest=none | notes=Recovery state is stable."
+        },
+        "environmentSnapshot": {
+          "cwd": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "repoRoot": "/Volumes/Developer/Workspace/Retrieval-Research",
+          "branch": "main",
+          "gitStatusSummary": "?? .deepharness/\n?? apps/web/pnpm-lock.yaml\n?? core_processor/health.py\n?? tests/test_health.py",
+          "languageHints": [],
+          "packageManagers": [],
+          "repoMap": [
+            ".claude/",
+            ".cursor/",
+            ".deepharness/",
+            ".env.example",
+            ".git/",
+            ".github/",
+            ".gitignore",
+            ".pytest_cache/",
+            ".venv/",
+            "Dockerfile",
+            "GLM-OCR + Gemini 3.1 Pro Preview.md",
+            "IMPLEMENTATION_PLAN.md",
+            "LICENSE",
+            "README.md",
+            "__pycache__/",
+            "apps/",
+            "core_processor/",
+            "data/",
+            "datasets/",
+            "gradio_app.py"
+          ],
+          "runtimeVersions": {
+            "node": "v22.22.2",
+            "python": "Python 3.13.7",
+            "rust": "rustc 1.81.0 (eeb90cda1 2024-09-04)",
+            "bun": "1.3.11"
+          },
+          "memoryGb": 16
+        },
+        "relevantSnippets": [
+          {
+            "path": "README.md",
+            "summary": "Matched task terms: run, pytest, project, fix, any",
+            "snippet": "<p align=\"center\"> <img src=\"https://img.shields.io/badge/python-3.12+-blue\" alt=\"Python\"> <img src=\"https://img.shields.io/badge/next.js-16-black\" alt=\"Next.js\"> <img src=\"https://img.shields.io/badge/license-MIT-green\" alt=\"License\"> <img src=\"https://img.shields.io/badge/tests-90%20passed-brightgreen\" alt=\"Tests\"> </p> # Retrieval Research **A retrieval engine that actually understands your documents.** Not just v…",
+            "score": 22
+          }
+        ],
+        "budgetReport": {
+          "contextTier": "standard",
+          "tokenBudget": 2500,
+          "estimatedTotalTokens": 1336,
+          "selectedTotalTokens": 1336,
+          "compactionTriggered": false,
+          "compressionPressure": "none",
+          "compressionTargetTokens": 1875,
+          "degradedSections": []
+        }
+      }
+    },
+    {
+      "type": "gateway_budget",
+      "turn": 3,
+      "contextTier": "standard",
+      "promptTokenEstimate": 2846,
+      "budgetDecision": {
+        "withinBudget": true,
+        "requiresCompaction": false,
+        "reason": "Selected context fits within the effective standard budget.",
+        "effectivePromptTokenLimit": 24000
+      }
+    },
+    {
+      "type": "note",
+      "turn": 3,
+      "level": "info",
+      "message": "Ralph refresh triggered at turn 3. Selected tokens: 2846. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state."
+    },
+    {
+      "type": "cache_stability_contract",
+      "turn": 3,
+      "contract": {
+        "version": "cache-stability/v1",
+        "createdAt": "2026-05-20T19:03:04.836Z",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "protectedMessageBoundary": 2,
+        "protectedMessageHash": "f7de16e1ff8d15785e7ba1864ea9fb7111f3277a01c9de5e2b6239206c7d53b7"
+      },
+      "status": "validated",
+      "violationCount": 0
+    },
+    {
+      "type": "cache_metrics",
+      "turn": 3,
+      "metric": {
+        "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:904658251ce69bc7",
+        "cacheHit": false,
+        "hitCount": 0,
+        "model": "deepseek:deepseek-v4-pro",
+        "promptHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+        "toolHash": "77578162d0a94a74a8059d43cda420c07678f55c8d9c8e08935f92bb9bf36bb0",
+        "recentMessageHash": "904658251ce69bc7ef3a551be0d9f27d19b809a49ebe0a9b95f8e7e8baa801e6"
+      }
+    },
+    {
+      "type": "progressive_tool_disclosure",
+      "turn": 3,
+      "phase": "planning",
+      "capabilityProfile": "governed_delivery",
+      "activeToolNames": [
+        "self.capabilities",
+        "self.knowledge",
+        "self.history",
+        "list_files",
+        "read_file",
+        "write_file",
+        "shell"
+      ]
+    },
+    {
+      "type": "model_output",
+      "turn": 3,
+      "assistantMessage": "<toolCalls>\n<toolCall id=\"tc_1\" name=\"list_files\" input='{\"path\":\"tests\"}'>\n<toolCall id=\"tc_2\" name=\"list_files\" input='{\"path\":\"core_processor\"}'>\n<toolCall id=\"tc_3\" name=\"list_files\" input='{\"path\":\"retrieval_research\"}'>\n<toolCall id=\"tc_4\" name=\"read_file\" input='{\"path\":\"pyproject.toml\"}'>\n<toolCall id=\"tc_5\" name=\"read_file\" input='{\"path\":\"setup.cfg\"}'>\n<toolCall id=\"tc_6\" name=\"read_file\" input='{\"path\":\"pytest.ini\"}'>\n</toolCalls>",
+      "toolCallNames": [],
+      "modelMetadata": {
+        "provider": "deepseek",
+        "model": "deepseek-v4-pro",
+        "cacheHit": true,
+        "cacheTtftMs": 339
+      },
+      "usage": {
+        "inputTokens": 3408,
+        "outputTokens": 326,
+        "cachedTokens": 1536,
+        "reasoningTokens": 167,
+        "cacheTtftMs": 339,
+        "totalTokens": 3734,
+        "estimated": false
+      },
+      "completionSummary": "<toolCalls>\n<toolCall id=\"tc_1\" name=\"list_files\" input='{\"path\":\"tests\"}'>\n<toolCall id=\"tc_2\" name=\"list_files\" input='{\"path\":\"core_processor\"}'>\n<toolCall id=\"tc_3\" name=\"list_files\" input='{\"path"
+    },
+    {
+      "type": "turn_state",
+      "turn": 3,
+      "state": "llm",
+      "detail": "text-only generation with completion claim"
+    },
+    {
+      "type": "verifier_verdict",
+      "turn": 3,
+      "verdict": {
+        "status": "pass",
+        "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+        "evidence": [
+          "Completion claim: <toolCalls>\n<toolCall id=\"tc_1\" name=\"list_files\" input='{\"path\":\"tests\"}'>\n<toolCall id=\"tc_2\" name=\"list_files\" input='{\"path\":\"core_processor\"}'>\n<toolCall id=\"tc_3\" name=\"list_files\" input='{\"path",
+          "Touched files: 0"
+        ]
+      }
+    },
+    {
+      "type": "delivery_gate",
+      "turn": 3,
+      "verdict": {
+        "status": "fail",
+        "summary": "Runtime is missing required handoff evidence: changed_files, patch_bundle.",
+        "missingRequirements": [
+          "changed_files",
+          "patch_bundle"
+        ],
+        "satisfiedRequirements": [
+          "tool_proofs",
+          "trace",
+          "verifier"
+        ]
+      }
+    },
+    {
+      "type": "resource_usage",
+      "turn": 3,
+      "usage": {
+        "inputTokens": 9401,
+        "outputTokens": 659,
+        "totalTokens": 10060,
+        "totalCostUsd": 0,
+        "estimated": false,
+        "withinBudget": true,
+        "notes": [
+          "Token usage is estimated unless the active model adapter returns explicit usage metadata."
+        ]
+      }
+    }
+  ],
+  "messages": [
+    {
+      "id": "749b7e94-692b-4a26-85d2-708f482cf1cf",
+      "role": "user",
+      "content": "Run pytest on this project and fix any failures you find. Report results.",
+      "timestamp": "2026-05-20T19:03:04.756Z"
+    },
+    {
+      "id": "6e4a0830-b04f-4726-a52c-424dfa1fb3fd",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 1. Selected tokens: 2174. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T19:03:04.833Z"
+    },
+    {
+      "id": "945b0b2d-271f-4b1c-849b-cd453a3df82c",
+      "role": "assistant",
+      "content": "Starting with a survey of the project structure and test files before running pytest.",
+      "timestamp": "2026-05-20T19:03:10.339Z"
+    },
+    {
+      "id": "4216f2bc-5664-489d-93e3-12f404c91b21",
+      "role": "tool",
+      "content": "dir  .claude\ndir  .cursor\ndir  .deepharness\nfile .env.example\ndir  .git\ndir  .github\nfile .gitignore\ndir  .pytest_cache\ndir  .venv\nfile Dockerfile\nfile GLM-OCR + Gemini 3.1 Pro Preview.md\nfile IMPLEMENTATION_PLAN.md\nfile LICENSE\nfile README.md\ndir  __pycache__\ndir  apps\ndir  core_processor\ndir  data\ndir  datasets\nfile gradio_app.py\ndir  history\nfile requirements.txt\ndir  retrieval_research\nfile retrieval_roadmap.md\nfile run-app.sh\ndir  scripts\ndir  security\nfile streamlit_app.py\ndir  tests",
+      "timestamp": "2026-05-20T19:03:10.356Z",
+      "metadata": {
+        "toolName": "list_files",
+        "toolCallId": "call-1",
+        "success": true
+      }
+    },
+    {
+      "id": "71059659-a746-4080-8b5b-de0ca27cb381",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 2. Selected tokens: 2636. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T19:03:10.392Z"
+    },
+    {
+      "id": "0a19a3da-0053-438e-8af3-7935ab6ea0e5",
+      "role": "assistant",
+      "content": "Let me look at the test files and key source directories to understand the codebase before running pytest.",
+      "timestamp": "2026-05-20T19:03:17.482Z"
+    },
+    {
+      "id": "5ddaebf1-fcec-4c55-9215-08c2a896c2aa",
+      "role": "system",
+      "content": "Ralph refresh triggered at turn 3. Selected tokens: 2846. Degraded sections: none. Rebuild the plan, keep the stable prefix intact, and continue from verified state.",
+      "timestamp": "2026-05-20T19:03:17.522Z"
+    },
+    {
+      "id": "bf310d4c-4b48-4d01-ac4b-d066f99251ad",
+      "role": "assistant",
+      "content": "<toolCalls>\n<toolCall id=\"tc_1\" name=\"list_files\" input='{\"path\":\"tests\"}'>\n<toolCall id=\"tc_2\" name=\"list_files\" input='{\"path\":\"core_processor\"}'>\n<toolCall id=\"tc_3\" name=\"list_files\" input='{\"path\":\"retrieval_research\"}'>\n<toolCall id=\"tc_4\" name=\"read_file\" input='{\"path\":\"pyproject.toml\"}'>\n<toolCall id=\"tc_5\" name=\"read_file\" input='{\"path\":\"setup.cfg\"}'>\n<toolCall id=\"tc_6\" name=\"read_file\" input='{\"path\":\"pytest.ini\"}'>\n</toolCalls>",
+      "timestamp": "2026-05-20T19:03:28.702Z"
+    }
+  ]
+}

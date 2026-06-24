@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "source": "runtime_run",
+  "createdAt": "2026-05-16T09:53:06.853Z",
+  "anonymousInstallationId": "3508f720-cd3f-4ba9-9392-142fa5446649",
+  "shareMode": "manual_review_required",
+  "privacy": {
+    "includesPromptText": false,
+    "includesRawSummaryText": false,
+    "includesFilePaths": false,
+    "includesCode": false
+  },
+  "runtime": {
+    "status": "blocked",
+    "contextTier": "standard",
+    "turnCount": 2,
+    "hasParentSession": false,
+    "checkpointed": true,
+    "touchedFileCount": 2
+  },
+  "verifier": {
+    "status": "partial",
+    "evidenceCount": 2
+  },
+  "tools": [
+    {
+      "toolName": "custom_tool",
+      "invocations": 2,
+      "successes": 2,
+      "failures": 0,
+      "denied": 0,
+      "asks": 0
+    }
+  ],
+  "fileExtensions": [
+    {
+      "extension": ".py",
+      "count": 2
+    }
+  ],
+  "graphShape": {
+    "fileCount": 86,
+    "functionCount": 382,
+    "highlightedFileCount": 2,
+    "highlightedFunctionCount": 2,
+    "languages": [
+      {
+        "key": "python",
+        "count": 57
+      },
+      {
+        "key": "typescript",
+        "count": 29
+      }
+    ]
+  },
+  "issueTags": [
+    "testing_signal"
+  ],
+  "recommendationTags": [
+    "testing_signal"
+  ]
+}

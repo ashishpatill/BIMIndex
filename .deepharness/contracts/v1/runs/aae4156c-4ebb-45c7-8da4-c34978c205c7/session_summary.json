@@ -1,0 +1,27 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:36:12.637Z",
+  "payload": {
+    "runId": "aae4156c-4ebb-45c7-8da4-c34978c205c7",
+    "sessionId": "2bb96104-a564-4565-ac88-12852d199e67",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "2bb96104-a564-4565-ac88-12852d199e67",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Summarize what this project does and list its top-level Python packages. Read-only: do not modify any files.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "aae4156c-4ebb-45c7-8da4-c34978c205c7:1",
+        "aae4156c-4ebb-45c7-8da4-c34978c205c7:2",
+        "aae4156c-4ebb-45c7-8da4-c34978c205c7:3",
+        "aae4156c-4ebb-45c7-8da4-c34978c205c7:4"
+      ]
+    }
+  }
+}

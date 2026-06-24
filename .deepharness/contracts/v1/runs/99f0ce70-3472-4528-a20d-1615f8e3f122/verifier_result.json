@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:17:24.814Z",
+  "payload": {
+    "runId": "99f0ce70-3472-4528-a20d-1615f8e3f122",
+    "sessionId": "ccaccfc3-af95-4dc6-b42f-7c0f1e525a68",
+    "verdict": {
+      "status": "pass",
+      "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+      "evidence": [
+        "Completion claim: The project root listing and config checks are complete.  Here is the final report.\n\n---\n\n### Pytest run report\n\n**Command:** `./.venv/bin/pytest`\n\n**Result:**\n- **Passed:** 0\n- **Failed:** 0\n- **Erro",
+        "Touched files: 0"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:53:06.854Z",
+  "payload": {
+    "runId": "ff75d4bc-be81-49e0-bb93-3eacf5a92cb7",
+    "sessionId": "4b38d198-f955-46d0-9597-f5cc5bfe6740",
+    "verdict": {
+      "status": "partial",
+      "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+      "evidence": [
+        "Completion claim: Let me verify both files were created correctly and the test passes.",
+        "Touched files: 2"
+      ]
+    }
+  }
+}

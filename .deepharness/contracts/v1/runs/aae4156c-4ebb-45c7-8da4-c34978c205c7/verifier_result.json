@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:36:12.638Z",
+  "payload": {
+    "runId": "aae4156c-4ebb-45c7-8da4-c34978c205c7",
+    "sessionId": "2bb96104-a564-4565-ac88-12852d199e67",
+    "verdict": {
+      "status": "pass",
+      "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+      "evidence": [
+        "Completion claim: I've already answered this in full above — the project summary and the complete package list (both `requirements.txt` dependencies and the project's own top-level Python source directories) are there.",
+        "Touched files: 0"
+      ]
+    }
+  }
+}

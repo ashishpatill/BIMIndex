@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:06:08.680Z",
+  "payload": {
+    "runId": "ef756844-835a-4d6c-acf6-105072008518",
+    "sessionId": "8e750a97-8d32-4da6-9aea-68168535413a",
+    "status": "completed",
+    "userRequest": "Run pytest on this project (read-only audit; do NOT fix anything yet — just report what fails).",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ef756844-835a-4d6c-acf6-105072008518/policy_candidates.json"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+  "runId": "2fee7f47-7a13-47b5-ab8d-878a4632cef8",
+  "state": "blocked",
+  "currentTurn": 8,
+  "currentStep": "Run finished with status blocked.",
+  "pendingControls": 0,
+  "lastUpdatedAt": "2026-05-27T17:38:33.688Z"
+}

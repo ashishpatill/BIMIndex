@@ -1,0 +1,874 @@
+{
+  "mock-planning-model:326fb665d4268504:ed915733e608fd90": {
+    "cacheKey": "mock-planning-model:326fb665d4268504:ed915733e608fd90",
+    "model": "mock-planning-model",
+    "createdAt": "2026-05-10T19:30:57.252Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "ed915733e608fd906947b7caf75987851c39b9be5b209040de8a9e19ba5e527c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1deac9be84f314d7": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1deac9be84f314d7",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:30:12.897Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1deac9be84f314d702099fd3705d4103d86877cefd63eec294273f4f6b18cd96"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:62b41a1c99dd6d67": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:62b41a1c99dd6d67",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:32:27.682Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "62b41a1c99dd6d673170a37c949b9ca619a676762b544deff2f77b47738b68ed"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:8071b5d08450dd12": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:8071b5d08450dd12",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:32:36.363Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "8071b5d08450dd12a1fddc92a9c46293442494faecd36adc0208bc945189e4bc"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:349d3c05f3f37dda": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:349d3c05f3f37dda",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:33:56.909Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "349d3c05f3f37dda0302ddca3bf7345fc972753cc0dba3de740cf74538ca8942"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:75f2fa06a593598c": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:75f2fa06a593598c",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:34:12.926Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "75f2fa06a593598cd4af1249baad1cd8fca1caddb69386b06675f6bc06c3c484"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:032925a94b5664f2": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:032925a94b5664f2",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:36:07.137Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "032925a94b5664f248d1b98b2f1237e9879fef7dd2b6fa31005a8bb9d2e3163f"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d55d3a8ddf65d93a": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d55d3a8ddf65d93a",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:36:18.445Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d55d3a8ddf65d93a2f6eb39a1086a20cd0be25d2b640b64b56f67dc6f5a105a7"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:a27100e3df876793": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a27100e3df876793",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:42:23.670Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "a27100e3df8767931ab78d6702eb544f1bc719cbe032dcf5ece9eff0b2be3ba6"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:12de70b9c7a7b16d": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:12de70b9c7a7b16d",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:42:32.019Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "12de70b9c7a7b16d19a7b6182ec3178800bd505315f858641a656c3473ab2205"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:9c0b7eba5faeb1ad": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:9c0b7eba5faeb1ad",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:43:51.409Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "9c0b7eba5faeb1adc1766617d5d5682cfa90ae1ccebb8b44404df5dd22543740"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:75190e1482cac4bb": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:75190e1482cac4bb",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:43:58.648Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "75190e1482cac4bbdff7b5a577bfb76fb3d87e637f800e3ee1fd6ee13ca089d3"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:b6dc3fb29f5f7658": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:b6dc3fb29f5f7658",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:44:07.029Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "b6dc3fb29f5f765874346c73f024b634fcc42871a6d73ea62ebe4ca38e8eab1d"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:5384891e20b5053c": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5384891e20b5053c",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:49:06.813Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "5384891e20b5053cede717afdf5f50b58ca1f1bda193b9b799f310e7d079448c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:aeae0cc30f1e7603": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:aeae0cc30f1e7603",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:49:23.479Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "aeae0cc30f1e7603a83dd4bb8b28b7d41254f85100ba71e50260141e92c4269c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:27112ebce9d30922": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:27112ebce9d30922",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:52:47.661Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "27112ebce9d309221b31dff73978be81b48e774c43019cc81b3ab90cb7c2edf5"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:6d48757ac9ab30a3": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:6d48757ac9ab30a3",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T09:53:01.596Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "6d48757ac9ab30a300608193f5e78463e65ac6ba27f576f081e3ff3939ad91e7"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:583000b8a6c05fa3": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:583000b8a6c05fa3",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:48:13.046Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "583000b8a6c05fa3d348e6c591b25f2db2688ad26d60f2b0c92606ea7789290c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:8d04956e4f5e2216": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:8d04956e4f5e2216",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:48:19.519Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "8d04956e4f5e221613e0ebdcafca04d0bc7eb095a62a6c69390647061cfa4930"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:2e819945d1964077": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:2e819945d1964077",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:48:56.097Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "2e819945d19640774150809ed14b1e1198fe7ee92bb57b496da8230149e431e3"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:2bdc1bca6b9851cc": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:2bdc1bca6b9851cc",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:49:05.001Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "2bdc1bca6b9851cce226e47e7c6cb19192442f3eef941ed68c651f40c622b4bb"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:f3636edb20a5b1ef": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:f3636edb20a5b1ef",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:50:21.351Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "f3636edb20a5b1efd0a3b93d5652c11f7d433a33e6b8c9f2e046c2a7a44d5cbb"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:8afffbd2d9c4e0e5": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:8afffbd2d9c4e0e5",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:50:30.883Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "8afffbd2d9c4e0e5541d243ac6aca92c08e5c588739daab7f56552bef819ad3b"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:49256a4abc372486": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:49256a4abc372486",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:55:17.986Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "49256a4abc372486783d365e356e24b9d818275f405936db597eb4f3b0993afb"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:346da653c388a3f3": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:346da653c388a3f3",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:55:32.597Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "346da653c388a3f3b5c4f5a531671b91e54b5675c338369c3a1f41fe8f293e79"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:dddb9aae35c0cdde": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:dddb9aae35c0cdde",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:56:25.420Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "dddb9aae35c0cdde8e5a1ef9c89c2d808a0a2d05303aea55a9184253e247c68a"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:deaec5c6c4c21545": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:deaec5c6c4c21545",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:56:36.512Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "deaec5c6c4c2154543105826cd3470fd67046560efa56bdbe0ced7207fe4c890"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:022924255d60d5d7": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:022924255d60d5d7",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:57:05.239Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "022924255d60d5d7fd2fb2b7e8809b864a3e0c8dd60b8b654e5a4383755c022b"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:069646893b043b66": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:069646893b043b66",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-16T17:57:18.199Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "069646893b043b660369579cf95923cb866f3fd76a6e25849f7e3531762a30cf"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:7aedf4fdef831a4a": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:7aedf4fdef831a4a",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:55:50.281Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "7aedf4fdef831a4a5b205727185879384c8b9c3633fa1b2d82dbbf4024ad67cc"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:c32e5bb9f5ca7ca9": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:c32e5bb9f5ca7ca9",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:55:57.991Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "c32e5bb9f5ca7ca9c7e69d6232790f6a9fae05fe516bd50a76ae123da71793e4"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:793928a2228f359f": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:793928a2228f359f",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:56:04.621Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "793928a2228f359f3604365869db2366f14ac408fb74cbb005f5c02f8515b19e"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d193ff65089c44a7": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d193ff65089c44a7",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:56:08.679Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d193ff65089c44a7d16a72b5ed5ac293460e84f9e9014236fbc616a93d6e76aa"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:9a6467d9940f59ce": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:9a6467d9940f59ce",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:56:19.501Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "9a6467d9940f59ce1a35cab5135ca562bb528ebf8228f89840405d0aac264b34"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d14166eef41f7405": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d14166eef41f7405",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:58:36.353Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d14166eef41f74052a25c4055a61380450c865d0385b289d64617d99d97dda74"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:13b62c4c08c3427a": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:13b62c4c08c3427a",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T18:58:44.306Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "13b62c4c08c3427ab1218fbb6bb44d6ccd041597049623292d15e15a8d4ead5e"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:0912553ce79560dd": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:0912553ce79560dd",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:03:04.837Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "0912553ce79560dd15015debc157a8532a3a5a324e87fde494057c72382d1c2b"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1df23151c06eeb69": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1df23151c06eeb69",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:03:10.395Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1df23151c06eeb6998386fdb3c0eaa7e241696726d95ae5d19143129fc5ca3a0"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:904658251ce69bc7": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:904658251ce69bc7",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:03:17.525Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "904658251ce69bc7ef3a551be0d9f27d19b809a49ebe0a9b95f8e7e8baa801e6"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:3d0a17ce1a8f95a0": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:3d0a17ce1a8f95a0",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:05:38.995Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "3d0a17ce1a8f95a089b6b6f405c8c21bf49986cc223497a263c35c95bddda17f"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:19e7c68e7bc8c088": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:19e7c68e7bc8c088",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:05:46.333Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "19e7c68e7bc8c0888204a742c5972b2d0c9e59354d4b7483f5c9aab707566076"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1119bcf1e4362c45": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1119bcf1e4362c45",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:05:50.781Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1119bcf1e4362c459fef1df74f1fc3155baa26ad3123f1013c46341347328900"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d8e6af51ac27239b": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d8e6af51ac27239b",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:05:58.046Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d8e6af51ac27239b6a90a8e4fa40ff2f294c6f29f6719e42d75a6963ed34ce0a"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:6aca6016389af362": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:6aca6016389af362",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:06:01.064Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "6aca6016389af3624b4d0c29198d51aacab5b97ef58e7ae7665341fb2db15326"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:2d61c5ecf54d4954": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:2d61c5ecf54d4954",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:10:01.766Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "2d61c5ecf54d4954705f07c601cc4fc3f8cf9fe43808959e08dede0adbad8f07"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:3732511bfe7c39ae": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:3732511bfe7c39ae",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:10:10.472Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "3732511bfe7c39aed9d7d5cd0e82f5d445c628274c622fea334999a7778f2a17"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:33b999550069cd73": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:33b999550069cd73",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:10:31.642Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "33b999550069cd73a58034e37cf3c3fcb10f0215b9115f47828cb21da9902c17"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:5b6620d207be9570": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5b6620d207be9570",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:10:36.230Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "5b6620d207be95702dcaa4bca39fef44476da4916cca1eecdbc2b5713fc68efd"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1c31e339577e9133": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1c31e339577e9133",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:10:45.798Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1c31e339577e9133b671050248dbd12800e4e8694231e13bd8560bc74dd0d6cf"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:cb933e12127eb0ae": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:cb933e12127eb0ae",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:13:44.705Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "cb933e12127eb0ae76b36a43262fbdebb35c2b8ff44fe0b7b0d01a88efdeb5bd"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:51b38e4368297b68": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:51b38e4368297b68",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:15:57.922Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "51b38e4368297b683b2bae319e51dcfe9e03cf4bec688fa2e807dba99ce63e6f"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:c0e41b77e078368a": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:c0e41b77e078368a",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:16:17.001Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "c0e41b77e078368a6456f5b2277c0a0c455b046f8929b32141cb6cb0ab421826"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:2c8bdba4effbe32a": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:2c8bdba4effbe32a",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:16:32.762Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "2c8bdba4effbe32aafa7b691cb10fb561a6c7dcb2e4ab38c7a724930302ff3ff"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:e353f2ed33398ae7": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:e353f2ed33398ae7",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:16:55.465Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "e353f2ed33398ae7c79985ba6de6d64210cbdee3891ac4bb2f60fb0ae14056bd"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:28c5788e2ab23e20": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:28c5788e2ab23e20",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:40:26.714Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "28c5788e2ab23e20dabbee76e2a5644b567aa49fb2e13f40c5a69aca85608e5c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:53a9644ea37982bf": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:53a9644ea37982bf",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:40:45.378Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "53a9644ea37982bf4cdc0070eee3538904431b0b3620ec5c6dd451526bfd76a4"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1cea26a5856f98b2": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1cea26a5856f98b2",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:47:30.108Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1cea26a5856f98b268d5db487c31a8394af957b2ce9733f81673d9c49eb5dfef"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:5ac50764f275252b": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5ac50764f275252b",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:47:38.002Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "5ac50764f275252b41c79a05fa9df81ede108c854e4706a366f3b7ebcdbc67e2"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:e7482019f34e82af": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:e7482019f34e82af",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:47:52.333Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "e7482019f34e82af0d8afd7528ba32b4855060a6893955d2010ac0c63bd079a6"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d40bc1118a21d5f7": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d40bc1118a21d5f7",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:47:57.111Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d40bc1118a21d5f73bcad69470ca22427f21998a71c32dda3e716e6a72142d31"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:cf6a4d1995408371": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:cf6a4d1995408371",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:48:01.868Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "cf6a4d19954083711271a7ddf5b837e71206bc4a3b16951aed932d2dbb9dd9d3"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:95bbaa97ad20f773": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:95bbaa97ad20f773",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:48:07.012Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "95bbaa97ad20f773b2745bb5f8f5ba6df4cda0425ca69c0c3a8f336d3ae351fd"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:3eb87e6fc1f0ae29": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:3eb87e6fc1f0ae29",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:51:08.851Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "3eb87e6fc1f0ae291a2233544a1d61393a61ae6345f357dea4653001b021da9c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:2f1664afdf91f081": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:2f1664afdf91f081",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:51:16.420Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "2f1664afdf91f0810cca1badf37dbc8979a955eec2e079818f74cf38a6808ff4"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:63479d943d30ee34": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:63479d943d30ee34",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:51:58.839Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "63479d943d30ee34e2cb4e5b9776ea82298fa98eb5f76cb0228b449a39962429"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:e5ab9e239cad4065": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:e5ab9e239cad4065",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:52:12.201Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "e5ab9e239cad4065d310470973c273b5e4cf3bcb282439055f52d703de82967a"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:e18f0b9dda0e9eca": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:e18f0b9dda0e9eca",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:52:40.670Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "e18f0b9dda0e9ecaea0851e60e62303ac00c45f8ab2d564650dae8f4f9a775da"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:925b70ac1369009f": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:925b70ac1369009f",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:52:54.356Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "925b70ac1369009f7180103fc70ddcfa12625ad8b1304ed0445ef289c5d07171"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:701ce2a387c899fe": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:701ce2a387c899fe",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:55:27.437Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "701ce2a387c899fe197b9cc69fda76b90007982b8caf2ef0ecbdb287ba0973db"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:8136488e7b6cc092": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:8136488e7b6cc092",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:55:34.310Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "8136488e7b6cc0925bcf22850c0d33a5ec225005e1fcba66f5cb186608e76df2"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:7d49ea756ef74e21": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:7d49ea756ef74e21",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:55:47.656Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "7d49ea756ef74e21c157aed18a6afce7a89ca2b8769e1e25c58aac54487b3c96"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:34d8765fa2169767": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:34d8765fa2169767",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:55:55.823Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "34d8765fa21697678d1e076b972aadd23fa88e2818f776d145b35f2345eb8fa6"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:aeb7000e4d0963b0": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:aeb7000e4d0963b0",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:56:03.746Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "aeb7000e4d0963b045ec980ad16efc6d8f33ae252ff3d795faf373eba0d4ca5b"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:a045dc94e5c5eee3": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a045dc94e5c5eee3",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:56:10.615Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "a045dc94e5c5eee3142b5d31f6563d00209571c8f3aa7d05b6e9ab448e8ca03d"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:7c14593694184a99": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:7c14593694184a99",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:56:58.446Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "7c14593694184a99d81ed0e54805cc6b69b306194cb36551df6bce0611d80598"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:4402f187b756abd4": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:4402f187b756abd4",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:57:15.504Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "4402f187b756abd4600558b158be0276e683271b309654c72c7298e1cb6c64d8"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:4dd622fc36b9a695": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:4dd622fc36b9a695",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T19:57:20.314Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "4dd622fc36b9a6953f9113d63377574ea99ec17c9d318d1c2f87905ae28d13b4"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:28d75558436b4169": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:28d75558436b4169",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:17:59.573Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "28d75558436b41692f80bbcf21e8b79dde6a99e49786645dc79f5868404ab9a0"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:6da5f8c23d35511c": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:6da5f8c23d35511c",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:22:19.426Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "6da5f8c23d35511c49acbace8f80b5b0a51d350b28698c2e44d42c699a913612"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:dec84e7484e54aa4": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:dec84e7484e54aa4",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:22:27.516Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "dec84e7484e54aa4ccafd87461861b8996c1221d8ba500520eff0da2532fa45c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:0853131f9e24aa96": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:0853131f9e24aa96",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:22:33.713Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "0853131f9e24aa96b1dc29b7ec09ae3abb57a18f9bebf0fcacfe2fa6a719799a"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d34ca16001e42ee8": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d34ca16001e42ee8",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:22:37.952Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d34ca16001e42ee8d80b3ae84193865625aaf3e99480a56812a4a28739bd7fb8"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:82307d170a4bab50": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:82307d170a4bab50",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:22:46.550Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "82307d170a4bab502a1c159d26acd0d3fab006af97be85925852d733c546a9f6"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:04e19e1505a83a7c": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:04e19e1505a83a7c",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:22:53.740Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "04e19e1505a83a7c48aab1f1cf97501ea215cabdda8d8bd968b9fc63f74aa779"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:d8d9bf622006eec6": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:d8d9bf622006eec6",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:23:01.583Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "d8d9bf622006eec6fb8e63c0cbbc64d5fbf1130ce2442231881d3d807bdb51df"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:12e80cd71b375f92": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:12e80cd71b375f92",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:23:12.327Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "12e80cd71b375f92fa7d6f9bb08a2d1c9ba5e6080653a02be1ca96124ef85809"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:254d4dea71b07a38": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:254d4dea71b07a38",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:23:26.898Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "254d4dea71b07a38e6ec06bbb5c262d4ad2a99870b69f9e6b018da3384d8c01a"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:92ff9ccdaef85953": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:92ff9ccdaef85953",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:23:37.808Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "92ff9ccdaef859537e4b8f0ba5d777171e26a1e7682411e0c70c12efd60c4fb8"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:b9e4f51796f48eb1": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:b9e4f51796f48eb1",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:23:41.984Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "b9e4f51796f48eb19951bc89292b24c76684b4a6d2f2228d6d43e173920a783c"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:91cc00cc8d6a24b6": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:91cc00cc8d6a24b6",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:23:51.593Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "91cc00cc8d6a24b659bb5641c9b300592b032cbe057a5b80c67faf5b4986464e"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:ef6dd2690b5c9eda": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:ef6dd2690b5c9eda",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:39:19.736Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "ef6dd2690b5c9eda29f3f062ae36f165952e658c8f27285b5f1fd98cc10f84bb"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1bd6b2f9d6d9d9c8": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1bd6b2f9d6d9d9c8",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:41:08.434Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1bd6b2f9d6d9d9c872c7780dd0e9b963f2f0f65f3ea76c0ff34de1fe2eda9572"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:f09b5c3cc7ae8476": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:f09b5c3cc7ae8476",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:44:56.397Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "f09b5c3cc7ae8476a0d655c6a47cc45aa6c62c722de48a3b6170377e3e0b0ed8"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:ef3fadd73fa815cc": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:ef3fadd73fa815cc",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:47:18.148Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "ef3fadd73fa815cc35b56079633fba725daff3270a920c310c11ef2b1e25597d"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:a5ec97f285a46978": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a5ec97f285a46978",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:47:37.867Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "a5ec97f285a46978ca3e447c43f45588481538d911debe55ae227702901781cb"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:f37027268dc2d845": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:f37027268dc2d845",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:47:46.384Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "f37027268dc2d8458cfdcb9f753a49792b6d2d64c6af2ca303311e97c12821a2"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:03fb853c584f7075": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:03fb853c584f7075",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-20T20:47:53.965Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "03fb853c584f707565f60fe3e500187b6614387d90357e54db49d76ca3b53466"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:1bd6c66903d1d4ab": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:1bd6c66903d1d4ab",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:35:37.078Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "1bd6c66903d1d4ab61470f77580d5b100a703147e7e2dedd5b4aea01965cf1b9"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:dff2fbb68c3676c3": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:dff2fbb68c3676c3",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:35:41.360Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "dff2fbb68c3676c394c605fdca772b682841ad743bc16e2e41755ca43f61eb27"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:a8983461e6583954": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a8983461e6583954",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:35:49.542Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "a8983461e6583954ed08bdd95b59b80d5dba2f929d373104cc98ee95461070bd"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:c0bb1597e8d6e064": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:c0bb1597e8d6e064",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:36:05.099Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "c0bb1597e8d6e064902e8372686b85d78ede4d807c3e8fc03668d2f95dcf240d"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:0c05e8e83c07d345": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:0c05e8e83c07d345",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:37:54.695Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "0c05e8e83c07d345c089ad51290f8280ac7059d803ce4b1c0ae476ae3364f385"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:bd65d021d2a0f76f": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:bd65d021d2a0f76f",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:37:58.328Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "bd65d021d2a0f76f768600f491ae1251d4cb302c5bed5874f52ee31ee4861cf1"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:b8669f8d6b5aa4be": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:b8669f8d6b5aa4be",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:38:01.530Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "b8669f8d6b5aa4be4a8341bca808e6c59a9fe30ca4417261fba4bb5587cbbe4a"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:5aa4bf36d5ae0e68": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5aa4bf36d5ae0e68",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:38:10.134Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "5aa4bf36d5ae0e688e0b3d41ff530de343bae3f9c6bf7e6d6473b752cb8ad5d5"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:03bec86c0d149729": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:03bec86c0d149729",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:38:19.529Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "03bec86c0d149729fe263bade58c20ef9caeb3212d2365f3707227a994cd1bd5"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:5ea47e0684d4c0f3": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:5ea47e0684d4c0f3",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:38:21.921Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "5ea47e0684d4c0f3a9376e05c7adf01b8a9f1569e4966cabb6654896798d9772"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:f79de9a2c99cca3a": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:f79de9a2c99cca3a",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:38:25.763Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "f79de9a2c99cca3ad0aeb8f9c0ce8fb01db1dda7dd09410e7f6e30a20c259e98"
+  },
+  "deepseek:deepseek-v4-pro:326fb665d4268504:a7b801193fb0c9dc": {
+    "cacheKey": "deepseek:deepseek-v4-pro:326fb665d4268504:a7b801193fb0c9dc",
+    "model": "deepseek:deepseek-v4-pro",
+    "createdAt": "2026-05-27T17:38:30.488Z",
+    "hitCount": 0,
+    "stablePrefixHash": "326fb665d4268504e940a24fc98dec14c465f0b80253bf0e0432beaa9f98904e",
+    "recentMessageHash": "a7b801193fb0c9dcce8b2282e6c5bc2e867ae89a72fa757f89ec9823d70edfab"
+  }
+}

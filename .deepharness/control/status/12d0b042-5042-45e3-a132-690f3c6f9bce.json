@@ -1,0 +1,9 @@
+{
+  "sessionId": "12d0b042-5042-45e3-a132-690f3c6f9bce",
+  "runId": "58482aaf-eace-4f84-a9fd-63261b752c89",
+  "state": "running",
+  "currentTurn": 1,
+  "currentStep": "Context prepared for turn 1; awaiting model generation.",
+  "pendingControls": 0,
+  "lastUpdatedAt": "2026-05-20T20:39:19.733Z"
+}

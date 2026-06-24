@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:03:28.754Z",
+  "payload": {
+    "runId": "608bc819-74e6-4789-9691-3480acd6fc01",
+    "sessionId": "5ba3c537-8493-43d4-bed4-928c90bead48",
+    "status": "completed",
+    "userRequest": "Run pytest on this project and fix any failures you find. Report results.",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/608bc819-74e6-4789-9691-3480acd6fc01/policy_candidates.json"
+    }
+  }
+}

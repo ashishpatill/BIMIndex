@@ -1,0 +1,9 @@
+{
+  "sessionId": "4f9b99e1-7df2-4a37-bf91-5aa808ea7fa1",
+  "runId": "b0d654e0-edfa-4c8f-b35b-1ed4792095a5",
+  "state": "running",
+  "currentTurn": 1,
+  "currentStep": "Model proposed a completion claim on turn 1.",
+  "pendingControls": 0,
+  "lastUpdatedAt": "2026-05-10T19:30:57.254Z"
+}

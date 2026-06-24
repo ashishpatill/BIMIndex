@@ -1,0 +1,53 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "delivery_artifacts",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:38:33.687Z",
+  "payload": {
+    "runId": "2fee7f47-7a13-47b5-ab8d-878a4632cef8",
+    "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+    "verdict": {
+      "status": "fail",
+      "summary": "Runtime is missing required handoff evidence: verifier.",
+      "missingRequirements": [
+        "verifier"
+      ],
+      "satisfiedRequirements": [
+        "changed_files",
+        "patch_bundle",
+        "tool_proofs",
+        "trace"
+      ]
+    },
+    "evidence": {
+      "touchedFiles": [
+        "/Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md"
+      ],
+      "toolProofs": [
+        "read_file: Tool call rejected — invalid arguments.",
+        "read_file: Read /Volumes/Developer/Workspace/Retrieval-Research/README.md.",
+        "write_file: Tool call rejected — invalid arguments.",
+        "write_file: Wrote /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md.",
+        "read_file: Read /Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md."
+      ],
+      "operatorInterventions": []
+    },
+    "artifacts": [
+      {
+        "artifactType": "trace",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8.json",
+        "summary": "Primary runtime trace."
+      },
+      {
+        "artifactType": "changed_files",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/changed-files.txt",
+        "summary": "Changed-file inventory for session eba4bcbf-1ac8-40c8-8e42-6cabe5c40680."
+      },
+      {
+        "artifactType": "patch_bundle",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/patch.diff",
+        "summary": "Patch bundle for session eba4bcbf-1ac8-40c8-8e42-6cabe5c40680."
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T20:19:06.920Z",
+  "payload": {
+    "runId": "ad48f9d9-f774-4d76-83b2-a24875690b47",
+    "sessionId": "11d51d63-a44a-4602-94d9-8663f748044b",
+    "verdict": {
+      "status": "pass",
+      "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+      "evidence": [
+        "Completion claim: # Retrieval-Research Roadmap Audit ✅\n\n## 1. Roadmap Items Implemented (by Phase)\n\n### Phase 0 — Foundation\n- **Canonical document schema** — `schema.py` with pydantic models covering `Document`, `Page",
+        "Touched files: 0"
+      ]
+    }
+  }
+}

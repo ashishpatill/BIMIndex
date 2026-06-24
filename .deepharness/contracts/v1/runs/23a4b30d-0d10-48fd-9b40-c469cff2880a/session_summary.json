@@ -1,0 +1,27 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T20:48:02.357Z",
+  "payload": {
+    "runId": "23a4b30d-0d10-48fd-9b40-c469cff2880a",
+    "sessionId": "3c874709-86a5-4fd4-b1d1-92db4dce66d1",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "3c874709-86a5-4fd4-b1d1-92db4dce66d1",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Run ./.venv/bin/pytest with PYTHONPATH=. via shell tool. Report the pass/fail counts and any failing test names. Do not modify code.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "23a4b30d-0d10-48fd-9b40-c469cff2880a:1",
+        "23a4b30d-0d10-48fd-9b40-c469cff2880a:2",
+        "23a4b30d-0d10-48fd-9b40-c469cff2880a:3",
+        "23a4b30d-0d10-48fd-9b40-c469cff2880a:4"
+      ]
+    }
+  }
+}

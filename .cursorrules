@@ -1,0 +1,6 @@
+# Cursor/Codex AI Rules for BIMIndex
+
+## Guidelines
+- Tri-Modal routing is the core priority. Optimize for Rust (Tantivy/LanceDB) and Python integrations.
+- Always use Antigravity subagents for running parallel queries.
+- Incorporate RRF (Reciprocal Rank Fusion) with k=60 natively in the final step.

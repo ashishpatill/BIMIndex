@@ -1,0 +1,33 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:38:33.687Z",
+  "payload": {
+    "runId": "2fee7f47-7a13-47b5-ab8d-878a4632cef8",
+    "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+    "status": "blocked",
+    "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+    "sessionRecord": {
+      "session_id": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+      "parent_session_id": null,
+      "checkpoint_id": "7252e8eb-cb3c-4ab5-9e98-dbc7d994f171",
+      "summary": "Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.",
+      "files_touched": [
+        "/Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md"
+      ],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:1",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:2",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:3",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:4",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:5",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:6",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:7",
+        "2fee7f47-7a13-47b5-ab8d-878a4632cef8:8"
+      ]
+    }
+  }
+}

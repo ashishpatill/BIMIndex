@@ -1,0 +1,25 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:40:54.660Z",
+  "payload": {
+    "runId": "3779608e-fa39-464f-ab4e-d0d762f3e397",
+    "sessionId": "5b29d1eb-27b0-4664-916f-f9834ecedbf4",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "5b29d1eb-27b0-4664-916f-f9834ecedbf4",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Run ./.venv/bin/pytest in this project with PYTHONPATH=. set so the retrieval_research package is importable. Use the shell tool with: 'PYTHONPATH=. ./.venv/bin/pytest -x --tb=short 2>&1 | tail -80'. Report the final pass/fail/error count and the first failure (if any). Do not modify any code.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "3779608e-fa39-464f-ab4e-d0d762f3e397:1",
+        "3779608e-fa39-464f-ab4e-d0d762f3e397:2"
+      ]
+    }
+  }
+}

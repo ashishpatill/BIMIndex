@@ -1,0 +1,26 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:03:28.754Z",
+  "payload": {
+    "runId": "608bc819-74e6-4789-9691-3480acd6fc01",
+    "sessionId": "5ba3c537-8493-43d4-bed4-928c90bead48",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "5ba3c537-8493-43d4-bed4-928c90bead48",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Run pytest on this project and fix any failures you find. Report results.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "608bc819-74e6-4789-9691-3480acd6fc01:1",
+        "608bc819-74e6-4789-9691-3480acd6fc01:2",
+        "608bc819-74e6-4789-9691-3480acd6fc01:3"
+      ]
+    }
+  }
+}

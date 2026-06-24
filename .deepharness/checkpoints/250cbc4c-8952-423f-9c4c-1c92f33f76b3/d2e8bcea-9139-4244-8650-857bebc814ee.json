@@ -1,0 +1,28 @@
+{
+  "version": "checkpoint/v2",
+  "checkpointId": "d2e8bcea-9139-4244-8650-857bebc814ee",
+  "sessionId": "250cbc4c-8952-423f-9c4c-1c92f33f76b3",
+  "createdAt": "2026-05-16T17:49:04.860Z",
+  "toolCallId": null,
+  "workspaceDiff": {
+    "summary": "No touched files recorded.",
+    "touchedFiles": [],
+    "diffHash": "sha256:12924a1fbe095e7337ac4866f708ec13c109347e8c9c35349465d8fcfe8272d2"
+  },
+  "workspaceState": null,
+  "ledgerCursor": null,
+  "runContractState": {},
+  "semanticStateHash": "sha256:66fcb4dbe9920b61a46eee3b4939fff47c909fd3a211330fe9362f7cfcdb8b45",
+  "snapshot": {
+    "turn": 1,
+    "messages": [
+      {
+        "id": "b21bb53f-c51d-4f8f-ad55-89fcd9068568",
+        "role": "user",
+        "content": "Create a file called HELLO_DEEPHARNESS.txt in the project root containing the single line: probe ok. Then read it back and confirm.",
+        "timestamp": "2026-05-16T17:48:54.245Z"
+      }
+    ],
+    "touchedFiles": []
+  }
+}

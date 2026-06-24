@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-27T17:38:33.678Z",
+  "totalEntries": 22,
+  "sourceCounts": {
+    "runtime_runs": 22,
+    "manual_sessions": 0
+  },
+  "statusCounts": {
+    "completed": 16,
+    "blocked": 6
+  },
+  "contextTierCounts": {
+    "standard": 22
+  },
+  "verifierCounts": {
+    "pass": 16,
+    "partial": 3,
+    "not_run": 3
+  },
+  "permissionOutcomeCounts": {
+    "allow": 74
+  },
+  "toolStats": [
+    {
+      "toolName": "list_files",
+      "invocations": 26,
+      "successes": 26,
+      "failures": 0,
+      "denied": 0,
+      "asks": 0
+    },
+    {
+      "toolName": "read_file",
+      "invocations": 35,
+      "successes": 32,
+      "failures": 3,
+      "denied": 0,
+      "asks": 0
+    },
+    {
+      "toolName": "shell",
+      "invocations": 12,
+      "successes": 9,
+      "failures": 3,
+      "denied": 0,
+      "asks": 0
+    },
+    {
+      "toolName": "write_file",
+      "invocations": 5,
+      "successes": 4,
+      "failures": 1,
+      "denied": 0,
+      "asks": 0
+    }
+  ],
+  "fileHotspots": [
+    {
+      "filePath": "core_processor/health.py",
+      "count": 1
+    },
+    {
+      "filePath": "tests/test_health.py",
+      "count": 1
+    },
+    {
+      "filePath": "HELLO_DEEPHARNESS.txt",
+      "count": 1
+    },
+    {
+      "filePath": "/Volumes/Developer/Workspace/Retrieval-Research/CONTRIBUTING_NOTES.md",
+      "count": 1
+    }
+  ],
+  "extensionHotspots": [
+    {
+      "extension": ".py",
+      "count": 2
+    },
+    {
+      "extension": ".md",
+      "count": 1
+    },
+    {
+      "extension": ".txt",
+      "count": 1
+    }
+  ],
+  "recommendationTags": [
+    "failure_signal",
+    "loop_warning",
+    "review_failure_patterns",
+    "strengthen_verification",
+    "testing_signal",
+    "tighten_loop_controls"
+  ],
+  "recentLearningNotes": [
+    "Maximum turn count reached before a verified completion.",
+    "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+    "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "Recovery halt triggered after 3 signals (loop_detected). Stop the current trajectory and hand off with evidence about the failure mode: Prompt tokens are at 16830/16000 with low-signal assistant output"
+  ]
+}

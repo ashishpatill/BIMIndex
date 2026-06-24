@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T17:49:09.763Z",
+  "payload": {
+    "runId": "539e464e-3c7a-44af-82c7-8f592675a9e5",
+    "sessionId": "250cbc4c-8952-423f-9c4c-1c92f33f76b3",
+    "status": "blocked",
+    "userRequest": "Create a file called HELLO_DEEPHARNESS.txt in the project root containing the single line: probe ok. Then read it back and confirm.",
+    "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/539e464e-3c7a-44af-82c7-8f592675a9e5/policy_candidates.json"
+    }
+  }
+}

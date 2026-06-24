@@ -1,0 +1,11 @@
+{
+  "sessionId": "6e638209-e494-4b69-85d9-96a9cc87984e",
+  "currentGoal": "Survey the codebase: list the main Python files, their purpose, and top-level imports. Give a brief architecture summary. --plain",
+  "filesTouched": [],
+  "hypotheses": [],
+  "failedAttempts": [],
+  "openQuestions": [],
+  "learnings": [
+    "Ran shell command with exit code 0."
+  ]
+}

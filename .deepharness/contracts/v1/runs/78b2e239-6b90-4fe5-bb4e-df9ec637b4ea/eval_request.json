@@ -1,0 +1,28 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T20:24:00.595Z",
+  "payload": {
+    "runId": "78b2e239-6b90-4fe5-bb4e-df9ec637b4ea",
+    "sessionId": "a126c6d0-5ca1-441f-a73d-6b7f55e6f42b",
+    "status": "blocked",
+    "userRequest": "Read retrieval_roadmap.md and IMPLEMENTATION_PLAN.md, then audit the project against the roadmap. Report: (1) which roadmap items are implemented, (2) which are missing, (3) any obvious gaps between docs and code. Use list_files/read_file. Do not modify code.",
+    "summary": "Recovery halt triggered after 3 signals (loop_detected). Stop the current trajectory and hand off with evidence about the failure mode: Prompt tokens are at 16830/16000 with low-signal assistant output",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/tool_observations.jsonl",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/78b2e239-6b90-4fe5-bb4e-df9ec637b4ea/policy_candidates.json"
+    }
+  }
+}

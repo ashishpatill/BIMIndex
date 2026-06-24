@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:44:12.766Z",
+  "payload": {
+    "runId": "eefedafe-0519-46d6-87d7-61a9f938b82d",
+    "sessionId": "13cfb79b-4f4f-47df-91d3-161dc32d523a",
+    "status": "completed",
+    "userRequest": "Add a health-check endpoint to the FastAPI app if one exists in core_processor/ or create a simple health.py module in core_processor/ that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Write a pytest test for it. --plain",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/eefedafe-0519-46d6-87d7-61a9f938b82d/policy_candidates.json"
+    }
+  }
+}

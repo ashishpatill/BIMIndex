@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T17:48:31.159Z",
+  "payload": {
+    "runId": "37a319d1-3fb2-4343-8900-47a13f8e086f",
+    "sessionId": "ae2eb118-13d4-4406-ac2b-d2396aa48fe4",
+    "status": "completed",
+    "userRequest": "List the top-level directories in this project and tell me in one sentence what the project does. Do not modify any files.",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/37a319d1-3fb2-4343-8900-47a13f8e086f/policy_candidates.json"
+    }
+  }
+}

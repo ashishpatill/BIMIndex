@@ -1,0 +1,9 @@
+{
+  "sessionId": "20b823b6-6838-4bb8-abee-da8c85f6f177",
+  "runId": "a5173ad4-0c48-43f1-95c1-72b20f5b85c7",
+  "state": "running",
+  "currentTurn": 1,
+  "currentStep": "Preparing turn 1 context and checking operator controls.",
+  "pendingControls": 0,
+  "lastUpdatedAt": "2026-05-27T17:34:47.102Z"
+}

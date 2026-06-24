@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:43:29.936Z",
+  "payload": {
+    "runId": "69d66831-610f-477c-a945-1b6c824a42e1",
+    "sessionId": "61b965ba-0218-4e03-b2d4-7f39f2f10c4d",
+    "status": "completed",
+    "userRequest": "Survey the codebase: list the main Python source files (not .venv), their purpose, and top-level imports. Give a brief architecture summary. --plain",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/69d66831-610f-477c-a945-1b6c824a42e1/policy_candidates.json"
+    }
+  }
+}

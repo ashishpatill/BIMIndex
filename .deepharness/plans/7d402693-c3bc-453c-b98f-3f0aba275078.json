@@ -1,0 +1,58 @@
+{
+  "taskId": "7d402693-c3bc-453c-b98f-3f0aba275078",
+  "prompt": "what is remaining in this project",
+  "summary": "Use a read-then-write plan for: what is remaining in this project. Prefer narrow file inspection, minimal churn, and explicit verification.",
+  "strategyNotes": [],
+  "recoveryBranches": [],
+  "activeRecoveryBranch": null,
+  "steps": [
+    {
+      "stepId": "S1",
+      "title": "Survey the workspace",
+      "objective": "Identify the repo areas and files most relevant to the task.",
+      "phase": "planning",
+      "suggestedTools": [
+        "list_files",
+        "read_file",
+        "shell"
+      ],
+      "status": "in_progress"
+    },
+    {
+      "stepId": "S2",
+      "title": "Inspect the critical implementation details",
+      "objective": "Read the narrowest set of files needed to confirm the current behavior.",
+      "phase": "planning",
+      "suggestedTools": [
+        "read_file",
+        "shell"
+      ],
+      "status": "pending"
+    },
+    {
+      "stepId": "S3",
+      "title": "Apply the smallest coherent code change",
+      "objective": "Implement the feature or fix with minimal unrelated churn.",
+      "phase": "implementation",
+      "suggestedTools": [
+        "read_file",
+        "write_file",
+        "shell"
+      ],
+      "status": "pending"
+    },
+    {
+      "stepId": "S4",
+      "title": "Verify the result",
+      "objective": "Check the final state, run the relevant validation, and confirm completion honestly.",
+      "phase": "verification",
+      "suggestedTools": [
+        "read_file",
+        "shell",
+        "list_files"
+      ],
+      "status": "pending"
+    }
+  ],
+  "updatedAt": "2026-05-20T18:55:50.020Z"
+}

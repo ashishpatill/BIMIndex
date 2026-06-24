@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:53:06.854Z",
+  "payload": {
+    "runId": "ff75d4bc-be81-49e0-bb93-3eacf5a92cb7",
+    "sessionId": "4b38d198-f955-46d0-9597-f5cc5bfe6740",
+    "status": "blocked",
+    "userRequest": "Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain",
+    "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/policy_candidates.json"
+    }
+  }
+}

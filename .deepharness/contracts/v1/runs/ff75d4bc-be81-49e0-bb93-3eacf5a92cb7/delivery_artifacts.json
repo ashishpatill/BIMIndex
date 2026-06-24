@@ -1,0 +1,51 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "delivery_artifacts",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:53:06.854Z",
+  "payload": {
+    "runId": "ff75d4bc-be81-49e0-bb93-3eacf5a92cb7",
+    "sessionId": "4b38d198-f955-46d0-9597-f5cc5bfe6740",
+    "verdict": {
+      "status": "fail",
+      "summary": "Runtime is missing required handoff evidence: verifier.",
+      "missingRequirements": [
+        "verifier"
+      ],
+      "satisfiedRequirements": [
+        "changed_files",
+        "patch_bundle",
+        "tool_proofs",
+        "trace"
+      ]
+    },
+    "evidence": {
+      "touchedFiles": [
+        "core_processor/health.py",
+        "tests/test_health.py"
+      ],
+      "toolProofs": [
+        "write_file: Wrote core_processor/health.py.",
+        "write_file: Wrote tests/test_health.py."
+      ],
+      "operatorInterventions": []
+    },
+    "artifacts": [
+      {
+        "artifactType": "trace",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7.json",
+        "summary": "Primary runtime trace."
+      },
+      {
+        "artifactType": "changed_files",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/changed-files.txt",
+        "summary": "Changed-file inventory for session 4b38d198-f955-46d0-9597-f5cc5bfe6740."
+      },
+      {
+        "artifactType": "patch_bundle",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/ff75d4bc-be81-49e0-bb93-3eacf5a92cb7/patch.diff",
+        "summary": "Patch bundle for session 4b38d198-f955-46d0-9597-f5cc5bfe6740."
+      }
+    ]
+  }
+}

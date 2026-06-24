@@ -1,0 +1,28 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:53:06.854Z",
+  "payload": {
+    "runId": "ff75d4bc-be81-49e0-bb93-3eacf5a92cb7",
+    "sessionId": "4b38d198-f955-46d0-9597-f5cc5bfe6740",
+    "status": "blocked",
+    "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+    "sessionRecord": {
+      "session_id": "4b38d198-f955-46d0-9597-f5cc5bfe6740",
+      "parent_session_id": null,
+      "checkpoint_id": "eef0369e-b376-4ad2-9a6d-c82c865625ea",
+      "summary": "Create a new file core_processor/health.py that exports a check() function returning {'status': 'ok', 'version': '1.0'}. Then write a pytest test at tests/test_health.py that imports and calls check() and asserts the result. Use write_file tool to create both files. --plain",
+      "files_touched": [
+        "core_processor/health.py",
+        "tests/test_health.py"
+      ],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "ff75d4bc-be81-49e0-bb93-3eacf5a92cb7:1",
+        "ff75d4bc-be81-49e0-bb93-3eacf5a92cb7:2"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:53:07.136Z",
+  "payload": {
+    "runId": "cf0a318e-1862-4749-86ea-7a062f4643ad",
+    "sessionId": "9b9862bb-7e03-4dd2-8f08-caffcb92d193",
+    "status": "blocked",
+    "userRequest": "Read retrieval_roadmap.md and IMPLEMENTATION_PLAN.md, then audit the project against the roadmap. Report: (1) which roadmap items are implemented, (2) which are missing, (3) any obvious gaps between docs and code. Use list_files/read_file. Do not modify code.",
+    "summary": "Maximum turn count reached before a verified completion.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/tool_observations.jsonl",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/cf0a318e-1862-4749-86ea-7a062f4643ad/policy_candidates.json"
+    }
+  }
+}

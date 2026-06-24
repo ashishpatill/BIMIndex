@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:38:33.688Z",
+  "payload": {
+    "runId": "2fee7f47-7a13-47b5-ab8d-878a4632cef8",
+    "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+    "verdict": {
+      "status": "partial",
+      "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+      "evidence": [
+        "Completion claim: The task is complete. `CONTRIBUTING_NOTES.md` is now at the repo root with the 3-bullet summary and is well under 15 lines.",
+        "Touched files: 1"
+      ]
+    }
+  }
+}

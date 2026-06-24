@@ -1,0 +1,37 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "delivery_artifacts",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:03:28.754Z",
+  "payload": {
+    "runId": "608bc819-74e6-4789-9691-3480acd6fc01",
+    "sessionId": "5ba3c537-8493-43d4-bed4-928c90bead48",
+    "verdict": {
+      "status": "fail",
+      "summary": "Runtime is missing required handoff evidence: changed_files, patch_bundle.",
+      "missingRequirements": [
+        "changed_files",
+        "patch_bundle"
+      ],
+      "satisfiedRequirements": [
+        "tool_proofs",
+        "trace",
+        "verifier"
+      ]
+    },
+    "evidence": {
+      "touchedFiles": [],
+      "toolProofs": [
+        "list_files: Listed 29 entries under .."
+      ],
+      "operatorInterventions": []
+    },
+    "artifacts": [
+      {
+        "artifactType": "trace",
+        "path": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/608bc819-74e6-4789-9691-3480acd6fc01.json",
+        "summary": "Primary runtime trace."
+      }
+    ]
+  }
+}

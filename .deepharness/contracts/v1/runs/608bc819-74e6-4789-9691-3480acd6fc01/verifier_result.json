@@ -1,0 +1,18 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "verifier_result",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:03:28.755Z",
+  "payload": {
+    "runId": "608bc819-74e6-4789-9691-3480acd6fc01",
+    "sessionId": "5ba3c537-8493-43d4-bed4-928c90bead48",
+    "verdict": {
+      "status": "pass",
+      "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+      "evidence": [
+        "Completion claim: <toolCalls>\n<toolCall id=\"tc_1\" name=\"list_files\" input='{\"path\":\"tests\"}'>\n<toolCall id=\"tc_2\" name=\"list_files\" input='{\"path\":\"core_processor\"}'>\n<toolCall id=\"tc_3\" name=\"list_files\" input='{\"path",
+        "Touched files: 0"
+      ]
+    }
+  }
+}

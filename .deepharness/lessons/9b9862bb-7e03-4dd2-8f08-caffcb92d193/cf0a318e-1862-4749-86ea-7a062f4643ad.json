@@ -1,0 +1,579 @@
+{
+  "createdAt": "2026-05-20T19:53:07.132Z",
+  "runId": "cf0a318e-1862-4749-86ea-7a062f4643ad",
+  "sessionId": "9b9862bb-7e03-4dd2-8f08-caffcb92d193",
+  "userRequest": "Read retrieval_roadmap.md and IMPLEMENTATION_PLAN.md, then audit the project against the roadmap. Report: (1) which roadmap items are implemented, (2) which are missing, (3) any obvious gaps between docs and code. Use list_files/read_file. Do not modify code.",
+  "status": "blocked",
+  "summary": "Maximum turn count reached before a verified completion.",
+  "filesTouched": [],
+  "learnings": [],
+  "errors": [],
+  "turnHistoryRefs": [
+    "cf0a318e-1862-4749-86ea-7a062f4643ad:1",
+    "cf0a318e-1862-4749-86ea-7a062f4643ad:2",
+    "cf0a318e-1862-4749-86ea-7a062f4643ad:3",
+    "cf0a318e-1862-4749-86ea-7a062f4643ad:4",
+    "cf0a318e-1862-4749-86ea-7a062f4643ad:5",
+    "cf0a318e-1862-4749-86ea-7a062f4643ad:6"
+  ],
+  "tracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/cf0a318e-1862-4749-86ea-7a062f4643ad.json",
+  "graphPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/graphs/cf0a318e-1862-4749-86ea-7a062f4643ad.json",
+  "verifierVerdict": null,
+  "graphHighlights": {
+    "files": [
+      {
+        "path": "apps/web/next-env.d.ts",
+        "language": "typescript",
+        "summary": "<reference types=\"next\" />",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/next.config.ts",
+        "language": "typescript",
+        "summary": "Source file apps/web/next.config.ts.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/documents/[id]/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/documents/[id]/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/documents/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/documents/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/evals/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/evals/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/layout.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/layout.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/app/query/page.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/app/query/page.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": "apps/web/src/components/document-actions.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/document-actions.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/document-actions.tsx#DocumentActions",
+          "apps/web/src/components/document-actions.tsx#runAction"
+        ]
+      },
+      {
+        "path": "apps/web/src/components/document-profile-panel.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/document-profile-panel.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/document-profile-panel.tsx#readStringList",
+          "apps/web/src/components/document-profile-panel.tsx#DocumentProfilePanel"
+        ]
+      },
+      {
+        "path": "apps/web/src/components/eval-runner.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/eval-runner.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/eval-runner.tsx#EvalRunner",
+          "apps/web/src/components/eval-runner.tsx#onSubmit"
+        ]
+      },
+      {
+        "path": "apps/web/src/components/ingest-form.tsx",
+        "language": "typescript",
+        "summary": "Source file apps/web/src/components/ingest-form.tsx.",
+        "imports": [],
+        "importedBy": [],
+        "functions": [
+          "apps/web/src/components/ingest-form.tsx#IngestForm",
+          "apps/web/src/components/ingest-form.tsx#onSubmit"
+        ]
+      }
+    ],
+    "functions": [
+      {
+        "id": "apps/web/src/components/document-actions.tsx#DocumentActions",
+        "filePath": "apps/web/src/components/document-actions.tsx",
+        "language": "typescript",
+        "name": "DocumentActions",
+        "kind": "function",
+        "container": null,
+        "signature": "export function DocumentActions({ documentId }: Props) {",
+        "lineStart": 13,
+        "lineEnd": 80,
+        "summary": "Function DocumentActions.",
+        "calls": [
+          "apps/web/src/components/document-actions.tsx#runAction"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "fetch",
+          "JSON.stringify",
+          "response.json",
+          "setBusyAction",
+          "setStatus"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/document-actions.tsx#runAction",
+        "filePath": "apps/web/src/components/document-actions.tsx",
+        "language": "typescript",
+        "name": "runAction",
+        "kind": "function",
+        "container": null,
+        "signature": "async function runAction(action: \"chunk\" | \"index\") {",
+        "lineStart": 17,
+        "lineEnd": 47,
+        "summary": "Function runAction.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/document-actions.tsx#DocumentActions"
+        ],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "fetch",
+          "JSON.stringify",
+          "response.json",
+          "setBusyAction",
+          "setStatus"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/document-profile-panel.tsx#DocumentProfilePanel",
+        "filePath": "apps/web/src/components/document-profile-panel.tsx",
+        "language": "typescript",
+        "name": "DocumentProfilePanel",
+        "kind": "function",
+        "container": null,
+        "signature": "export function DocumentProfilePanel({ profile }: Props) {",
+        "lineStart": 18,
+        "lineEnd": 106,
+        "summary": "Function DocumentProfilePanel.",
+        "calls": [
+          "apps/web/src/components/document-profile-panel.tsx#readStringList"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "Array.isArray",
+          "base.filter",
+          "includes",
+          "kind.toLowerCase",
+          "map",
+          "Object.keys",
+          "query.trim",
+          "ref.toLowerCase",
+          "refs.join",
+          "refs.some",
+          "rows.map",
+          "setQuery",
+          "sort",
+          "toLowerCase",
+          "useMemo",
+          "useState"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/document-profile-panel.tsx#readStringList",
+        "filePath": "apps/web/src/components/document-profile-panel.tsx",
+        "language": "typescript",
+        "name": "readStringList",
+        "kind": "function",
+        "container": null,
+        "signature": "function readStringList(value: unknown): string[] {",
+        "lineStart": 14,
+        "lineEnd": 16,
+        "summary": "Function readStringList.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/document-profile-panel.tsx#DocumentProfilePanel"
+        ],
+        "unresolvedCalls": [
+          "Array.isArray",
+          "value.filter"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/eval-runner.tsx#EvalRunner",
+        "filePath": "apps/web/src/components/eval-runner.tsx",
+        "language": "typescript",
+        "name": "EvalRunner",
+        "kind": "function",
+        "container": null,
+        "signature": "export function EvalRunner() {",
+        "lineStart": 108,
+        "lineEnd": 423,
+        "summary": "Function EvalRunner.",
+        "calls": [
+          "apps/web/src/components/eval-runner.tsx#onSubmit"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "event.preventDefault",
+          "fetch",
+          "filter",
+          "flatMap",
+          "graphRows.map",
+          "JSON.parse",
+          "JSON.stringify",
+          "m.trim",
+          "Manifest",
+          "map",
+          "Modes",
+          "Number",
+          "Object.entries",
+          "response.json",
+          "setError",
+          "setIsSubmitting",
+          "setManifestText",
+          "setModesText",
+          "setPlannerRerank",
+          "setPlannerRerankOverlapWeight",
+          "setPlannerRouteVoteBonus",
+          "setPlannerSweep",
+          "setResult",
+          "setShowPlannerOptions",
+          "setTopK",
+          "slice",
+          "split",
+          "String",
+          "toFixed",
+          "useState"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/eval-runner.tsx#onSubmit",
+        "filePath": "apps/web/src/components/eval-runner.tsx",
+        "language": "typescript",
+        "name": "onSubmit",
+        "kind": "function",
+        "container": null,
+        "signature": "async function onSubmit(event: React.FormEvent<HTMLFormElement>) {",
+        "lineStart": 122,
+        "lineEnd": 159,
+        "summary": "Function onSubmit.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/eval-runner.tsx#EvalRunner"
+        ],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "event.preventDefault",
+          "fetch",
+          "filter",
+          "JSON.parse",
+          "JSON.stringify",
+          "m.trim",
+          "map",
+          "response.json",
+          "setError",
+          "setIsSubmitting",
+          "setResult",
+          "split"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/ingest-form.tsx#IngestForm",
+        "filePath": "apps/web/src/components/ingest-form.tsx",
+        "language": "typescript",
+        "name": "IngestForm",
+        "kind": "function",
+        "container": null,
+        "signature": "export function IngestForm() {",
+        "lineStart": 13,
+        "lineEnd": 92,
+        "summary": "Function IngestForm.",
+        "calls": [
+          "apps/web/src/components/ingest-form.tsx#onSubmit"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "data.get",
+          "event.preventDefault",
+          "fetch",
+          "form.reset",
+          "FormData",
+          "response.json",
+          "setIsSubmitting",
+          "setMessage",
+          "useState"
+        ]
+      },
+      {
+        "id": "apps/web/src/components/ingest-form.tsx#onSubmit",
+        "filePath": "apps/web/src/components/ingest-form.tsx",
+        "language": "typescript",
+        "name": "onSubmit",
+        "kind": "function",
+        "container": null,
+        "signature": "async function onSubmit(event: React.FormEvent<HTMLFormElement>) {",
+        "lineStart": 17,
+        "lineEnd": 45,
+        "summary": "Function onSubmit.",
+        "calls": [],
+        "calledBy": [
+          "apps/web/src/components/ingest-form.tsx#IngestForm"
+        ],
+        "unresolvedCalls": [
+          "apiBaseUrl",
+          "data.get",
+          "event.preventDefault",
+          "fetch",
+          "form.reset",
+          "FormData",
+          "response.json",
+          "setIsSubmitting",
+          "setMessage"
+        ]
+      }
+    ]
+  },
+  "toolObservations": [
+    {
+      "toolName": "list_files",
+      "success": true,
+      "summary": "Listed 29 entries under /Volumes/Developer/Workspace/Retrieval-Research.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read /Volumes/Developer/Workspace/Retrieval-Research/retrieval_roadmap.md.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read /Volumes/Developer/Workspace/Retrieval-Research/IMPLEMENTATION_PLAN.md.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "shell",
+      "success": true,
+      "summary": "Ran shell command with exit code 0.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "shell",
+      "success": true,
+      "summary": "Ran shell command with exit code 0.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/schema/models.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/storage/artifacts.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/ingest/service.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/chunking/page_aware.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/retrieval/planner.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/retrieval/graph.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/retrieval/visual.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/retrieval/hybrid.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/cli.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/api.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/evaluation/runner.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    },
+    {
+      "toolName": "read_file",
+      "success": true,
+      "summary": "Read retrieval_research/config.py.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    }
+  ]
+}

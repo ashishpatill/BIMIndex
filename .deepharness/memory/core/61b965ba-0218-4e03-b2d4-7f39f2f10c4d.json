@@ -1,0 +1,11 @@
+{
+  "sessionId": "61b965ba-0218-4e03-b2d4-7f39f2f10c4d",
+  "currentGoal": "Survey the codebase: list the main Python source files (not .venv), their purpose, and top-level imports. Give a brief architecture summary. --plain",
+  "filesTouched": [],
+  "hypotheses": [],
+  "failedAttempts": [],
+  "openQuestions": [],
+  "learnings": [
+    "Ran shell command with exit code 0."
+  ]
+}

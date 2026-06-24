@@ -1,0 +1,965 @@
+{
+  "createdAt": "2026-05-16T09:36:24.797Z",
+  "runId": "6bd3e201-3188-4e2b-ae0d-668c0d8655a4",
+  "sessionId": "b76d1785-99bc-41b5-a74c-d1fc9dc5031d",
+  "userRequest": "Survey the codebase: list the main Python files, their purpose, and top-level imports. Give a brief architecture summary. --plain",
+  "status": "completed",
+  "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+  "filesTouched": [],
+  "learnings": [],
+  "errors": [],
+  "turnHistoryRefs": [
+    "6bd3e201-3188-4e2b-ae0d-668c0d8655a4:1",
+    "6bd3e201-3188-4e2b-ae0d-668c0d8655a4:2"
+  ],
+  "tracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/runs/6bd3e201-3188-4e2b-ae0d-668c0d8655a4.json",
+  "graphPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/graphs/6bd3e201-3188-4e2b-ae0d-668c0d8655a4.json",
+  "verifierVerdict": {
+    "status": "pass",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "evidence": [
+      "Completion claim: Let me explore the main source directories in parallel.",
+      "Touched files: 0"
+    ]
+  },
+  "graphHighlights": {
+    "files": [
+      {
+        "path": ".venv/bin/activate_this.py",
+        "language": "python",
+        "summary": "Copyright (c) 2020-202x The virtualenv developers",
+        "imports": [
+          ".venv/bin/__future__.py",
+          ".venv/bin/os.py",
+          ".venv/bin/runpy.py",
+          ".venv/bin/site.py",
+          ".venv/bin/sys.py"
+        ],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/__init__.py",
+        "language": "python",
+        "summary": "Source file .venv/lib/python3.13/site-packages/_pytest/__init__.py.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_version.py"
+        ],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py",
+        "language": "python",
+        "summary": "Allow bash-completion for argparse with argcomplete if installed.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py",
+          ".venv/lib/python3.13/site-packages/_pytest/argcomplete/completers.py",
+          ".venv/lib/python3.13/site-packages/_pytest/argparse.py",
+          ".venv/lib/python3.13/site-packages/_pytest/glob.py",
+          ".venv/lib/python3.13/site-packages/_pytest/os.py",
+          ".venv/lib/python3.13/site-packages/_pytest/sys.py",
+          ".venv/lib/python3.13/site-packages/_pytest/typing.py"
+        ],
+        "importedBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py"
+        ],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#FastFilesCompleter.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#FastFilesCompleter.__call__",
+          ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#try_argcomplete",
+          ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#try_argcomplete"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_code/__init__.py",
+        "language": "python",
+        "summary": "Python inspection/code generation API.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py"
+        ],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "summary": "mypy: allow-untyped-defs",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest/_code/source.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest/_io.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest/_io/saferepr.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest/compat.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest/deprecated.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/_pytest/pathlib.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/ast.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/collections/abc.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/dataclasses.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/exceptiongroup.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/inspect.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/io.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/os.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/pathlib.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/pluggy.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/re.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/sys.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/traceback.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/types.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/typing.py"
+        ],
+        "importedBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/__init__.py"
+        ],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.from_function",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.__eq__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.firstlineno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.name",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.path",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.fullsource",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.source",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.getargs",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.lineno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.f_globals",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.f_locals",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.code",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.statement",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.eval",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.repr",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Frame.getargs",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.with_repr_style",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.lineno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.get_python_framesummary",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.end_lineno_relative",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.colno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.end_colno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.end_lineno_relative",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.colno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.end_colno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.frame",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.relline",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.__repr__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.statement",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.path",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.locals",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.getfirstlinesource",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.getsource",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.ishidden",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.__str__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TracebackEntry.name",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.f",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.cut",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.__getitem__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.__getitem__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.__getitem__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.filter",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Traceback.recursionindex",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#stringify_exception",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_exception",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_exc_info",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_current",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.for_later",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.fill_unfilled",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.type",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.value",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.tb",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.typename",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.traceback",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.traceback",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.__repr__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.exconly",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._get_single_subexc",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.errisinstance",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._getreprcrash",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.getrepr",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.match",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._group_contains",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.group_contains",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo._getindent",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo._getentrysource",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.repr_args",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.get_source",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.get_highlight_arrows_for_line",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.get_exconly",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.repr_locals",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.repr_traceback_entry",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo._makepath",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.repr_traceback",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo._truncate_recursive_traceback",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.repr_excinfo",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TerminalRepr.__str__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TerminalRepr.__repr__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#TerminalRepr.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionRepr.addsection",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionRepr.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionChainRepr.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionChainRepr.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprExceptionInfo.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprTraceback.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprTracebackNative.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprEntryNative.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprEntry._write_entry_lines",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprEntry.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprEntry.__str__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprFileLocation.__post_init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprFileLocation.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprLocals.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprFuncArgs.toterminal",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#getfslineno",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#_byte_offset_to_character_offset",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#filter_traceback",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#filter_excinfo_traceback"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_code/source.py",
+        "language": "python",
+        "summary": "mypy: allow-untyped-defs",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/ast.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/bisect.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/collections/abc.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/inspect.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/textwrap.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/tokenize.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/types.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/typing.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/warnings.py"
+        ],
+        "importedBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/__init__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_py/path.py"
+        ],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__eq__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__getitem__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__getitem__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__getitem__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__iter__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__len__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.strip",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.indent",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.getstatement",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.getstatementrange",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.deindent",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#Source.__str__",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#findsource",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#getrawcode",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#deindent",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#get_statement_startend2",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/source.py#getstatementrange_ast"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_io/__init__.py",
+        "language": "python",
+        "summary": "Source file .venv/lib/python3.13/site-packages/_pytest/_io/__init__.py.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py"
+        ],
+        "importedBy": [],
+        "functions": []
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py",
+        "language": "python",
+        "summary": "mypy: allow-untyped-defs",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/collections.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/collections/abc.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/dataclasses.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/io.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/re.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/types.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/typing.py"
+        ],
+        "importedBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py"
+        ],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#_safe_key.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#_safe_key.__lt__",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#_safe_tuple",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter.pformat",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._format",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_dataclass",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_dict",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_ordered_dict",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_list",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_tuple",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_set",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_str",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_bytes",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_bytearray",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_mappingproxy",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_simplenamespace",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._format_dict_items",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._format_namespace_items",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._format_items",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._repr",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_default_dict",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_counter",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_chain_map",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_deque",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_user_dict",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_user_list",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._pprint_user_string",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#PrettyPrinter._safe_repr",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#_recursion",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py#_wrap_bytes_repr"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py",
+        "language": "python",
+        "summary": "Source file .venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pprint.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/reprlib.py"
+        ],
+        "importedBy": [],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#_try_repr_or_str",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#_format_repr_exception",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#_ellipsize",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#SafeRepr.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#SafeRepr.repr",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#SafeRepr.repr_instance",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#safeformat",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#saferepr",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/saferepr.py#saferepr_unlimited"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py",
+        "language": "python",
+        "summary": "Helper functions for writing to terminals and files.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/_pytest/config/exceptions.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/collections/abc.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/colorama.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/os.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pygments.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pygments/formatters/terminal.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pygments/lexer.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pygments/lexers/diff.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/pygments/lexers/python.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/shutil.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/sys.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/typing.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/wcwidth.py",
+          ".venv/lib/python3.13/site-packages/_pytest/compat.py"
+        ],
+        "importedBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/__init__.py"
+        ],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#get_terminal_width",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#should_do_markup",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.__init__",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.fullwidth",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.fullwidth",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.width_of_current_line",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.markup",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.sep",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.write",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.write_raw",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.line",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter.flush",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter._write_source",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter._get_pygments_lexer",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter._get_pygments_formatter",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py#TerminalWriter._highlight"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_io/wcwidth.py",
+        "language": "python",
+        "summary": "Source file .venv/lib/python3.13/site-packages/_pytest/_io/wcwidth.py.",
+        "imports": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/__future__.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/functools.py",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/unicodedata.py"
+        ],
+        "importedBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/terminalwriter.py"
+        ],
+        "functions": [
+          ".venv/lib/python3.13/site-packages/_pytest/_io/wcwidth.py#wcwidth",
+          ".venv/lib/python3.13/site-packages/_pytest/_io/wcwidth.py#wcswidth"
+        ]
+      },
+      {
+        "path": ".venv/lib/python3.13/site-packages/_pytest/_py/__init__.py",
+        "language": "python",
+        "summary": "Source file .venv/lib/python3.13/site-packages/_pytest/_py/__init__.py.",
+        "imports": [],
+        "importedBy": [],
+        "functions": []
+      }
+    ],
+    "functions": [
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#FastFilesCompleter.__call__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py",
+        "language": "python",
+        "name": "__call__",
+        "kind": "method",
+        "container": "FastFilesCompleter",
+        "signature": "def __call__(self, prefix: str, **kwargs: Any) -> list[str]:",
+        "lineStart": 80,
+        "lineEnd": 101,
+        "summary": "Method __call__ on FastFilesCompleter.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "completion.append",
+          "glob",
+          "globbed.extend",
+          "len",
+          "path.dirname",
+          "path.isdir",
+          "prefix",
+          "sorted"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#FastFilesCompleter.__init__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py",
+        "language": "python",
+        "name": "__init__",
+        "kind": "method",
+        "container": "FastFilesCompleter",
+        "signature": "def __init__(self, directories: bool = True) -> None:",
+        "lineStart": 77,
+        "lineEnd": 79,
+        "summary": "Method __init__ on FastFilesCompleter.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#try_argcomplete",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py",
+        "language": "python",
+        "name": "try_argcomplete",
+        "kind": "function",
+        "container": null,
+        "signature": "def try_argcomplete(parser: argparse.ArgumentParser) -> None:",
+        "lineStart": 109,
+        "lineEnd": 111,
+        "summary": "Function try_argcomplete.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "argcomplete.autocomplete"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py#try_argcomplete",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_argcomplete.py",
+        "language": "python",
+        "name": "try_argcomplete",
+        "kind": "function",
+        "container": null,
+        "signature": "def try_argcomplete(parser: argparse.ArgumentParser) -> None:",
+        "lineStart": 114,
+        "lineEnd": 116,
+        "summary": "Function try_argcomplete.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#_byte_offset_to_character_offset",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "_byte_offset_to_character_offset",
+        "kind": "function",
+        "container": null,
+        "signature": "def _byte_offset_to_character_offset(str, offset):",
+        "lineStart": 1515,
+        "lineEnd": 1520,
+        "summary": "Converts a byte based offset in a string to a code-point.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "decode",
+          "len",
+          "str.encode"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.__eq__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "__eq__",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def __eq__(self, other):",
+        "lineStart": 72,
+        "lineEnd": 74,
+        "summary": "Method __eq__ on Code.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.__init__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "__init__",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def __init__(self, obj: CodeType) -> None:",
+        "lineStart": 65,
+        "lineEnd": 67,
+        "summary": "Method __init__ on Code.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.firstlineno",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "firstlineno",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def firstlineno(self) -> int:",
+        "lineStart": 79,
+        "lineEnd": 81,
+        "summary": "Method firstlineno on Code.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.from_function",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "from_function",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def from_function(cls, obj: object) -> Code:",
+        "lineStart": 69,
+        "lineEnd": 71,
+        "summary": "Method from_function on Code.",
+        "calls": [],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#getfslineno"
+        ],
+        "unresolvedCalls": [
+          "cls",
+          "getrawcode"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.fullsource",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "fullsource",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def fullsource(self) -> Source | None:",
+        "lineStart": 104,
+        "lineEnd": 108,
+        "summary": "Return a _pytest._code.Source object for the full source file of the code.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "findsource"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.getargs",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "getargs",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def getargs(self, var: bool = False) -> tuple[str, ...]:",
+        "lineStart": 114,
+        "lineEnd": 128,
+        "summary": "Return a tuple with the argument names for the code object.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.name",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "name",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def name(self) -> str:",
+        "lineStart": 83,
+        "lineEnd": 85,
+        "summary": "Method name on Code.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.path",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "path",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def path(self) -> Path | str:",
+        "lineStart": 87,
+        "lineEnd": 102,
+        "summary": "Return a path object pointing to source code, or an ``str`` in",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "absolutepath",
+          "OSError",
+          "p.exists"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#Code.source",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "source",
+        "kind": "method",
+        "container": "Code",
+        "signature": "def source(self) -> Source:",
+        "lineStart": 109,
+        "lineEnd": 113,
+        "summary": "Return a _pytest._code.Source object for the code object's source only.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "Source"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionChainRepr.__init__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "__init__",
+        "kind": "method",
+        "container": "ExceptionChainRepr",
+        "signature": "def __init__(",
+        "lineStart": 1271,
+        "lineEnd": 1273,
+        "summary": "Method __init__ on ExceptionChainRepr.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionChainRepr.toterminal",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "toterminal",
+        "kind": "method",
+        "container": "ExceptionChainRepr",
+        "signature": "def toterminal(self, tw: TerminalWriter) -> None:",
+        "lineStart": 1283,
+        "lineEnd": 1291,
+        "summary": "Method toterminal on ExceptionChainRepr.",
+        "calls": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionChainRepr.toterminal"
+        ],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionChainRepr.toterminal"
+        ],
+        "unresolvedCalls": [
+          "tw.line"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.__init__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "__init__",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def __init__(",
+        "lineStart": 505,
+        "lineEnd": 511,
+        "summary": "Method __init__ on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.__repr__",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "__repr__",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def __repr__(self) -> str:",
+        "lineStart": 638,
+        "lineEnd": 642,
+        "summary": "Method __repr__ on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "len",
+          "saferepr"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._get_single_subexc",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "_get_single_subexc",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def _get_single_subexc(",
+        "lineStart": 652,
+        "lineEnd": 653,
+        "summary": "Method _get_single_subexc on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.exconly"
+        ],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._getreprcrash",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "_getreprcrash",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def _getreprcrash(self) -> ReprFileLocation | None:",
+        "lineStart": 683,
+        "lineEnd": 693,
+        "summary": "Method _getreprcrash on ExceptionInfo.",
+        "calls": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.exconly"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "entry.ishidden",
+          "len",
+          "range",
+          "ReprFileLocation"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._group_contains",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "_group_contains",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def _group_contains(",
+        "lineStart": 786,
+        "lineEnd": 792,
+        "summary": "Method _group_contains on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.errisinstance",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "errisinstance",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def errisinstance(self, exc: EXCEPTION_OR_MORE) -> bool:",
+        "lineStart": 676,
+        "lineEnd": 682,
+        "summary": "Return True if the exception is an instance of exc.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "isinstance"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.exconly",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "exconly",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def exconly(self, tryshort: bool = False) -> str:",
+        "lineStart": 643,
+        "lineEnd": 675,
+        "summary": "Return the exception as a string.",
+        "calls": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._get_single_subexc",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.type"
+        ],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo._getreprcrash"
+        ],
+        "unresolvedCalls": [
+          "and",
+          "format_exception_only",
+          "isinstance",
+          "join",
+          "len",
+          "returned",
+          "text.rstrip",
+          "text.startswith"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.fill_unfilled",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "fill_unfilled",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def fill_unfilled(self, exc_info: tuple[type[E], E, TracebackType]) -> None:",
+        "lineStart": 590,
+        "lineEnd": 594,
+        "summary": "Fill an unfilled ExceptionInfo created with ``for_later()``.",
+        "calls": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.for_later"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.for_later",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "for_later",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def for_later(cls) -> ExceptionInfo[E]:",
+        "lineStart": 586,
+        "lineEnd": 589,
+        "summary": "Return an unfilled ExceptionInfo.",
+        "calls": [],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.fill_unfilled"
+        ],
+        "unresolvedCalls": [
+          "cls"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_current",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "from_current",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def from_current(cls, exprinfo: str | None = None) -> ExceptionInfo[BaseException]:",
+        "lineStart": 566,
+        "lineEnd": 584,
+        "summary": "Return an ExceptionInfo matching the current traceback.",
+        "calls": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_exc_info",
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ReprEntry.__str__"
+        ],
+        "calledBy": [],
+        "unresolvedCalls": [
+          "sys.exc_info"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_exc_info",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "from_exc_info",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def from_exc_info(",
+        "lineStart": 549,
+        "lineEnd": 552,
+        "summary": "Method from_exc_info on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_current"
+        ],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.from_exception",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "from_exception",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def from_exception(",
+        "lineStart": 519,
+        "lineEnd": 525,
+        "summary": "Method from_exception on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [
+          ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#FormattedExcinfo.repr_excinfo"
+        ],
+        "unresolvedCalls": [
+          "is"
+        ]
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.getrepr",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "getrepr",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def getrepr(",
+        "lineStart": 694,
+        "lineEnd": 703,
+        "summary": "Method getrepr on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      },
+      {
+        "id": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py#ExceptionInfo.group_contains",
+        "filePath": ".venv/lib/python3.13/site-packages/_pytest/_code/code.py",
+        "language": "python",
+        "name": "group_contains",
+        "kind": "method",
+        "container": "ExceptionInfo",
+        "signature": "def group_contains(",
+        "lineStart": 816,
+        "lineEnd": 821,
+        "summary": "Method group_contains on ExceptionInfo.",
+        "calls": [],
+        "calledBy": [],
+        "unresolvedCalls": []
+      }
+    ]
+  },
+  "toolObservations": [
+    {
+      "toolName": "list_files",
+      "success": true,
+      "summary": "Listed 29 entries under /Volumes/Developer/Workspace/Retrieval-Research.",
+      "mutatedFiles": [],
+      "permission": {
+        "outcome": "allow",
+        "reason": "Read-only action allowed by default.",
+        "source": "mode_default",
+        "mode": "auto"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T17:48:31.159Z",
+  "payload": {
+    "runId": "37a319d1-3fb2-4343-8900-47a13f8e086f",
+    "sessionId": "ae2eb118-13d4-4406-ac2b-d2396aa48fe4",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "ae2eb118-13d4-4406-ac2b-d2396aa48fe4",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "List the top-level directories in this project and tell me in one sentence what the project does. Do not modify any files.",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "37a319d1-3fb2-4343-8900-47a13f8e086f:1",
+        "37a319d1-3fb2-4343-8900-47a13f8e086f:2"
+      ]
+    }
+  }
+}

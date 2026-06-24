@@ -1,0 +1,9 @@
+{
+  "sessionId": "d8a2875f-a0cb-488a-a21c-5d13aedf00d7",
+  "runId": "8625ea37-27fb-4ecc-94b7-f79ecdc26203",
+  "state": "running",
+  "currentTurn": 1,
+  "currentStep": "Model requested 3 tool call(s) on turn 1.",
+  "pendingControls": 0,
+  "lastUpdatedAt": "2026-05-20T19:13:52.127Z"
+}

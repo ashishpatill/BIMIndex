@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-27T17:38:33.687Z",
+  "payload": {
+    "runId": "2fee7f47-7a13-47b5-ab8d-878a4632cef8",
+    "sessionId": "eba4bcbf-1ac8-40c8-8e42-6cabe5c40680",
+    "status": "blocked",
+    "userRequest": "Create a new file CONTRIBUTING_NOTES.md at the repo root containing a 3-bullet summary of how to run the test suite, derived from the README. Keep it under 15 lines.",
+    "summary": "Mutations were made, but there is no explicit successful verification evidence after the last mutation.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/2fee7f47-7a13-47b5-ab8d-878a4632cef8/policy_candidates.json"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "eval_request",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T19:10:58.829Z",
+  "payload": {
+    "runId": "6b4caaaa-e781-40d8-b7a0-97de945dbc80",
+    "sessionId": "ba0108cc-ece6-4cf4-9285-c05781349364",
+    "status": "completed",
+    "userRequest": "Run pytest using ./.venv/bin/pytest in this project, then report any failing tests with file:line. Do not modify any code.",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "requestedOutputs": [
+      "eval_result",
+      "policy_candidates"
+    ],
+    "inputs": {
+      "runTracePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/run_trace.json",
+      "sessionSummaryPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/session_summary.json",
+      "toolObservationsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/tool_observations.jsonl",
+      "verifierResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/verifier_result.json",
+      "deliveryArtifactsPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/delivery_artifacts.json",
+      "resourceUsagePath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/resource_usage.json"
+    },
+    "proposedOutputs": {
+      "evalResultPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/eval_result.json",
+      "policyCandidatesPath": "/Volumes/Developer/Workspace/Retrieval-Research/.deepharness/contracts/v1/runs/6b4caaaa-e781-40d8-b7a0-97de945dbc80/policy_candidates.json"
+    }
+  }
+}

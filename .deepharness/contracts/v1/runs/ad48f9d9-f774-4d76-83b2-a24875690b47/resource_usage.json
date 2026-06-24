@@ -1,0 +1,24 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "resource_usage",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-20T20:19:06.915Z",
+  "payload": {
+    "runId": "ad48f9d9-f774-4d76-83b2-a24875690b47",
+    "sessionId": "11d51d63-a44a-4602-94d9-8663f748044b",
+    "usage": {
+      "inputTokens": 176155,
+      "outputTokens": 43358,
+      "totalTokens": 219513,
+      "totalCostUsd": 0,
+      "estimated": false,
+      "withinBudget": true,
+      "notes": [
+        "Token usage is estimated unless the active model adapter returns explicit usage metadata.",
+        "Selected context exceeds the effective standard budget (16077 > 16000).",
+        "Selected context exceeds the effective standard budget (16177 > 16000).",
+        "Selected context exceeds the effective standard budget (50290 > 16000)."
+      ]
+    }
+  }
+}

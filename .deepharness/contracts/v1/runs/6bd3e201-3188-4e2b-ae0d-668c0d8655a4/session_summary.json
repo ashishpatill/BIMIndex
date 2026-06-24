@@ -1,0 +1,25 @@
+{
+  "contractVersion": "deepharness.artifacts.v1",
+  "artifactType": "session_summary",
+  "generator": "deepharness-ts-core",
+  "createdAt": "2026-05-16T09:36:24.954Z",
+  "payload": {
+    "runId": "6bd3e201-3188-4e2b-ae0d-668c0d8655a4",
+    "sessionId": "b76d1785-99bc-41b5-a74c-d1fc9dc5031d",
+    "status": "completed",
+    "summary": "No file mutations were recorded; the completion claim is acceptable as an informational result.",
+    "sessionRecord": {
+      "session_id": "b76d1785-99bc-41b5-a74c-d1fc9dc5031d",
+      "parent_session_id": null,
+      "checkpoint_id": null,
+      "summary": "Survey the codebase: list the main Python files, their purpose, and top-level imports. Give a brief architecture summary. --plain",
+      "files_touched": [],
+      "errors": [],
+      "learnings": [],
+      "turn_history_refs": [
+        "6bd3e201-3188-4e2b-ae0d-668c0d8655a4:1",
+        "6bd3e201-3188-4e2b-ae0d-668c0d8655a4:2"
+      ]
+    }
+  }
+}
