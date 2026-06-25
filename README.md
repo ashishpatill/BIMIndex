@@ -1,5 +1,7 @@
 # BIMIndex: Tri-Modal Retrieval Architecture
 
+![CI](https://github.com/ashishpatill/BIMIndex/actions/workflows/ci.yml/badge.svg)
+
 ![Tri-Modal Retrieval Concept](assets/tri_modal_retrieval.png)
 
 ## The Problem with Traditional RAG

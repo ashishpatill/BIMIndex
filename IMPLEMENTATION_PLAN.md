@@ -1,6 +1,6 @@
 # Implementation Plan: BIMIndex
 
-This document tracks the implementation progress, technical debt, and future roadmap for the `BIMIndex` repository.
+**Last updated: 2026-06-25** — 7 of 10 TASKS.md items complete. Critical gap: `tantivy`/`lancedb`/`kuzu` Python packages not installed in `.venv` — `src/backends/` code exists but cannot be exercised.
 
 ## Current Focus: Tri-Modal Agentic Retrieval (v1.0 Integration)
 
@@ -12,14 +12,21 @@ The current priority is establishing the robust Tri-Modal retrieval agent levera
 - `[x]` Reciprocal Rank Fusion (RRF) implementation for combining tri-modal results.
 - `[x]` Graceful tool error handling and fallback hooks.
 
-### Pending Tri-Modal Work
+### Live Backend Code (Packages Not Installed)
+- `[x]` `src/backends/tantivy_index.py` (78 lines) — `TantivyIndex` with BM25 search.
+- `[x]` `src/backends/lancedb_index.py` (85 lines) — `LanceDBIndex` with MUVERA IVF index.
+- `[x]` `src/backends/kuzu_graph.py` (78 lines) — `KuzuGraph` with HippoRAG 2 schema.
+- `[x]` `src/backends/neo4j_graph.py` (112 lines) — `Neo4jGraph` with Cypher queries.
+
+### Pending Tri-Modal Work (CRITICAL)
+- `[ ]` **Install DB packages** (`uv add tantivy lancedb pyarrow kuzu neo4j`) and update `pyproject.toml`.
 - `[ ]` Replace mock `retrieval_tools.py` data with live connections to Tantivy, LanceDB, and KuzuDB instances.
 - `[ ]` Integrate `ColQwen2.5` multi-vector routing.
 - `[ ]` Hook up Graph extraction data from the Phase 6 pipeline into the KuzuDB ingestion path.
 
 ---
 
-## Legacy Roadmap & Eval Harness
+## Legacy Roadmap & Eval Harness (Completed)
 
 This plan turns `retrieval_roadmap.md` into an implementation sequence for the underlying evaluation and ingestion systems.
 
@@ -29,496 +36,70 @@ Last updated: 2026-05-10 (planner calibration + graph stress-testing completed)
 
 Current milestone: **v0.3 (phase 7 — hardening)**
 
-Completed:
+Completed (all phases 0–7):
 
-- Phase 0 foundation:
-  - Canonical schema + artifact store under `data/`.
-  - Ingestion pipeline and CLI entrypoints.
-  - Package structure + smoke tests.
-- Phase 1 text retrieval baseline:
-  - Page-aware chunking.
-  - BM25 + dense retrieval + hybrid fusion.
-  - Query traces and evidence bundles.
-- Phase 2 evaluation harness:
-  - Eval manifest execution via CLI/API.
-  - Mode metrics, citation support, answerability and confidence reporting.
-- Phase 3 inspector UI:
-  - Custom Next.js UI scaffold in `apps/web`.
-  - Document library, document detail workspace, query workbench, eval page.
-  - FastAPI backend surface in `retrieval_research/api.py`.
-- Phase 4 multimodal page retrieval (completed):
-  - Visual retrieval mode is available through CLI/API/UI.
-  - Baseline visual page index now includes OCR-independent image/layout profile signals for image-backed pages.
-  - Optional ColPali-compatible visual backend and `int8` compression path are wired for richer page retrieval.
-  - Visual routing is integrated into planner traces, eval reports, and query/eval UI diagnostics.
-  - Reproducible weak-OCR visual fixture and eval manifest builder are available via `scripts/build_visual_phase4_fixture.py`.
-  - Weak-OCR visual fixture validation shows visual and planner page hit rate at `1.000`.
-- Phase 5 planner and adaptive routing (completed):
-  - Query classifier and rule-based route selection.
-  - Query planner now exposes human-readable `route_explanation` in retrieval traces.
-  - Route-specific planner settings (top-k factors and merge strategy) recorded in traces.
-  - Evidence consolidation with redundancy/conflict annotations in `planner_merge`.
-  - Confidence + answerability estimates added to knowledge cards and eval outputs.
-  - Planner-vs-static comparison summary added to eval JSON/Markdown output.
-  - Planner merge controls support `score_max` and `route_vote`, plus optional query-overlap reranking.
-  - Eval can benchmark planner merge/rerank variants and report best variants by MRR/confidence.
-  - Planner route-vote and rerank-overlap weights are tunable across CLI, API, eval, and UI.
-  - CLI/API/core retrieval now default query mode to `planner`.
-  - Added larger manifest templates for planner sweep benchmarking.
-  - Default planner merge now optimizes for fixture MRR with `score_max` plus soft query-overlap reranking.
-- Phase 6 structured knowledge layer (completed baseline + quality expansion):
-  - First graph-style retrieval path (`graph`) added with chunk-neighborhood expansion.
-  - Planner can route graph-intent queries through graph retrieval.
-  - Graph index now builds section, entity, and reference links in addition to page/chunk neighborhood links.
-  - Query and eval UI surfaces graph retrieval diagnostics.
-  - Knowledge cards include unresolved ambiguity notes and follow-up retrieval suggestions.
-  - `knowledge_graph.json` artifacts persist extracted sections/entities/references alongside chunks.
-  - Corpus graph search supports cross-document traversal over shared entities and references.
-  - Eval manifests can target `document_ids` and report aggregate graph diagnostics.
-  - Planner mode can route multi-document corpus queries through corpus-level graph traversal.
-  - Inspector UI can filter graph relations and inspect knowledge graph sections/entities/references.
-  - Graph extraction handles acronym definitions, quoted concepts, section aliases, numeric reference ranges, and DOI/arXiv/URL references.
-  - Eval reports include graph extraction artifact counts and optional expected entity/reference/section recall.
-  - Added a reproducible 10-document planner tuning fixture and local manifest builder.
-  - Fixed section-aware chunk assignment so graph extraction preserves per-heading sections.
-  - Ran the fixture sweep: `score_rerank_soft` led by MRR, while stronger route-vote rerank only increased confidence.
-  - Validated graph extraction recall on the 10-document fixture: expected entities, references, and sections all reached `1.000`.
-  - Added OCR-noise-tolerant reference normalization for section/figure/table/arXiv signals in graph extraction.
-  - Graph index adds section reading-order and numeric hierarchy edges (`next_section` / `previous_section` / `child_section` / `parent_section`) for planner and graph expansion.
-  - `document_profile.json` includes `structured_reference_inventory` (figures, tables, sections, citations, DOIs, arXiv, URLs) aligned with graph reference extraction.
-  - **Quality expansion**: numeric range expansion (`Figures 1-3` now produces all intermediate values), section hierarchy aliases with parent prefix generation (`3.2.1` produces `3`, `3.2`), and 9 new OCR noise patterns (`sect1on`, `chapte r`, `appenclix`, `equat10n`, etc.).
-- Phase 7 hardening (configuration system + structured logging + Docker + expanded tests):
-  - Centralized configuration system in `retrieval_research/config.py` with 30+ env-configurable settings covering storage paths, API keys, OCR/ingestion, chunking, BM25, dense, late interaction, visual, ColPali, and retrieval defaults.
-  - All retrieval index classes (BM25, dense, late, visual, ColPali) resolve defaults from the centralized config system.
-  - CLI, API, eval runner, ingestion service, chunking module, and Streamlit UI all wire through `get_settings()`.
-  - Removed the monolithic `core_processor.py` (moved to `core_processor/` package); `core_processor/settings.py` now delegates to centralized config.
-  - `.env.example` documents all 30+ configuration variables with sensible defaults.
-  - Structured logging module (`retrieval_research/log.py`) with configurable level and optional file output.
-  - Expanded test suite: `test_config.py` (config system coverage), `test_chunking.py` (chunking correctness), `test_retrieval.py` (all retrieval engines + edge cases), `test_log.py` (logging module).
-  - Dockerfile with three targets: `api` (FastAPI/uvicorn), `cli` (entrypoint), and `worker` (background job worker).
-  - Legacy `core_processor.py` deletion committed.
-- Phase 7 follow-up — error handling (systematic pass):
-  - `safe_generate_content()` with retry logic in `core_processor/gemini_client.py`.
-  - Import guard + error wrapping for MLX/GLM-OCR in `core_processor/mlx_backend.py`.
-  - Structured logging + error resilience + Gemini fallback in `core_processor/pipeline.py`.
-  - Graceful handling of corrupt images, PDFs, and JSON in `retrieval_research/ingest/service.py`.
-  - Manifest load error handling in `retrieval_research/evaluation/runner.py`.
-- Phase 7 follow-up — background jobs for ingestion/indexing:
-  - File-based job queue (`retrieval_research/jobs/`) with `Job`, `JobStatus`, `JobType` models.
-  - `JobStore` backed by JSON files; supports submit, load, list (with status filter), claim_next, complete, fail.
-  - `handle_job()` dispatches INGEST/CHUNK/INDEX/PIPELINE job types to existing service functions.
-  - `run_worker()` polls the queue, processes jobs, handles SIGINT/SIGTERM for graceful shutdown.
-  - API: async/sync pattern on ingest/chunk/index with `?sync=true` for backward compat; new pipeline endpoint; new `/api/jobs` and `/api/jobs/{id}` endpoints.
-  - CLI: `rr worker`, `rr jobs`, `rr job-status`, `--async` flag on ingest/chunk/index.
-  - Docker worker target in `Dockerfile`.
-  - Config: `RR_JOBS_ROOT` and `RR_JOB_POLL_INTERVAL` in config + `.env.example`.
-  - 18 job tests covering models, store edge cases, handler dispatch.
-- Phase 7 follow-up — Dependabot config:
-  - `.github/dependabot.yml` with pip (weekly), npm (weekly), and Docker (weekly) ecosystems.
-- Phase 5 follow-up — planner classifier calibration (vocabulary expansion + strong identifier detection):
-  - Expanded TABLE_TERMS: added receipt, schedule, catalog, inventory, budget, ROI, cost, revenue, payroll, balance, transaction, checkbook.
-  - Expanded VISUAL_TERMS: added UI, interface, mockup, wireframe, thumbnail, logo, icon, blueprint, render, infographic, painting.
-  - Expanded MULTIHOP_TERMS: added difference, similar, both, vs, versus, common, together, relation, correlation, trend, pattern, merge, combine, intersection, overlap, align.
-  - Expanded GRAPH_TERMS: added citation, cite, bibliography, appendix, subsection, paragraph, clause, chapter, preface, glossary, index, tableofcontents, parent, child, sibling, ancestor, descendant, subtree.
-  - Added `_has_strong_identifier()` as a pre-check in `plan_query()` — DOI, version numbers, invoice codes (XXX-12345), and alphanumeric IDs now route to `exact_lookup` before table/graph routing, fixing mixed-intent queries like "look up invoice INV-2024-001" or "find section DOI 10.1234/abc.def".
-  - Added `PlannerCalibrationTest` with 8 test methods covering 45+ calibration queries across visual, table, graph, multi-hop, identifier, semantic, and combined-intent categories.
-  - All 34 retrieval tests pass with 79 subtests covering planner routing, merge strategies, and calibration.
-- Phase 4 follow-up — broad visual benchmarks:
-  - Enhanced fixture builder (`scripts/build_visual_broad_benchmark.py`) with 6 diverse document types: dense table, application form, text with figure, bar chart, pie chart, financial metrics.
-  - 10-query eval manifest with single-document and cross-corpus queries.
-  - Baseline results: visual page_hit_rate=1.000, mrr=1.000; planner page_hit_rate=0.800, mrr=0.800.
-  - Reference manifest template at `datasets/manifests/visual_broad_benchmark.example.json`.
-- Phase 7 — UI/UX overhaul:
-  - Added best-in-class UI libraries: `lucide-react` (icons), `@radix-ui/*` (headless primitives), `class-variance-authority` for component variants.
-  - Created 9 shadcn-style UI primitives: Button, Card, Badge, Input/Textarea, Select, Tabs, Dialog, Checkbox, Label, Skeleton.
-  - Redesigned all 7 pages and 7 components with professional dark theme, consistent card-based layouts, and lucide icons.
-  - Added collapsible planner options in query workbench and eval runner.
-  - Navigation upgraded to sticky header with backdrop blur, icons, and active state.
-  - Next.js build compiles with zero errors.
-- Infra/quality improvements:
-  - Fixed `--store` flag handling for `cmd_eval` (None → default root).
-  - Removed misleading `args` parameter from `_job_store()` (jobs use independent config).
-  - Added `list_indexes()` method and corrupt-entry warning logging to `ArtifactStore`.
-  - Fixed Next.js web ingest form to send `?sync=true` for async API compatibility.
-  - Added worker, jobs, job-status, and broad benchmark documentation to README.
-
-- Phase 6 follow-up — graph extraction stress-testing on noisy OCR (quality expansion):
-  - Expanded OCR_REFERENCE_NORMALIZATIONS from 20 to 60+ patterns: added `sectl0n`, `secti0n`, `sectton`, `secton`, `sec ion`, `sec tlon`, `chapt3r`, `chapt er`, `chap ter`, `app3ndix`, `appen dix`, `appendixx`, `figu re`, `flgure`, `ftgure`, `ligures`, `tab le`, `tab les`, `tabke`, `tahle`, `equati0n`, `eqnation`, `equ ation`, `arxi v`, and unified plural/singular variants.
-  - Fixed `f1g(?:ures?)?` and `flg(?:ures?)?` patterns to handle plural forms (e.g., "F1gures 1-3" now correctly normalizes to "figures" for range expansion).
-  - Consolidated figure/table/section patterns to handle both singular and plural with a single regex branch.
-  - Added 4 stress-test graph tests: `test_ocr_noise_expanded_patterns` (18 cases), `test_ocr_normalize_reference_text_roundtrip`, `test_graph_stress_multiple_combined_noise`, and `test_graph_stress_numeric_range_with_noise`.
-  - Validated extraction across clean, noisy, and very-noisy quality tiers.
+- Phase 0 foundation: Canonical schema + artifact store under `data/`. Ingestion pipeline and CLI entrypoints. Package structure + smoke tests.
+- Phase 1 text retrieval baseline: Page-aware chunking. BM25 + dense retrieval + hybrid fusion. Query traces and evidence bundles.
+- Phase 2 evaluation harness: Eval manifest execution via CLI/API. Mode metrics, citation support, answerability and confidence reporting.
+- Phase 3 inspector UI: Custom Next.js UI scaffold in `apps/web`. Document library, document detail workspace, query workbench, eval page. FastAPI backend surface in `retrieval_research/api.py`.
+- Phase 4 multimodal page retrieval: Visual retrieval mode through CLI/API/UI. Baseline visual page index with OCR-independent image/layout profile signals. Optional ColPali-compatible visual backend and `int8` compression path. Visual routing integrated into planner traces, eval reports, query/eval UI diagnostics. Reproducible weak-OCR visual fixture and eval manifest builder via `scripts/build_visual_phase4_fixture.py`. Weak-OCR visual fixture validation: visual and planner page hit rate at `1.000`.
+- Phase 5 planner and adaptive routing: Query classifier and rule-based route selection. Human-readable `route_explanation` in retrieval traces. Route-specific planner settings recorded in traces. Evidence consolidation with redundancy/conflict annotations in `planner_merge`. Confidence + answerability estimates added to knowledge cards and eval outputs. Planner-vs-static comparison summary. Planner merge controls support `score_max` and `route_vote`, plus optional query-overlap reranking. Default query mode is `planner`. Larger manifest templates for planner sweep benchmarking. Default planner merge optimizes for fixture MRR with `score_max` plus soft query-overlap reranking.
+- Phase 6 structured knowledge layer: First graph-style retrieval path (`graph`) with chunk-neighborhood expansion. Section, entity, and reference links in addition to page/chunk neighborhood. Graph diagnostics in UI. Unresolved ambiguity notes and follow-up retrieval suggestions. `knowledge_graph.json` artifacts. Corpus graph search with cross-document traversal. Eval manifests can target `document_ids`. Planner can route multi-document corpus queries through corpus-level graph traversal. Graph extraction handles acronym definitions, quoted concepts, section aliases, numeric reference ranges, DOI/arXiv/URL references. Stress-tested on noisy OCR. Numeric range expansion. Section hierarchy aliases. 60+ OCR noise patterns.
+- Phase 7 hardening: Centralized configuration system in `retrieval_research/config.py` with 30+ env-configurable settings. Structured logging module. Expanded test suite. Dockerfile with three targets (api/cli/worker). Background jobs for ingestion/indexing (file-based queue, JobStore, worker, API, CLI). Dependabot config. Error handling pass. Planner classifier calibration (vocabulary expansion + strong identifier detection). Broad visual benchmarks.
 
 Remaining / next:
 
-- Phase 5 follow-up:
-  - Planner calibration is complete on the synthetic corpus. Next: run planner-vs-static deltas on real-world mixed corpora (form-heavy PDFs, scanned docs, research papers).
-  - Monitor planner classification accuracy in production-like settings; add real-query confusion matrix if deployment data becomes available.
-- Phase 6 follow-up (ongoing quality expansion, non-blocking):
-  - Stress-testing is complete on synthetic OCR noise. Next: validate graph extraction on real OCR output from GLM-OCR/Gemini in Hybrid mode, particularly for section hierarchy edges and numeric reference ranges under heavy noise.
-  - Revisit NLP/LLM extractors only if normalized rule-based extraction still misses key entities/references on production-quality OCR output.
-
-Next session start point:
-
-1. Run planner-vs-static eval comparisons on real-world mixed corpora.
-2. Validate graph extraction recall on real OCR output (Hybrid mode) and widen quality-tier corpus with actual scanned documents.
-3. (If needed) Add CI/CD pipeline with GitHub Actions.
+- Phase 5 follow-up: Run planner-vs-static eval comparisons on real-world mixed corpora. Monitor planner classification accuracy in production-like settings.
+- Phase 6 follow-up: Validate graph extraction on real OCR output (Hybrid mode) from GLM-OCR/Gemini. Widen quality-tier corpus with actual scanned documents.
+- Phase 7 follow-up: CI/CD pipeline with GitHub Actions (partially done — `ci.yml` and `cd.yml` exist).
+- **Phase 8 (NEW)**: Install live DB packages (Tantivy/LanceDB/KuzuDB) and wire `src/backends/` to the active retrieval pipeline. This unblocks BIMAgent cross-repo integration (T-AGENT-3).
 
 ## Current baseline
 
-The repository currently contains a working document parsing prototype:
+The repository currently contains a working document parsing prototype plus a mature `retrieval_research/` package:
 
-- `core_processor.py`: page preprocessing, GLM-OCR via MLX, optional Gemini refinement.
-- `streamlit_app.py`: upload/process/history UI.
-- `gradio_app.py`: alternate batch-processing UI.
-- `history/`: JSON output from prior runs.
+- `retrieval_research/`: Phases 0–7 complete. Production-grade BM25, dense, late interaction, graph, visual, and planner retrieval. FastAPI server, CLI, evaluation framework, evidence/knowledge card system, profiling, config management, job system, chunking.
+- `src/backends/`: Live DB wrappers written but packages not installed. Test files wrap calls in try/except ImportError — they currently skip on missing packages.
+- `retrieval_tools.py` + `retrieval_agent.py`: Mock/demo layer using `MOCK_DOCUMENTS`. Needs to be wired to `src/backends/` (or replaced with calls to `retrieval_research/`).
+- `apps/web/`: Fully scaffolded Next.js 16 inspector UI with Dashboard, Documents, Query Workbench, Eval Runner pages.
 
-This is closest to the roadmap's ingestion layer. The missing product layers are canonical document storage, chunking, indexes, retrieval, evidence bundles, evaluation, and a retrieval-oriented inspector UI.
+## Target v0 product — SHIPPED
 
-## Target v0 product
+Build a local-first hard-document retrieval system that:
+1. ✅ Ingests PDFs/images and preserves page-level provenance.
+2. ✅ Normalizes OCR/refined output into a canonical document schema.
+3. ✅ Chunks documents with page, section, layout, and confidence metadata.
+4. ✅ Indexes chunks in lexical and dense retrieval backends.
+5. ✅ Answers queries with grounded evidence and retrieval traces.
+6. ✅ Evaluates retrieval and answer quality on a reproducible corpus.
+7. ✅ Exposes the workflow through a practical inspector UI.
 
-Build a local-first hard-document retrieval system that can:
+## Phase 8: Live Tri-Modal Backends (NEW)
 
-1. Ingest PDFs/images and preserve page-level provenance.
-2. Normalize OCR/refined output into a canonical document schema.
-3. Chunk documents with page, section, layout, and confidence metadata.
-4. Index chunks in lexical and dense retrieval backends.
-5. Answer queries with grounded evidence and retrieval traces.
-6. Evaluate retrieval and answer quality on a small reproducible corpus.
-7. Expose the workflow through a practical inspector UI.
+**Goal**: Replace the mock `retrieval_tools.py` layer with real Tantivy/LanceDB/KuzuDB backends and integrate them with the orchestrator.
 
-## Phase 0: Stabilize the Foundation
+### Deliverables
+- `uv add tantivy lancedb pyarrow kuzu neo4j` — install Python packages
+- Update `pyproject.toml` to declare all 4 packages as runtime deps
+- Add live integration tests that exercise real DB connections (not just structural checks)
+- Update `retrieval_tools.py` to call `src/backends/*.py` instead of returning mock data
+- Wire `retrieval_agent.py` to use the live backends via the RRF fusion
+- Verify `pytest tests/ -v` passes with all 79+ tests, including live DB tests
+- Document the live backend setup in README
 
-Goal: Convert the parser prototype into reusable project modules with testable data contracts.
+### Acceptance criteria
+- All 3 DB integration tests pass independently with real connections.
+- `retrieval_tools.py` returns real results from indexed documents.
+- RRF fusion combines results from 3 live backends.
+- The BIMAgent `BIMIndexSearchSkill` can hit real endpoints.
 
-Deliverables:
+## Near-term milestone: v1.0 (Live Tri-Modal)
 
-- Create package structure:
-  - `retrieval_research/ingest/`
-  - `retrieval_research/schema/`
-  - `retrieval_research/storage/`
-  - `retrieval_research/chunking/`
-  - `retrieval_research/retrieval/`
-  - `retrieval_research/evidence/`
-  - `retrieval_research/evaluation/`
-- Move OCR/page processing out of top-level app coupling.
-- Define canonical schema models:
-  - `Document`
-  - `Page`
-  - `Block`
-  - `Table`
-  - `Figure`
-  - `Chunk`
-  - `Evidence`
-  - `RetrievalTrace`
-- Replace ad hoc history JSON with versioned artifacts under `data/`:
-  - `data/raw/`
-  - `data/pages/`
-  - `data/processed/`
-  - `data/indexes/`
-  - `data/runs/`
-- Add CLI entrypoints:
-  - `rr ingest <path>`
-  - `rr chunk <document-id>`
-  - `rr index <document-id>`
-  - `rr query "<question>"`
-  - `rr eval <manifest>`
-- Add smoke tests for schema serialization and one-page ingestion.
-
-Acceptance criteria:
-
-- Existing Streamlit and Gradio flows still work.
-- A processed document can be saved and loaded without losing page provenance.
-- One command can ingest a PDF/image into canonical JSON.
-
-## Phase 1: Strong Text Retrieval Baseline
-
-Goal: Ship a reliable text-first RAG baseline before adding multimodal retrieval.
-
-Deliverables:
-
-- Implement chunking:
-  - fixed-size baseline chunker
-  - section-aware chunker using Markdown headings from OCR/refinement output
-  - page-aware chunk boundaries with source coordinates reserved in the schema
-- Implement lexical retrieval:
-  - start with local BM25, such as `rank-bm25` or Tantivy/Pyserini later
-  - persist index metadata under `data/indexes/`
-- Implement dense retrieval:
-  - local embedding model adapter
-  - FAISS or Qdrant adapter
-  - model-agnostic embedding interface
-- Implement hybrid fusion:
-  - weighted score fusion
-  - reciprocal rank fusion
-- Implement answer generation:
-  - query retrieves evidence chunks
-  - Gemini or configurable LLM produces grounded answer
-  - answer includes citations to document/page/chunk
-- Emit `retrieval_trace.json` and `evidence_bundle.json` for every query.
-
-Acceptance criteria:
-
-- Querying over ingested documents returns ranked chunks and an answer.
-- Evidence includes source file, page number, chunk id, retrieval scores, and text.
-- BM25-only, dense-only, and hybrid modes are selectable.
-
-## Phase 2: Evaluation Harness
-
-Goal: Make retrieval quality measurable from the start.
-
-Deliverables:
-
-- Define manifest format for eval corpora:
-  - document paths
-  - questions
-  - expected answer snippets
-  - expected pages/chunks when known
-- Add metrics:
-  - Recall@k
-  - MRR
-  - page hit rate
-  - citation support rate
-  - answerability flag
-  - latency per stage
-- Add small seed eval set:
-  - one research paper
-  - one report
-  - one scanned or image-heavy document
-  - one table/form-heavy document
-- Add eval command that writes run reports to `data/runs/`.
-
-Acceptance criteria:
-
-- `rr eval` produces JSON and Markdown reports.
-- Reports compare BM25, dense, and hybrid retrieval.
-- Latency and quality metrics are captured for each query.
-
-## Phase 3: Inspector UI
-
-Goal: Turn the app from a parser into a retrieval debugging workbench.
-
-Deliverables:
-
-- Update Streamlit first, keeping Gradio as a secondary interface.
-- Add document library view:
-  - uploaded documents
-  - processing status
-  - page count
-  - chunk count
-  - index status
-- Add query workbench:
-  - query input
-  - retrieval mode selector
-  - answer panel
-  - ranked evidence panel
-  - retrieval trace panel
-- Add page/evidence viewer:
-  - show page image when available
-  - highlight page/chunk provenance where coordinates exist
-  - expose raw OCR and refined text side by side
-- Add eval dashboard:
-  - latest run summary
-  - per-query pass/fail details
-  - retrieval mode comparison
-
-Acceptance criteria:
-
-- A user can ingest, index, query, and inspect evidence from the UI.
-- Every answer has visible evidence and a trace.
-- Failed or low-confidence answers are easy to diagnose.
-
-## Phase 4: Multimodal Page Retrieval
-
-Goal: Add the roadmap's visual retrieval path after the text baseline is stable.
-
-Deliverables:
-
-- Persist page images during ingestion.
-- Add visual retriever interface:
-  - page encoder
-  - query encoder
-  - page-level ranking
-- Integrate ColPali-compatible retrieval as the first visual backend.
-- Add visual evidence objects:
-  - page id
-  - thumbnail path
-  - visual score
-  - linked text chunks from the same page
-- Fuse visual and text retrieval results.
-- Add multimodal retrieval mode to CLI and UI.
-
-Acceptance criteria:
-
-- Visually dense pages can be retrieved even when OCR text is weak.
-- Query traces show when visual retrieval contributed evidence.
-- Evaluation reports include page hit rate for visual retrieval.
-
-## Phase 5: Planner and Adaptive Routing
-
-Goal: Replace static retrieval mode selection with rule-based routing, then prepare for learned routing.
-
-Deliverables:
-
-- Implement query classifier:
-  - exact lookup
-  - semantic question
-  - table/form lookup
-  - visual/layout question
-  - multi-hop synthesis
-- Implement rule-based planner:
-  - chooses BM25/dense/hybrid/visual paths
-  - chooses top-k and reranking settings
-  - records decisions in `retrieval_trace.json`
-- Add evidence consolidation:
-  - deduplicate overlapping chunks
-  - merge page-level visual hits with text chunks
-  - annotate conflicts and redundancy
-- Add confidence and answerability estimates.
-
-Acceptance criteria:
-
-- Default query mode is planner-routed retrieval.
-- Trace explains the route and why it was selected.
-- Planner can be evaluated against static retrieval modes.
-
-## Phase 6: Structured Knowledge Layer
-
-Goal: Add graph-style document navigation and structured communication objects.
-
-Deliverables:
-
-- Extract section hierarchy into a navigable graph.
-- Extract lightweight entities and references from refined text.
-- Add graph traversal retrieval path for:
-  - section expansion
-  - citation/reference chase
-  - entity neighborhood lookup
-- Produce `knowledge_card.json`:
-  - answer
-  - claims
-  - supporting evidence
-  - unresolved ambiguity
-  - suggested follow-up retrieval
-- Produce `document_profile.json`:
-  - topics
-  - entities
-  - page types
-  - table/figure inventory
-  - extraction confidence summary
-
-Acceptance criteria:
-
-- Retrieval can expand from a hit chunk to sibling/parent/child sections.
-- Final answers can be exported as structured knowledge cards.
-- Corpus/document profiles are visible in the UI.
-
-## Phase 7: Hardening and Packaging
-
-Goal: Make the project reliable for external contributors and repeated local use.
-
-Deliverables:
-
-- Add configuration system:
-  - models
-  - storage paths
-  - retrieval backends
-  - API keys
-  - GPU/CPU options
-- Add background jobs for ingestion/indexing (file-based queue with JobStore, worker, API, CLI).
-- Add structured logging.
-- Add error handling for missing models, failed OCR, failed API calls, and corrupt PDFs.
-- Add Docker/devcontainer path if feasible.
-- Expand tests:
-  - schema tests
-  - chunking tests
-  - retrieval tests
-  - CLI smoke tests
-  - UI smoke tests
-- Update README with real workflows.
-
-Acceptance criteria:
-
-- New users can run the project from README instructions.
-- Core CLI commands work in a clean environment.
-- The app degrades gracefully when optional cloud/model dependencies are unavailable.
-
-## Suggested implementation order
-
-1. Refactor `core_processor.py` into package modules while preserving current app behavior.
-2. Add canonical schemas and artifact storage.
-3. Add ingestion CLI.
-4. Add chunking and local BM25 retrieval.
-5. Add dense embeddings and hybrid retrieval.
-6. Add grounded QA with evidence bundles and traces.
-7. Add evaluation manifests and metrics.
-8. Upgrade Streamlit into the retrieval inspector.
-9. Add visual page retrieval.
-10. Add planner routing and evidence consolidation.
-11. Add graph/knowledge-card layer.
-12. Harden packaging, configuration, and tests.
-
-## Near-term milestone: v0.1
-
-Scope:
-
-- Canonical schema.
-- File-backed artifact store.
-- PDF/image ingestion CLI.
-- Page-aware chunking.
-- BM25 retrieval.
-- Streamlit query page.
-- Evidence bundle and retrieval trace.
-- Minimal eval manifest with one sample document.
+Scope: Wire up real Tantivy, LanceDB, and KuzuDB; deprecate the mock layer.
 
 Definition of done:
-
-- From a fresh document, a user can run ingest, chunk, index, query, and inspect evidence.
-- No multimodal page retrieval yet.
-- No paper/research experiment work.
-- No distributed services yet.
-
-## Near-term milestone: v0.2
-
-Scope:
-
-- Dense retrieval.
-- Hybrid fusion.
-- Grounded QA.
-- Expanded eval harness.
-- Document library in UI.
-- Better OCR/refinement artifact tracking.
-
-Definition of done:
-
-- Hybrid retrieval beats BM25-only on the seed eval set.
-- Every answer includes page/chunk citations.
-- Eval reports are generated automatically.
-
-## Near-term milestone: v0.3
-
-Scope:
-
-- Persisted page images.
-- ColPali-compatible visual page retrieval adapter.
-- Visual evidence in UI.
-- Planner v1 with rule-based query routing.
-
-Definition of done:
-
-- Visual retrieval improves page hit rate on image-heavy/table-heavy docs.
-- Query traces show selected retrieval paths and evidence fusion.
-
-## Deferred for now
-
-These remain in the roadmap but are not needed to complete the first implementation:
-
-- Research paper writing.
-- Large ablation suite.
-- Rust hot-path optimization.
-- Distributed service decomposition.
-- HPC-ColPali compression work.
-- Learned MoE chunk router.
-- Learned planner model.
-- Public benchmark release.
-
+- `uv add tantivy lancedb pyarrow kuzu` succeeds
+- `pytest tests/test_tantivy.py tests/test_lancedb.py tests/test_kuzu.py -v` all pass with real connections
+- `retrieval_tools.py` calls `src/backends/*.py`
+- `retrieval_agent.py` runs a query and gets fused results from 3 live backends
+- BIMAgent's `BIMIndexSearchSkill` can dispatch queries to live BIMIndex endpoints

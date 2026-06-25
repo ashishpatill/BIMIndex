@@ -4,3 +4,14 @@
 - Tri-Modal routing is the core priority. Optimize for Rust (Tantivy/LanceDB) and Python integrations.
 - Always use Antigravity subagents for running parallel queries.
 - Incorporate RRF (Reciprocal Rank Fusion) with k=60 natively in the final step.
+
+## Task List
+- Read `TASKS.md` for 10 detailed tasks with specs and implementation steps.
+
+## Model Routing
+- Read `ROUTING.md` before any task.
+- Live DB integrations (Tantivy/LanceDB/KuzuDB) → Qwen3 Coder Plus write + Pro verify. Run in parallel.
+- Standard DB SDK wiring (Neo4j, PaddleOCR) → DeepSeek V4 Flash.
+- Novel retrieval algorithms (SPLADE, cross-encoder, PageIndex) → DeepSeek V4 Pro.
+- CI/CD, docs → DeepSeek V4 Flash.
+- Run `PYTHONPATH=. pytest tests/ -v` after any change — 79 tests must pass.
